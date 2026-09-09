@@ -1,0 +1,89 @@
+/* ==========================================================================
+   INDIAN LAW SCHOOL (ILS) - NAVY BLUE GLASSMORPHISM ON PITCH BLACK
+   - Base Background: 100% Solid Black (#000000)
+   - Containers: Navy Blue Glass (rgba(10, 18, 42, 0.85))
+   - Borders & Accents: Gold (#D4AF37), Navy Blue, and White
+   ========================================================================== */
+
+/* Full Black Body Setup */
+body {
+  background-color: var(--bg-pitch-black) !important;
+  color: var(--white-pure);
+  font-family: var(--font-body);
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Glass Panel Component - Navy Blue Glass on Pure Black */
+.glass-panel {
+  background: var(--navy-glass);
+  backdrop-filter: blur(24px) saturate(200%);
+  -webkit-backdrop-filter: blur(24px) saturate(200%);
+  border: 1px solid var(--gold-border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-pitch);
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Top Shimmer Line - Gold & White */
+.glass-panel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, 
+    rgba(212, 175, 55, 0.9) 0%, 
+    rgba(255, 255, 255, 0.8) 50%, 
+    rgba(212, 175, 55, 0.9) 100%
+  );
+  z-index: 2;
+}
+
+.glass-panel:hover {
+  background: var(--navy-glass-hover);
+  border-color: var(--gold-light);
+  box-shadow: 
+    0 30px 70px rgba(0, 0, 0, 1), 
+    0 0 30px rgba(212, 175, 55, 0.3);
+  transform: translateY(-4px);
+}
+
+/* Tri-Border Card Variant - Gold, White, Navy Border Highlights */
+.tri-border-card {
+  border: 1px solid rgba(212, 175, 55, 0.4);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.95);
+}
+
+/* Badges - Strictly Gold and White */
+.glass-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 1.1rem;
+  border-radius: 30px;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background: rgba(10, 18, 42, 0.9);
+  border: 1px solid var(--gold-border);
+  color: var(--gold-light);
+}
+
+.glass-badge-gold {
+  background: rgba(212, 175, 55, 0.15);
+  border-color: var(--gold-primary);
+  color: var(--gold-light);
+}
+
+.glass-badge-white {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--white-border);
+  color: var(--white-pure);
+}

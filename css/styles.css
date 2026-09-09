@@ -1,0 +1,65 @@
+/* ==========================================================================
+   INDIAN LAW SCHOOL (ILS) - MASTER CSS ENTRY POINT
+   Modular Architecture Importing:
+   1. variables.css (Dark Black Base, Gold, Navy Blue, White tokens)
+   2. glass.css (Tri-border glassmorphism card system)
+   3. components.css (Navbar, Hero, Offerings, AI Widget, Blog, Modal, Footer)
+   4. animations.css (Constellation node glows, floating motion, pulse dots)
+   ========================================================================== */
+
+@import url('variables.css');
+@import url('glass.css');
+@import url('components.css');
+@import url('animations.css');
+
+/* Global Container Setup */
+.container {
+  width: 100%;
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 4rem auto;
+}
+
+.section-title {
+  font-size: 2.6rem;
+  font-weight: 800;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  color: var(--white-pure);
+}
+
+.section-subtitle {
+  font-size: 1.05rem;
+  color: var(--white-muted);
+}
+
+.subhead-label {
+  font-family: var(--font-sans);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--gold-primary);
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.subhead-label::before, .subhead-label::after {
+  content: '';
+  display: inline-block;
+  width: 24px;
+  height: 2px;
+  background: var(--gold-primary);
+}

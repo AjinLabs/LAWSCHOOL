@@ -1,0 +1,49 @@
+/* ==========================================================================
+   INDIAN LAW SCHOOL (ILS) - DESIGN TOKENS & VARIABLES
+   Strict Theme Rules:
+   - 100% Solid Pitch Black Background (#000000)
+   - Navy Blue Glassmorphic Containers (rgba(10, 18, 42, 0.85))
+   - Text & Accents ONLY White (#FFFFFF) and Gold (#D4AF37 / #F6D365)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+:root {
+  /* 100% Pure Pitch Black Background */
+  --bg-pitch-black: #000000;
+  --bg-dark-base: #000000;
+
+  /* Navy Blue Glassmorphic Containers */
+  --navy-glass: rgba(10, 18, 42, 0.85);
+  --navy-glass-hover: rgba(16, 28, 64, 0.95);
+  --navy-glass-solid: #0a122a;
+  --navy-border: rgba(30, 58, 138, 0.5);
+
+  /* Gold Color Palette */
+  --gold-primary: #d4af37;
+  --gold-light: #f6d365;
+  --gold-dark: #9a7b20;
+  --gold-gradient: linear-gradient(135deg, #d4af37 0%, #f6d365 50%, #e5c158 100%);
+  --gold-glow: rgba(212, 175, 55, 0.35);
+  --gold-border: rgba(212, 175, 55, 0.35);
+
+  /* White Color Palette */
+  --white-pure: #ffffff;
+  --white-bright: #f8fafc;
+  --white-muted: #cbd5e1;
+  --white-border: rgba(255, 255, 255, 0.2);
+
+  /* Fonts */
+  --font-serif: 'Cinzel', serif;
+  --font-sans: 'Outfit', sans-serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+
+  /* Shadows & Motion */
+  --shadow-pitch: 0 25px 60px rgba(0, 0, 0, 0.98);
+  --shadow-gold-glow: 0 10px 30px rgba(212, 175, 55, 0.3);
+  --transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+
+  --radius-sm: 10px;
+  --radius-md: 18px;
+  --radius-lg: 28px;
+}
