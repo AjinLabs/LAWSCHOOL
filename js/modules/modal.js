@@ -10,8 +10,17 @@ export function initEnrollmentModal() {
   const successBox = document.getElementById('enroll-success-box');
 
   const openModal = (courseName) => {
-    if (courseName && document.getElementById('form-course-select')) {
-      document.getElementById('form-course-select').value = courseName;
+    const selectElem = document.getElementById('form-course-select');
+    if (courseName && selectElem) {
+      let found = false;
+      for (let i = 0; i < selectElem.options.length; i++) {
+        if (selectElem.options[i].value === courseName || selectElem.options[i].text.toLowerCase().includes(courseName.toLowerCase()) || courseName.toLowerCase().includes(selectElem.options[i].value.toLowerCase())) {
+          selectElem.selectedIndex = i;
+          found = true;
+          break;
+        }
+      }
+      if (!found) selectElem.value = courseName;
     }
     if (modal) {
       modal.classList.add('active');
