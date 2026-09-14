@@ -3,6 +3,173 @@
    ========================================================================== */
 
 export const COURSE_DATA = {
+  klee: {
+    id: "klee",
+    badge: "KLEE 2027 FLAGSHIP",
+    title: "KLEE 2027 Super Batch",
+    subtitle: "India's Most Premium KLEE Coaching Experience. 9-Month Transformation Program.",
+    tagline: "Don't Just Prepare for KLEE. Prepare for the Career That Follows.",
+    statusBadge: "🔥 ADMISSIONS OPEN • 8 SEATS REMAINING",
+    shortDescription: "Only 15 Students Per Batch (Only 10 Batches/Year across India). 300+ Hours Recorded + 3 Live Classes/Wk, 1,00,000+ Qs Bank, 250 CBT Mock Exams & 100% Refund Commitment Policy*.",
+    collaboration: "",
+    investmentSummary: "₹1,00,000 (Inclusive of GST)",
+    investmentDetails: [
+      {
+        title: "KLEE 2027 Flagship Super Batch",
+        price: "₹1,00,000",
+        note: "(Inclusive of GST — Complete 9-Month Transformation Ecosystem)"
+      }
+    ],
+    scarcityDetails: {
+      studentsPerBatch: 15,
+      superBatchesPerYear: 10,
+      totalStudentsIndia: 150,
+      note: "Once your batch is full, admissions close. No overcrowding. No last-minute expansion. No compromise in quality."
+    },
+    heroLead: "Kerala's most serious and elite law entrance coaching (KLEE) & law practice ecosystem. Don't Just Prepare for KLEE. Prepare for the Career That Follows.",
+    ecosystemDescription: "Designed for high-performing legal aspirants targeting Government Law Colleges in Kerala. Experience small-batch coaching (strictly 15 students per batch), AI-driven weak area tracking, 15 years' solved KLEE papers, and 1-on-1 ranker mentorship.",
+    whyEnroll: "Because KLEE is a speed & accuracy computer-based test where precision under pressure determines your college rank. When everyone else is competing for attention in classrooms of 100+, you'll be learning in a batch of only 15 serious aspirants.",
+    whySmallBatch: [
+      "Personal Academic Mentor for every student",
+      "One-to-One Weekly Performance Reviews",
+      "Individualized Study Plan & Strategy",
+      "Weekly Progress Meetings & Motivation",
+      "Unlimited 24/7 Doubt Support Desk",
+      "Continuous Academic Accountability",
+      "Faster Feedback on Mock Performance",
+      "Personalized Weak Area Improvement Blueprint"
+    ],
+    accessPoints: [
+      "Only 15 Students Per Batch (Only 10 Batches/Year across India)",
+      "300+ Hours Recorded + 3 Live Interactive Classes Every Week",
+      "1,00,000+ Practice Qs + 250 Full-Length CBT Mock Exams",
+      "Previous 15 Years' Solved KLEE Papers & Trend Mapping",
+      "AI-Powered Weak Area Alert System for targeted accuracy",
+      "Personal Academic Mentor & 1-on-1 Performance Reviews",
+      "100% Tuition Fee Refund Commitment Policy*"
+    ],
+    weeklyModel: [
+      { day: "Monday", desc: "🎙 Live Interactive Class — Conceptual Foundation & Legal Reasoning" },
+      { day: "Tuesday", desc: "🎥 Recorded Masterclass + Practice Speed Drills & Question Solving" },
+      { day: "Wednesday", desc: "🎙 Live Interactive Class — Problem Solving & Legal Aptitude Masterclass" },
+      { day: "Thursday", desc: "🎥 Recorded Masterclass + Sectional Speed Drills & Grammar Modules" },
+      { day: "Friday", desc: "🎙 Live Interactive Class — High-Yield Topic Deep Dives & Exam Tactics" },
+      { day: "Saturday", desc: "📝 Weekly Full-Length CBT Mock Examination (120 Qs / 360 Marks) & Self Study" },
+      { day: "Sunday", desc: "📊 Weekly AI Accuracy Review, Recovery & Planning for Next Week" }
+    ],
+    examPattern: {
+      mode: "Computer-Based Test (CBT)",
+      duration: "2 Hours (120 Minutes)",
+      questionType: "Multiple Choice Questions (MCQs)",
+      totalQuestions: "120 Questions",
+      maxMarks: "360 Marks",
+      markingScheme: "✅ Correct: +3 Marks | ❌ Wrong: -1 Mark | ➖ Unanswered: 0 Marks",
+      subjects: [
+        {
+          name: "⚖️ Aptitude for Legal Studies",
+          questions: "42 Questions",
+          marks: "126 Marks",
+          details: "Highest-weightage section. Legal Principles, Legal Reasoning, Constitution Basics, Fundamental Rights, Legal Maxims, Legal Awareness, Landmark Precedents."
+        },
+        {
+          name: "📖 General English",
+          questions: "36 Questions",
+          marks: "108 Marks",
+          details: "Reading Comprehension, Grammar, Vocabulary, Synonyms, Antonyms, Idioms & Phrases, Sentence Correction, Error Detection."
+        },
+        {
+          name: "🌍 General Knowledge & Current Affairs",
+          questions: "27 Questions",
+          marks: "81 Marks",
+          details: "Indian Polity, History, Geography, Economy, Science & Tech, Awards, Sports, International Affairs, Government Schemes, Current Events."
+        },
+        {
+          name: "🧠 Arithmetic & Mental Ability",
+          questions: "15 Questions",
+          marks: "45 Marks",
+          details: "Number System, Percentages, Ratio & Proportion, Profit & Loss, Time & Work, Coding-Decoding, Blood Relations, Direction Sense, Logical Reasoning."
+        }
+      ]
+    },
+    govColleges: [
+      "Government Law College, Thiruvananthapuram",
+      "Government Law College, Ernakulam",
+      "Government Law College, Thrissur",
+      "Government Law College, Kozhikode"
+    ],
+    selfFinancingColleges: [
+      "Kerala Law Academy Law College",
+      "Bharata Mata School of Legal Studies",
+      "CSI Institute of Legal Studies",
+      "CSI College for Legal Studies",
+      "Sree Narayana Law College",
+      "Sree Narayana Guru College of Legal Studies",
+      "Nehru Academy of Law",
+      "KMCT Law College",
+      "MCT College of Legal Studies",
+      "Al-Ameen Law College",
+      "Al Azhar Law College",
+      "Mar Gregorios College of Law",
+      "Mount Zion Law College",
+      "Co-operative School of Law",
+      "Bhavan's N. A. Palkhivala Academy",
+      "NSS Law College",
+      "Markaz Law College",
+      "AIM College of Law",
+      "St. Dominic's College of Law"
+    ],
+    founderMessage: {
+      author: "Cmpk Raheem",
+      role: "Founder, Indian Law School",
+      quote: "The KLEE paper tests something very specific—not how much law you know, but how precisely you think under pressure. Our programme builds that precision through structure, repetition, disciplined practice, and continuous improvement—not by overwhelming students with endless content. Every practice question, every mock exam, every mentor session has one purpose: helping you become a confident law student and future legal professional."
+    },
+    curriculumVault: [
+      { title: "Aptitude for Legal Studies (126 Marks)", desc: "Legal principles, reasoning, legal maxims, BNS/IPC basics, Indian Constitution & landmark precedents." },
+      { title: "General English (108 Marks)", desc: "Reading comprehension, vocabulary, grammar, idioms & legal phrases." },
+      { title: "GK & Current Affairs (81 Marks)", desc: "Polity, history, international legal conventions, geography & national news." },
+      { title: "Arithmetic & Logic (45 Marks)", desc: "Logical reasoning, blood relations, series, data interpretation & quantitative speed math." }
+    ],
+    aiLmsFeatures: [
+      "Real-time speed & accuracy metrics on legal principle questions",
+      "Identification of time traps during CBT mock simulations",
+      "Targeted revision sets for low-accuracy subtopics",
+      "Comparative class ranker trajectory tracking"
+    ],
+    mentorship: [
+      "1-on-1 weekly rank audit calls with KLEE top rankers",
+      "Personalized time-table and daily question targets",
+      "Dedicated WhatsApp doubt clearance desk with sub-2 hour resolution time"
+    ],
+    commitment: {
+      title: "🛡️ ADMISSION COMMITMENT POLICY*",
+      subtitle: "Study with Absolute Confidence — 100% Tuition Fee Refund Guarantee",
+      text: "Students who satisfy all published eligibility requirements—including attendance, assessments, assignments, participation, and appearance for the official KLEE examination—may qualify for a 100% tuition fee refund if they do not secure admission to a Government Law College through KLEE, subject to complete terms and conditions.",
+      criteria: [
+        "90%+ Attendance in Live & Recorded Classes",
+        "Completion of Full 9-Month Ecosystem",
+        "Attempting All Prescribed CBT Mock Exams",
+        "Submission of Mandatory Assignments & Daily Exams",
+        "Following Personalized Study Plan & Ranker Reviews",
+        "Official Appearance in the KLEE Entrance Examination"
+      ]
+    },
+    whatMakesDifferent: [
+      "Strict Scarcity: Max 15 Students per Batch for Ultra-Personalized Attention",
+      "Only 10 Super Batches Per Year Across India (150 Total Seats)",
+      "9-Month Transformation Program (300+ Hours Recorded + 3 Live Classes Weekly)",
+      "250 Full-Length CBT Mock Exams with AI Analytics",
+      "1,00,000+ Question Bank specifically tuned to KLEE patterns",
+      "Previous 15 Years' Solved Questions & Trend Analysis",
+      "100% Tuition Fee Refund Commitment Policy*"
+    ],
+    whoShouldEnroll: [
+      "Aspirants targeting 3-Year or 5-Year LL.B admissions in Kerala Government Law Colleges.",
+      "Students seeking elite rank-level preparation without overcrowded 200+ student coaching rooms.",
+      "Candidates who want data-driven AI tracking to fix speed and accuracy bottlenecks.",
+      "Students willing to commit to disciplined 9-month preparation."
+    ]
+  },
+
   mastery: {
     id: "mastery",
     badge: "LL.B. DEGREE MASTERY",
@@ -15,18 +182,28 @@ export const COURSE_DATA = {
     investmentSummary: "₹1,25,000 (Complete Flagship) | Or ₹5,000+GST Per Subject",
     investmentDetails: [
       {
-        title: "Law Mastery Flagship (Complete 100% Online Program)",
+        title: "Flagship Law Subject Mastery Program (Complete LL.B.)",
         price: "₹1,25,000",
-        note: "(Inclusive of GST — Full Access to All Semesters, AI LMS, Weekly Live Clinics, Exam-Season Guidance & Mentorship)"
+        note: "(Inclusive of GST — Full Access to All Semesters, AI LMS, Weekly Live Clinics, Exam-Season Guidance, Mentorship & Progress Tracking)"
       },
       {
-        title: "Modular Subject Access",
+        title: "Individual Subject Mastery",
         price: "₹5,000 + GST",
-        note: "per targeted core subject"
+        note: "Per targeted subject (Perfect for back papers, single semester focus, or concept clarity)"
       }
     ],
     heroLead: "Stop surviving semester exams through frantic, last-minute cramming. Master the law on your own schedule with a cutting-edge digital learning environment built for serious law students across India.",
     ecosystemDescription: "No rigid commutes. No chaotic, overcrowded lecture halls. This is a modern, high-precision legal learning ecosystem combining asynchronous mastery with real-time strategic interaction. Learn through 4K cinematic visual breakdowns, bare act dissections, and real-world litigation drafting—all accessible 24/7 on an AI-powered LMS dashboard, backed by a focused weekly live clinic and dedicated online exam-season support.",
+    languages: ["Malayalam 🇮🇳", "English 🇬🇧"],
+    whyStruggle: [
+      "Memorizing sections without understanding underlying statutory intent",
+      "Forgetting landmark Supreme Court and High Court precedents before finals",
+      "Losing confidence during classroom debates and professor questioning",
+      "Fearing viva-voce examinations and procedural questions",
+      "Struggling during senior chamber internships due to lack of practical drafting",
+      "Graduating with a degree but lacking courtroom legal reasoning"
+    ],
+    programPurpose: "We don't teach you only to clear university examinations. We teach you to understand law deeply. To analyse. To reason. To argue. To research. To draft. To negotiate. To interpret statutes. To think like a lawyer. Because clients, Senior Advocates, Law Firms, Judges, Corporate Employers, and society value competence more than memorization.",
     whyEnroll: "Because true legal acumen comes from deep conceptual clarity, practical drafting, and consistent feedback—not passive presence in a lecture hall.",
     accessPoints: [
       "Complete LL.B Subject Library across all semesters",
@@ -44,6 +221,34 @@ export const COURSE_DATA = {
       { day: "Mid-Week (LMS Portal)", desc: "📝 Submit Weekly Answer-Writing & Legal Drafting Assignments for Faculty Review" },
       { day: "Saturday (Live Online Masterclass)", desc: "🎙 Weekly Live Interactive Clinic: Case Law Debates, Real-Time Problem Solving & Direct Q&A" },
       { day: "Sunday (Personal Review)", desc: "📊 AI Retention Check, Progress Audit & Weekly Planning" }
+    ],
+    fullSubjectList: [
+      "⚖ Constitutional Law",
+      "📜 Law of Contracts I",
+      "📜 Law of Contracts II",
+      "⚖ Law of Torts",
+      "⚖ Criminal Law (IPC / BNS)",
+      "👨👩👧 Family Law I & II",
+      "🏠 Property Law",
+      "📖 Jurisprudence",
+      "🏛 Administrative Law",
+      "🏢 Company Law",
+      "👷 Labour & Industrial Law",
+      "🌿 Environmental Law",
+      "📜 Interpretation of Statutes",
+      "📑 Law of Evidence (BSA)",
+      "⚖ Civil Procedure Code (CPC)",
+      "⚖ Criminal Procedure Code (CrPC / BNSS)",
+      "🏠 Transfer of Property Act",
+      "🌍 Public International Law",
+      "💡 Intellectual Property Rights (IPR)",
+      "💻 Cyber Law & Information Tech",
+      "🤝 Alternative Dispute Resolution (ADR)",
+      "📜 Consumer Protection Law",
+      "📚 Moot Court & Mock Trial",
+      "✍ Drafting, Pleading & Conveyancing",
+      "🎤 Professional Ethics & Bar Bench Relations",
+      "📖 Legal Research Methodology"
     ],
     examBootcamps: [
       { title: "Late-Night Live Online Revision Sessions", desc: "High-yield doctrine breakdowns, rapid case-law summaries, and key issue recaps directly on your screen." },
@@ -75,8 +280,8 @@ export const COURSE_DATA = {
     ],
     commitment: {
       title: "🛡️ ACADEMIC PERFORMANCE COMMITMENT",
-      subtitle: "Study with Absolute Conviction.",
-      text: "We stand firmly behind the depth and rigor of our digital curriculum. Students who satisfy all published academic milestones who do not secure a First Class in their university examinations qualify for a 100% tuition fee refund, subject to full published terms and conditions.",
+      subtitle: "Study with Absolute Conviction — 100% First Class Refund Commitment",
+      text: "We stand firmly behind the depth and rigor of our digital curriculum. Students who satisfy all published academic milestones—including watching 100% of prescribed 4K modules, attending the weekly live online clinics, submitting all drafting assignments on time, and completing the exam-season revision bootcamps—who do not secure a First Class in their university examinations qualify for a 100% tuition fee refund, subject to full published terms and conditions.",
       criteria: [
         "Active LMS Completion of Prescribed 4K Modules",
         "Attendance in the Weekly Live Online Clinics",
@@ -97,10 +302,12 @@ export const COURSE_DATA = {
       "100% Performance Commitment Policy*"
     ],
     whoShouldEnroll: [
+      "First Year, Second Year, and Final Year LL.B. Students seeking academic excellence.",
       "Law students who want elite legal education with the flexibility of a 100% digital LMS.",
+      "Students with back papers or struggling in specific core law subjects.",
       "Students who need targeted, high-impact guidance during stressful university exams.",
-      "Aspirants targeting top-tier litigation practice, judicial service, or corporate law.",
-      "Anyone who prefers clear visual storytelling and structured analytics over dry, dense textbooks."
+      "Judicial aspirants, future advocates, and corporate law aspirants.",
+      "Anyone who prefers clear visual storytelling and structured analytics over dry textbooks."
     ]
   },
 
@@ -121,7 +328,7 @@ export const COURSE_DATA = {
         note: "(Inclusive of GST — Comprehensive Access to All Practice Modules, Judicial & Practitioner Masterclasses, AI LMS, Weekly Live Clinics, Drafting Vaults & Chamber Management Systems)"
       }
     ],
-    heroLead: "Learn Directly from the Bench and the Bar. Master client consultation, tactical drafting, registry procedures, oral advocacy, and modern chamber systems on a state-of-the-art AI LMS platform.",
+    heroLead: "Learn Directly from the Bench and the Bar. Instruction by Retired Judges, Senior Counsel, and Elite Currently Practicing Advocates. Master client consultation, tactical drafting, registry procedures, oral advocacy, and modern chamber systems on a state-of-the-art AI LMS platform.",
     ecosystemDescription: "No chaotic travel. No unstructured guesswork. No waiting 5 to 7 years in the shadows of a senior's chamber just to learn basic filing and courtroom maneuvering. This is a modern, high-precision legal practice incubator where the syllabus is dictated by the people who run the courts. Through cinema-grade 4K procedural walk-throughs, tactical case dissections, battle-tested pleading templates, and weekly live masterclasses led by former judicial officers and top practitioners, you master the unwritten rules of trial and appellate advocacy directly from your office.",
     facultyBenchInfo: [
       {
@@ -185,8 +392,8 @@ export const COURSE_DATA = {
     ],
     commitment: {
       title: "🛡️ PRACTICE ACCELERATION COMMITMENT",
-      subtitle: "Invest with Total Professional Confidence.",
-      text: "We stand firmly behind the transformative rigor of our advocacy curriculum. Enrolled advocates who complete 100% of prescribed 4K procedural modules, attend weekly live clinics led by judges & practitioners, and submit core drafting portfolios qualify for our complete Satisfaction & Practice Elevation Guarantee.",
+      subtitle: "Invest with Total Professional Confidence — Satisfaction & Practice Elevation Guarantee",
+      text: "We stand firmly behind the transformative rigor of our advocacy curriculum. Enrolled advocates who complete 100% of prescribed 4K procedural modules, attend weekly live clinics led by judges & practitioners, submit core drafting portfolios, and implement chamber systems qualify for our complete Satisfaction & Practice Elevation Guarantee.",
       criteria: [
         "Complete LMS Engagement with Core 4K Practice Modules",
         "Attendance in Weekly Saturday Live Advocacy Clinics",
@@ -233,7 +440,7 @@ export const COURSE_DATA = {
       {
         title: "Flexible 5-Month Easy EMI",
         price: "₹10,000 × 5 Months = ₹50,000 Total",
-        note: "(Inclusive of GST — Automated digital approval & zero paperwork)"
+        note: "(Inclusive of GST — Automated digital approval & zero paperwork friction)"
       }
     ],
     heroLead: "Living thousands of miles away in the Gulf, Europe, the UK, or the Americas shouldn’t mean leaving your life's earnings vulnerable to fraud, encroachment, or family friction.",
@@ -300,7 +507,7 @@ export const COURSE_DATA = {
     commitment: {
       title: "🛡️ 100% LEGAL EMPOWERMENT COMMITMENT",
       subtitle: "Invest in Complete Peace of Mind.",
-      text: "Any participant who completes all prescribed 4K modules, attends weekly live clinics, and implements our property risk audit who does not gain absolute clarity and practical confidence qualifies for our complete Satisfaction & Empowerment Guarantee.",
+      text: "Any participant who completes all prescribed 4K modules, attends weekly live clinics, and implements our property risk assessment audit within their family portfolio who does not gain absolute clarity and practical confidence in managing their Indian legal affairs qualifies for our complete Satisfaction & Empowerment Guarantee.",
       criteria: [
         "Complete LMS Engagement with Core 4K Modules",
         "Attendance in Weekly Saturday Interactive Clinics",
@@ -340,7 +547,7 @@ export const COURSE_DATA = {
       {
         title: "Full Upfront Payment (Save ₹7,000)",
         price: "₹18,000",
-        note: "(One-Time Inclusive of GST — Lock in immediate, comprehensive access)"
+        note: "(One-Time Inclusive of GST — Lock in immediate, comprehensive access at highest-value rate)"
       },
       {
         title: "Flexible 6-Month Easy EMI",
@@ -413,7 +620,7 @@ export const COURSE_DATA = {
     commitment: {
       title: "🛡️ 100% BUSINESS EMPOWERMENT COMMITMENT",
       subtitle: "Invest in Complete Commercial Security.",
-      text: "Any founder or business owner who completes all prescribed 4K modules, attends weekly live clinics, and implements our business compliance audit who does not gain absolute clarity and practical confidence qualifies for our complete Satisfaction & Empowerment Guarantee.",
+      text: "Any founder or business owner who completes all prescribed 4K modules, attends weekly live clinics, and implements our business compliance audit within their enterprise who does not gain absolute clarity and practical confidence in managing their company’s legal affairs qualifies for our complete Satisfaction & Empowerment Guarantee.",
       criteria: [
         "Complete LMS Engagement with Core 4K Modules",
         "Attendance in Weekly Saturday Interactive Clinics",
@@ -436,84 +643,6 @@ export const COURSE_DATA = {
       "Early-stage startup founders preparing for incorporation, co-founder equity allocation, or funding.",
       "Small business owners and solo entrepreneurs seeking to draft ironclad vendor and client contracts.",
       "Growing companies wanting to ensure full labor, POSH, and corporate regulatory compliance."
-    ]
-  },
-
-  klee: {
-    id: "klee",
-    badge: "KLEE 2027 FLAGSHIP",
-    title: "KLEE 2027 Super Batch",
-    subtitle: "India's Most Premium KLEE Coaching Experience. 9-Month Transformation Program.",
-    tagline: "Don't Just Prepare for KLEE. Prepare for the Career That Follows.",
-    statusBadge: "🔥 ADMISSIONS OPEN • 8 SEATS REMAINING",
-    shortDescription: "Only 15 Students Per Batch (Only 10 Batches/Year across India). 300+ Hours Recorded + 3 Live Classes/Wk, 1,00,000+ Qs Bank, 250 CBT Mock Exams & 100% Refund Commitment Policy*.",
-    collaboration: "",
-    investmentSummary: "₹1,00,000 (Inclusive of GST)",
-    investmentDetails: [
-      {
-        title: "KLEE 2027 Flagship Super Batch",
-        price: "₹1,00,000",
-        note: "(Inclusive of GST — Complete 9-Month Transformation Ecosystem)"
-      }
-    ],
-    heroLead: "Kerala's most serious and elite law entrance coaching (KLEE) & law practice ecosystem. Don't Just Prepare for KLEE. Prepare for the Career That Follows.",
-    ecosystemDescription: "Designed for high-performing legal aspirants targeting Government Law Colleges in Kerala. Experience small-batch coaching (strictly 15 students per batch), AI-driven weak area tracking, 15 years' solved KLEE papers, and 1-on-1 ranker mentorship.",
-    whyEnroll: "Because KLEE is a speed & accuracy computer-based test where precision under pressure determines your college rank.",
-    accessPoints: [
-      "Only 15 Students Per Batch (Only 10 Batches/Year across India)",
-      "300+ Hours Recorded + 3 Live Interactive Classes Every Week",
-      "1,00,000+ Practice Qs + 250 Full-Length CBT Mock Exams",
-      "Previous 15 Years' Solved KLEE Papers & Trend Mapping",
-      "AI-Powered Weak Area Alert System for targeted accuracy",
-      "Personal Academic Mentor & 1-on-1 Performance Reviews",
-      "100% Tuition Fee Refund Commitment Policy*"
-    ],
-    weeklyModel: [
-      { day: "Monday to Friday", desc: "🎥 Self-Paced 4K Visual Lessons & Daily Sectional Speed Mock Drills" },
-      { day: "Wednesday & Friday", desc: "🎙 Live Interactive Problem Solving & Legal Aptitude Masterclasses" },
-      { day: "Saturday", desc: "📝 Weekly Full-Length CBT Mock Examination (120 Qs / 360 Marks)" },
-      { day: "Sunday", desc: "📊 1-on-1 Academic Mentor Audit & AI Accuracy Analytics Review" }
-    ],
-    curriculumVault: [
-      { title: "Aptitude for Legal Studies (126 Marks)", desc: "Legal principles, reasoning, legal maxims, BNS/IPC basics, Indian Constitution & landmark precedents." },
-      { title: "General English (108 Marks)", desc: "Reading comprehension, vocabulary, grammar, idioms & legal phrases." },
-      { title: "GK & Current Affairs (81 Marks)", desc: "Polity, history, international legal conventions, geography & national news." },
-      { title: "Arithmetic & Logic (45 Marks)", desc: "Logical reasoning, blood relations, series, data interpretation & quantitative speed math." }
-    ],
-    aiLmsFeatures: [
-      "Real-time speed & accuracy metrics on legal principle questions",
-      "Identification of time traps during CBT mock simulations",
-      "Targeted revision sets for low-accuracy subtopics",
-      "Comparative class ranker trajectory tracking"
-    ],
-    mentorship: [
-      "1-on-1 weekly rank audit calls with KLEE top rankers",
-      "Personalized time-table and daily question targets",
-      "Dedicated Whatsapp doubt clearance desk with sub-2 hour resolution time"
-    ],
-    commitment: {
-      title: "🛡️ 100% TUITION FEE REFUND COMMITMENT POLICY*",
-      subtitle: "Zero Financial Risk.",
-      text: "Students who complete all published criteria (90%+ attendance, all mock tests attempted, assignments submitted) and do not secure admission to a Government Law College through KLEE qualify for a 100% tuition fee refund.",
-      criteria: [
-        "90%+ Attendance in Live Classes",
-        "Completion of 9-Month Ecosystem",
-        "Attempting All Prescribed CBT Mock Exams",
-        "Submission of Assignments & Performance Reviews",
-        "Official Appearance in University Entrance Exam"
-      ]
-    },
-    whatMakesDifferent: [
-      "Strict Scarcity: Max 15 Students per Batch for Ultra-Personalized Attention",
-      "300+ Hours Recorded + 3 Live Classes Weekly",
-      "250 Full-Length CBT Mock Exams with AI Analytics",
-      "1,00,000+ Question Bank specifically tuned to KLEE patterns",
-      "100% Tuition Fee Refund Commitment Policy*"
-    ],
-    whoShouldEnroll: [
-      "Aspirants targeting 3-Year or 5-Year LL.B admissions in Kerala Government Law Colleges.",
-      "Students seeking elite rank-level preparation without overcrowded 200+ student coaching rooms.",
-      "Candidates who want data-driven AI tracking to fix speed and accuracy bottlenecks."
     ]
   }
 };

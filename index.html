@@ -1,22 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Indian Law School (ILS) | India's Most Premium Law Learning Platform</title>
-  <meta name="description" content="India's most premium law learning platform now in Kerala. KLEE 2027 Super Batch, Law Subject Mastery, Advocacy Practice, NRI & MSME Legal Programs.">
-  
+  <meta name="description"
+    content="India's most premium law learning platform now in Kerala. KLEE 2027 Super Batch, Law Subject Mastery, Advocacy Practice, NRI & MSME Legal Programs.">
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet">
+
   <!-- FontAwesome Icons CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
+
   <!-- Custom Modular CSS System -->
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css?v=4.0">
 </head>
+
 <body style="background-color: #000000 !important; color: #ffffff;">
 
   <!-- Particle Background Canvas -->
@@ -47,743 +52,847 @@
       </ul>
 
       <div style="display: flex; align-items: center; gap: 1rem;">
+        <a href="#home" class="btn btn-glass btn-sm" id="nav-back-button"
+          style="display: none; color: var(--gold-light); border-color: var(--gold-border);">
+          <i class="fa-solid fa-arrow-left"></i> Main Platform
+        </a>
         <button class="btn btn-gold btn-sm open-enroll-modal" data-course="KLEE 2027 Flagship Super Batch">
           <i class="fa-solid fa-graduation-cap"></i> Secure Your Spot
         </button>
-        <button class="mobile-menu-btn" id="mobile-toggle" aria-label="Toggle navigation menu"><i class="fa-solid fa-bars"></i></button>
+        <button class="mobile-menu-btn" id="mobile-toggle" aria-label="Toggle navigation menu"><i
+            class="fa-solid fa-bars"></i></button>
       </div>
     </div>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="container">
-      <div class="hero-grid">
-        <!-- Hero Left: Content -->
-        <div class="hero-content scroll-reveal-left">
-          <div class="ticker-badge pulse-badge-glow">
-            <span class="pulse-dot"></span>
-            <span class="ticker-text">KLEE 2027 SUPER BATCH • APPLICATIONS NOW OPEN</span>
-          </div>
+  <!-- Main Homepage Landing View -->
+  <main id="main-landing-view">
 
-          <h1 class="hero-title">
-            India's Most Premium Law Learning Platform <span class="gradient-text">Now in Kerala.</span>
-          </h1>
-
-          <p class="hero-lead">
-            Kerala's most serious and elite law entrance coaching (KLEE) & law practice ecosystem.
-            <strong>Don't Just Prepare for KLEE. Prepare for the Career That Follows.</strong>
-          </p>
-
-          <div class="hero-cta-group">
-            <a href="#courses" class="btn btn-gold btn-lg">
-              <i class="fa-solid fa-rocket"></i> Explore Flagship Super Batch
-            </a>
-            <a href="#knowledge-hub" class="btn btn-glass btn-lg">
-              <i class="fa-solid fa-book-open"></i> Free Legal Resources & Blogs
-            </a>
-          </div>
-        </div>
-
-        <!-- Hero Right: Minimal Animated Glass Dashboard Widget -->
-        <div class="hero-media scroll-reveal-right">
-          <div class="hero-minimal-dashboard tri-border-card">
-            <!-- Top Bar: Live Status -->
-            <div class="dash-top-bar">
-              <div class="dash-status">
-                <span class="pulse-dot"></span>
-                <span class="dash-status-text">KLEE 2027 SUPER BATCH #3</span>
-              </div>
-              <span class="dash-pill-badge"><i class="fa-solid fa-fire"></i> 8 SEATS REMAINING</span>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <!-- Hero Left: Content -->
+          <div class="hero-content scroll-reveal-left">
+            <div class="ticker-badge pulse-badge-glow">
+              <span class="pulse-dot"></span>
+              <span class="ticker-text">KLEE 2027 SUPER BATCH • APPLICATIONS NOW OPEN</span>
             </div>
 
-            <!-- Main Dynamic Feature Highlights Grid -->
-            <div class="dash-metrics-grid">
-              <div class="dash-metric-card">
-                <div class="metric-icon"><i class="fa-solid fa-database"></i></div>
-                <div class="metric-info">
-                  <span class="metric-val">100K+</span>
-                  <span class="metric-lbl">Practice Qs Bank</span>
-                </div>
-              </div>
-              <div class="dash-metric-card">
-                <div class="metric-icon"><i class="fa-solid fa-shield-halved"></i></div>
-                <div class="metric-info">
-                  <span class="metric-val">100%</span>
-                  <span class="metric-lbl">Fee Refund Policy*</span>
-                </div>
-              </div>
-            </div>
+            <h1 class="hero-title">
+              India's Most Premium Law Learning Platform <span class="gradient-text">Now in Kerala.</span>
+            </h1>
 
-            <!-- Live Dynamic Feed / Ranker Ticker -->
-            <div class="dash-ticker-box">
-              <div class="ticker-label"><i class="fa-solid fa-circle-nodes"></i> RECENT CONFIRMED ADMISSIONS</div>
-              <div class="ranker-stream-wrapper">
-                <div class="ranker-stream-track" id="live-ranker-stream">
-                  <div class="ranker-stream-item">
-                    <div class="ranker-info">
-                      <span class="student-name">Ananya S. (Kochi)</span>
-                      <span class="student-program">KLEE 2027 Super Batch</span>
-                    </div>
-                    <span class="time-ago">2 mins ago</span>
-                  </div>
-                  <div class="ranker-stream-item">
-                    <div class="ranker-info">
-                      <span class="student-name">Rahul K. (Trivandrum)</span>
-                      <span class="student-program">Law Subject Mastery</span>
-                    </div>
-                    <span class="time-ago">14 mins ago</span>
-                  </div>
-                  <div class="ranker-stream-item">
-                    <div class="ranker-info">
-                      <span class="student-name">Dr. Faisal M. (Dubai, UAE)</span>
-                      <span class="student-program">NRI Legal Mastery</span>
-                    </div>
-                    <span class="time-ago">35 mins ago</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Quick Action Button -->
-            <button class="btn btn-gold open-enroll-modal" data-course="KLEE 2027 Flagship Super Batch" style="width: 100%;">
-              <i class="fa-solid fa-user-plus"></i> Claim Seat in Super Batch #3 &rarr;
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- Bottom Trust Bar (Scarcity Left, Refund Right - Perfectly Aligned) -->
-      <div class="hero-trust-bar-grid scroll-reveal-pop" style="margin-top: 2rem;">
-        <!-- Left: Seats Ticker Card -->
-        <div class="seats-ticker-card tri-border-card">
-          <div class="ticker-header">
-            <span class="ticker-title"><i class="fa-solid fa-users-rectangle"></i> Exclusive Super Batch Scarcity</span>
-            <span style="font-size: 0.8rem; color: var(--gold-light); font-weight: 600;"><i class="fa-solid fa-circle-check"></i> Admissions Open</span>
-          </div>
-          <div class="ticker-stats">
-            <div class="stat-item">
-              <div class="stat-num" id="seats-remaining-count">15</div>
-              <div class="stat-desc">Students Per Batch</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-num">10</div>
-              <div class="stat-desc">Super Batches / Year</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-num">150</div>
-              <div class="stat-desc">Students Across India</div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Right: 100% Refund Policy Badge Card -->
-        <div class="hero-refund-card tri-border-card">
-          <div class="refund-card-body">
-            <div class="badge-icon"><i class="fa-solid fa-shield-halved"></i></div>
-            <div class="badge-info">
-              <h4 style="color: var(--gold-light); font-family: var(--font-sans); font-size: 1.05rem; font-weight: 700; margin-bottom: 0.25rem;">100% Refund Policy*</h4>
-              <p style="color: var(--white-muted); font-size: 0.85rem; margin: 0;">Admission Commitment Guaranteed</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Highlights Bar -->
-  <section class="highlights-bar">
-    <div class="container">
-      <div class="highlights-grid scroll-reveal-pop">
-        <div class="highlight-box">
-          <div class="highlight-icon"><i class="fa-solid fa-laptop-code"></i></div>
-          <div class="highlight-text">
-            <h5>100% Online Access</h5>
-            <p>Learn anytime, anywhere</p>
-          </div>
-        </div>
-        <div class="highlight-box">
-          <div class="highlight-icon"><i class="fa-solid fa-award"></i></div>
-          <div class="highlight-text">
-            <h5>Top Rankers Faculty</h5>
-            <p>Guided by legal experts</p>
-          </div>
-        </div>
-        <div class="highlight-box">
-          <div class="highlight-icon"><i class="fa-solid fa-video"></i></div>
-          <div class="highlight-text">
-            <h5>300+ Hours Recorded</h5>
-            <p>Complete masterclass library</p>
-          </div>
-        </div>
-        <div class="highlight-box">
-          <div class="highlight-icon"><i class="fa-solid fa-file-pen"></i></div>
-          <div class="highlight-text">
-            <h5>250 Full-Length Mocks</h5>
-            <p>Real examination CBT simulation</p>
-          </div>
-        </div>
-        <div class="highlight-box">
-          <div class="highlight-icon"><i class="fa-solid fa-brain"></i></div>
-          <div class="highlight-text">
-            <h5>AI Weak Area Alerts</h5>
-            <p>Continuous accuracy tracking</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Flagship Offerings / Courses Section -->
-  <section class="courses-section" id="courses">
-    <div class="container">
-      <div class="section-header scroll-reveal">
-        <span class="subhead-label">ELITE ACADEMIC PROGRAMS</span>
-        <h2 class="section-title">Master the Law. <span class="gradient-text">Master Your Future.</span></h2>
-        <p class="section-subtitle">Select from our premier entrance, university subject mastery, advocacy practice, or specialized NRI & Business law programs.</p>
-      </div>
-
-      <div class="course-tabs scroll-reveal-pop">
-        <button class="tab-btn active" data-filter="all">All Programs</button>
-        <button class="tab-btn" data-filter="klee">KLEE 2027 Super Batch</button>
-        <button class="tab-btn" data-filter="mastery">Law Subject Mastery</button>
-        <button class="tab-btn" data-filter="advocacy">Advanced Advocacy</button>
-        <button class="tab-btn" data-filter="nri">NRI Legal Mastery</button>
-        <button class="tab-btn" data-filter="msme">MSME & Business Law</button>
-      </div>
-
-      <div class="courses-grid scroll-reveal">
-        
-        <!-- Course 1: KLEE 2027 Super Batch -->
-        <div class="course-card-wrapper" data-category="klee">
-          <div class="glass-panel course-card tri-border-card">
-            <div>
-              <span class="course-badge">KLEE 2027 FLAGSHIP</span>
-              <h3 class="course-title">KLEE 2027 Super Batch</h3>
-              <p class="course-card-desc">India's Most Premium KLEE Coaching Experience. 9-Month Transformation Program.</p>
-
-              <div class="course-price-tag">₹1,00,000 <span class="course-price-sub">(Inclusive of GST)</span></div>
-
-              <ul class="course-features-list">
-                <li><span class="check-icon">✓</span> <span><strong>Only 15 Students Per Batch</strong> (Only 10 Batches/Year across India)</span></li>
-                <li><span class="check-icon">✓</span> <span><strong>300+ Hours Recorded</strong> + 3 Live Interactive Classes Every Week</span></li>
-                <li><span class="check-icon">✓</span> <span><strong>1,00,000+ Practice Qs</strong> + 250 Full-Length CBT Mock Exams</span></li>
-                <li><span class="check-icon">✓</span> <span><strong>Previous 15 Years'</strong> Solved KLEE Papers & Trend Mapping</span></li>
-                <li><span class="check-icon">✓</span> <span><strong>100% Tuition Fee Refund Commitment Policy*</strong></span></li>
-              </ul>
-            </div>
-
-            <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-top: 1.5rem;">
-              <button class="btn btn-gold explore-course-btn" data-course-id="klee" style="width: 100%;">
-                <i class="fa-solid fa-magnifying-glass-chart"></i> Explore Super Batch Details &rarr;
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Course 2: Law Subject Mastery Program -->
-        <div class="course-card-wrapper" data-category="mastery">
-          <div class="glass-panel course-card tri-border-card">
-            <div>
-              <span class="course-badge">LL.B. DEGREE MASTERY</span>
-              <h3 class="course-title">Law Subject Mastery Program</h3>
-              <p class="course-card-desc">Available in Malayalam & English. Don't just pass your degree—build doctrinal mastery of a High Court advocate.</p>
-
-              <div class="course-price-tag">₹1,25,000 <span class="course-price-sub">Flagship | Or ₹5,000+GST Per Subject</span></div>
-
-              <ul class="course-features-list">
-                <li><span class="check-icon">✓</span> <span><strong>Complete LL.B. Library:</strong> 25+ Core & Elective Subjects Covered</span></li>
-                <li><span class="check-icon">✓</span> <span><strong>Const Law, BNS/IPC, BNSS/CrPC, CPC, Evidence, Contracts, Torts</strong></span></li>
-                <li><span class="check-icon">✓</span> <span><strong>500+ Hours 4K Motion Visuals</strong> (Malayalam & English)</span></li>
-                <li><span class="check-icon">✓</span> <span><strong>Weekly Live Interactive Clinic & Evaluated Briefs</strong></span></li>
-                <li><span class="check-icon">✓</span> <span><strong>100% First Class Academic Performance Commitment*</strong></span></li>
-              </ul>
-            </div>
-
-            <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-top: 1.5rem;">
-              <button class="btn btn-gold explore-course-btn" data-course-id="mastery" style="width: 100%;">
-                <i class="fa-solid fa-book-bookmark"></i> Explore Law Mastery Details &rarr;
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Course 3: Advanced Advocacy & Legal Practice Mastery -->
-        <div class="course-card-wrapper" data-category="advocacy">
-          <div class="glass-panel course-card tri-border-card">
-            <div>
-              <span class="course-badge">PRACTICE MASTERY</span>
-              <h3 class="course-title">Advanced Advocacy & Legal Practice</h3>
-              <p class="course-card-desc">For Advocates in Practice (1–3 Yrs). Instruction by Retired Judges, Senior Counsel & Active Advocates.</p>
-
-              <div class="course-price-tag">₹80,000 <span class="course-price-sub">(Inclusive of GST)</span></div>
-
-              <ul class="course-features-list">
-                <li><span class="check-icon">✓</span> <span><strong>Learn From Both Sides of the Bench:</strong> Retired Judges & Senior Counsel</span></li>
-                <li><span class="check-icon">✓</span> <span><strong>Practical Drafting & Pleading Vault:</strong> Bail, Writs, Plaints, Sec 138 Notices</span></li>
-                <li><span class="check-icon">✓</span> <span><strong>High-Stakes Hearing Prep:</strong> Bench psychology & cross-examination</span></li>
-                <li><span class="check-icon">✓</span> <span><strong>Registry Defect Bypass & Digital Chamber Systems</strong></span></li>
-                <li><span class="check-icon">✓</span> <span><strong>100% Practice Elevation Commitment*</strong></span></li>
-              </ul>
-            </div>
-
-            <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-top: 1.5rem;">
-              <button class="btn btn-gold explore-course-btn" data-course-id="advocacy" style="width: 100%;">
-                <i class="fa-solid fa-gavel"></i> Explore Advocacy Details &rarr;
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Course 4: NRI Full Legal Mastery -->
-        <div class="course-card-wrapper" data-category="nri">
-          <div class="glass-panel course-card tri-border-card">
-            <div>
-              <span class="course-badge">IN ASSOC. WITH VAKKEEL & ASSOCIATES</span>
-              <h3 class="course-title">NRI Full Legal Mastery</h3>
-              <p class="course-card-desc">For Malayali NRIs Worldwide (GCC, UK, USA, Europe). Protect ancestral land, wealth & rights in Kerala.</p>
-
-              <div class="course-price-tag">₹40,000 <span class="course-price-sub">Upfront (Save ₹10k) | Or 5-Month EMI ₹10k/mo</span></div>
-
-              <ul class="course-features-list">
-                <li><span class="check-icon">✓</span> <span><strong>Kerala Property Law & Title Verification:</strong> 30-yr EC & mutation</span></li>
-                <li><span class="check-icon">✓</span> <span><strong>Power of Attorney (PoA) Masterclass:</strong> Embassy attestation & revocation</span></li>
-                <li><span class="check-icon">✓</span> <span><strong>FEMA, NRE/NRO Compliance & Succession/Will Planning</strong></span></li>
-                <li><span class="check-icon">✓</span> <span><strong>Emergency Anti-Encroachment Rapid Action Plans</strong></span></li>
-                <li><span class="check-icon">✓</span> <span><strong>Downloadable Attorney-Drafted POA & Will Vault</strong></span></li>
-              </ul>
-            </div>
-
-            <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-top: 1.5rem;">
-              <button class="btn btn-gold explore-course-btn" data-course-id="nri" style="width: 100%;">
-                <i class="fa-solid fa-shield-halved"></i> Explore NRI Legal Details &rarr;
-              </button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Course 5: Full Legal Mastery for MSMEs & Startups -->
-        <div class="course-card-wrapper" data-category="msme">
-          <div class="glass-panel course-card tri-border-card">
-            <div>
-              <span class="course-badge">IN ASSOC. WITH VAKKEEL & ASSOCIATES</span>
-              <h3 class="course-title">Legal Mastery for MSMEs & Startups</h3>
-              <p class="course-card-desc">For MSME owners, startup founders & entrepreneurs. Build on an unshakeable corporate foundation.</p>
-
-              <div class="course-price-tag">₹18,000 <span class="course-price-sub">Upfront (Save ₹7k) | Or 6-Month Easy EMI</span></div>
-
-              <ul class="course-features-list">
-                <li><span class="check-icon">✓</span> <span><strong>Business Structure & ROC Compliance:</strong> Pvt Ltd vs LLP vs Sole Prop</span></li>
-                <li><span class="check-icon">✓</span> <span><strong>Commercial Contracts & NDAs:</strong> MSA, SOW, Founder SHA agreements</span></li>
-                <li><span class="check-icon">✓</span> <span><strong>MSME Samadhaan Payment Recovery & Sec 138 Action Plans</strong></span></li>
-                <li><span class="check-icon">✓</span> <span><strong>Intellectual Property:</strong> Trademark, Copyright & Trade Secret protection</span></li>
-                <li><span class="check-icon">✓</span> <span><strong>Downloadable Enterprise-Grade Contract Vault</strong></span></li>
-              </ul>
-            </div>
-
-            <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-top: 1.5rem;">
-              <button class="btn btn-gold explore-course-btn" data-course-id="msme" style="width: 100%;">
-                <i class="fa-solid fa-briefcase"></i> Explore MSME Legal Details &rarr;
-              </button>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Refund Policy Banner Box -->
-      <div class="refund-policy-box" id="commitment">
-        <div class="refund-grid">
-          <div>
-            <span class="subhead-label">TRANSPARENT RISK REDUCTION</span>
-            <h3 style="font-family: var(--font-serif); font-size: 2rem; color: #fff; margin-bottom: 1rem;">
-              🛡️ Admission Commitment Policy (100% Fee Refund)
-            </h3>
-            <p style="color: var(--white-muted); line-height: 1.7;">
-              We stand firmly behind the quality of our Flagship Super Batch preparation. Students who satisfy all published eligibility requirements and do not secure admission to a Government Law College through KLEE qualify for a <strong>100% tuition fee refund</strong>, subject to complete terms and conditions.
+            <p class="hero-lead">
+              Kerala's most serious and elite law entrance coaching (KLEE) & law practice ecosystem.
+              <strong>Don't Just Prepare for KLEE. Prepare for the Career That Follows.</strong>
             </p>
-            <div id="refund-status-badge" style="margin-top: 1.5rem; display: inline-block; padding: 0.5rem 1.25rem; border-radius: 30px; border: 1px solid var(--gold-primary); font-weight: 700; font-size: 0.85rem; background: rgba(212, 175, 55, 0.15); color: var(--gold-light);">
-              ⚠️ COMPLETE ALL CRITERIA TO LOCK COMMITMENT
+
+            <div class="hero-cta-group">
+              <a href="#courses" class="btn btn-gold btn-lg">
+                <i class="fa-solid fa-rocket"></i> Explore Flagship Super Batch
+              </a>
+              <a href="#knowledge-hub" class="btn btn-glass btn-lg">
+                <i class="fa-solid fa-book-open"></i> Free Legal Resources & Blogs
+              </a>
             </div>
           </div>
 
-          <div>
-            <h4 style="font-family: var(--font-sans); color: var(--gold-light); font-size: 1rem; margin-bottom: 0.75rem;">
-              Interactive Eligibility Tracker (Click to Verify Criteria):
-            </h4>
-            <div class="checklist-items">
-              <label class="checklist-item">
-                <input type="checkbox" class="refund-checkbox"> 90%+ Attendance
-              </label>
-              <label class="checklist-item">
-                <input type="checkbox" class="refund-checkbox"> Full 9-Month Program
-              </label>
-              <label class="checklist-item">
-                <input type="checkbox" class="refund-checkbox"> Daily Exams Attempted
-              </label>
-              <label class="checklist-item">
-                <input type="checkbox" class="refund-checkbox"> Required Mock Tests
-              </label>
-              <label class="checklist-item">
-                <input type="checkbox" class="refund-checkbox"> Assignments Submitted
-              </label>
-              <label class="checklist-item">
-                <input type="checkbox" class="refund-checkbox"> Study Plan Followed
-              </label>
-              <label class="checklist-item" style="grid-column: 1/-1;">
-                <input type="checkbox" class="refund-checkbox"> Appearance in Official KLEE Examination
-              </label>
+          <!-- Hero Right: Minimal Animated Glass Dashboard Widget -->
+          <div class="hero-media scroll-reveal-right">
+            <div class="hero-minimal-dashboard tri-border-card">
+              <!-- Top Bar: Live Status -->
+              <div class="dash-top-bar">
+                <div class="dash-status">
+                  <span class="pulse-dot"></span>
+                  <span class="dash-status-text">KLEE 2027 SUPER BATCH #3</span>
+                </div>
+                <span class="dash-pill-badge"><i class="fa-solid fa-fire"></i> 8 SEATS REMAINING</span>
+              </div>
+
+              <!-- Main Dynamic Feature Highlights Grid -->
+              <div class="dash-metrics-grid">
+                <div class="dash-metric-card">
+                  <div class="metric-icon"><i class="fa-solid fa-database"></i></div>
+                  <div class="metric-info">
+                    <span class="metric-val">100K+</span>
+                    <span class="metric-lbl">Practice Qs Bank</span>
+                  </div>
+                </div>
+                <div class="dash-metric-card">
+                  <div class="metric-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                  <div class="metric-info">
+                    <span class="metric-val">100%</span>
+                    <span class="metric-lbl">Fee Refund Policy*</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Live Dynamic Feed / Ranker Ticker -->
+              <div class="dash-ticker-box">
+                <div class="ticker-label"><i class="fa-solid fa-circle-nodes"></i> RECENT CONFIRMED ADMISSIONS</div>
+                <div class="ranker-stream-wrapper">
+                  <div class="ranker-stream-track" id="live-ranker-stream">
+                    <div class="ranker-stream-item">
+                      <div class="ranker-info">
+                        <span class="student-name">Ananya S. (Kochi)</span>
+                        <span class="student-program">KLEE 2027 Super Batch</span>
+                      </div>
+                      <span class="time-ago">2 mins ago</span>
+                    </div>
+                    <div class="ranker-stream-item">
+                      <div class="ranker-info">
+                        <span class="student-name">Rahul K. (Trivandrum)</span>
+                        <span class="student-program">Law Subject Mastery</span>
+                      </div>
+                      <span class="time-ago">14 mins ago</span>
+                    </div>
+                    <div class="ranker-stream-item">
+                      <div class="ranker-info">
+                        <span class="student-name">Dr. Faisal M. (Dubai, UAE)</span>
+                        <span class="student-program">NRI Legal Mastery</span>
+                      </div>
+                      <span class="time-ago">35 mins ago</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Quick Action Button -->
+              <button class="btn btn-gold open-enroll-modal" data-course="KLEE 2027 Flagship Super Batch"
+                style="width: 100%;">
+                <i class="fa-solid fa-user-plus"></i> Claim Seat in Super Batch #3 &rarr;
+              </button>
             </div>
-            <div id="refund-progress-text" style="font-size: 0.8rem; color: var(--white-muted); margin-top: 0.75rem; text-align: right;">
-              0 of 7 Criteria Satisfied
+          </div>
+        </div>
+
+        <!-- Bottom Trust Bar (Scarcity Left, Refund Right - Perfectly Aligned) -->
+        <div class="hero-trust-bar-grid scroll-reveal-pop" style="margin-top: 2rem;">
+          <!-- Left: Seats Ticker Card -->
+          <div class="seats-ticker-card tri-border-card">
+            <div class="ticker-header">
+              <span class="ticker-title"><i class="fa-solid fa-users-rectangle"></i> Exclusive Super Batch
+                Scarcity</span>
+              <span style="font-size: 0.8rem; color: var(--gold-light); font-weight: 600;"><i
+                  class="fa-solid fa-circle-check"></i> Admissions Open</span>
+            </div>
+            <div class="ticker-stats">
+              <div class="stat-item">
+                <div class="stat-num" id="seats-remaining-count">15</div>
+                <div class="stat-desc">Students Per Batch</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-num">10</div>
+                <div class="stat-desc">Super Batches / Year</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-num">150</div>
+                <div class="stat-desc">Students Across India</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: 100% Refund Policy Badge Card -->
+          <div class="hero-refund-card tri-border-card">
+            <div class="refund-card-body">
+              <div class="badge-icon"><i class="fa-solid fa-shield-halved"></i></div>
+              <div class="badge-info">
+                <h4
+                  style="color: var(--gold-light); font-family: var(--font-sans); font-size: 1.05rem; font-weight: 700; margin-bottom: 0.25rem;">
+                  100% Refund Policy*</h4>
+                <p style="color: var(--white-muted); font-size: 0.85rem; margin: 0;">Admission Commitment Guaranteed</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
+    </section>
 
-    </div>
-  </section>
+    <!-- Highlights Bar -->
+    <section class="highlights-bar">
+      <div class="container">
+        <div class="highlights-grid scroll-reveal-pop">
+          <div class="highlight-box">
+            <div class="highlight-icon"><i class="fa-solid fa-laptop-code"></i></div>
+            <div class="highlight-text">
+              <h5>100% Online Access</h5>
+              <p>Learn anytime, anywhere</p>
+            </div>
+          </div>
+          <div class="highlight-box">
+            <div class="highlight-icon"><i class="fa-solid fa-award"></i></div>
+            <div class="highlight-text">
+              <h5>Top Rankers Faculty</h5>
+              <p>Guided by legal experts</p>
+            </div>
+          </div>
+          <div class="highlight-box">
+            <div class="highlight-icon"><i class="fa-solid fa-video"></i></div>
+            <div class="highlight-text">
+              <h5>300+ Hours Recorded</h5>
+              <p>Complete masterclass library</p>
+            </div>
+          </div>
+          <div class="highlight-box">
+            <div class="highlight-icon"><i class="fa-solid fa-file-pen"></i></div>
+            <div class="highlight-text">
+              <h5>250 Full-Length Mocks</h5>
+              <p>Real examination CBT simulation</p>
+            </div>
+          </div>
+          <div class="highlight-box">
+            <div class="highlight-icon"><i class="fa-solid fa-brain"></i></div>
+            <div class="highlight-text">
+              <h5>AI Weak Area Alerts</h5>
+              <p>Continuous accuracy tracking</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <!-- AI Weak Area Alert System Widget Section -->
-  <section class="ai-widget-section" id="ai-dashboard">
-    <div class="container">
-      <div class="glass-panel ai-widget-card tri-border-card">
-        <div class="section-header" style="margin-bottom: 2rem;">
-          <span class="subhead-label">PROPRIETARY TECHNOLOGY</span>
-          <h2 class="section-title">AI-Powered <span class="gradient-text">Weak Area Alert System</span></h2>
-          <p class="section-subtitle">Our intelligent system continuously tracks your learning trajectory, identifying weak subjects, accuracy drops, and time management bottlenecks before exam day.</p>
+    <!-- Flagship Offerings / Courses Section -->
+    <section class="courses-section" id="courses">
+      <div class="container">
+        <div class="section-header scroll-reveal">
+          <span class="subhead-label">ELITE ACADEMIC PROGRAMS</span>
+          <h2 class="section-title">Master the Law. <span class="gradient-text">Master Your Future.</span></h2>
+          <p class="section-subtitle">Select from our premier entrance, university subject mastery, advocacy practice,
+            or specialized NRI & Business law programs.</p>
         </div>
 
-        <div class="ai-demo-grid">
-          <div class="ai-controls">
-            <h4 style="font-family: var(--font-sans); color: var(--gold-light); font-size: 0.95rem; text-transform: uppercase; letter-spacing: 1px;">
-              Select Topic to Simulate AI Diagnostics:
-            </h4>
-            
-            <button class="subject-select-btn active" data-subject="admin-law">
-              <span>🏛️ Administrative Law & Judicial Review</span>
-              <i class="fa-solid fa-chevron-right"></i>
-            </button>
-            <button class="subject-select-btn" data-subject="const-law">
-              <span>📜 Constitutional Fundamental Rights</span>
-              <i class="fa-solid fa-chevron-right"></i>
-            </button>
-            <button class="subject-select-btn" data-subject="legal-reasoning">
-              <span>⚖️ Legal Aptitude & Principle-Fact Qs</span>
-              <i class="fa-solid fa-chevron-right"></i>
-            </button>
-            <button class="subject-select-btn" data-subject="criminal-law">
-              <span>🛡️ Bharatiya Nyaya Sanhita (BNS) Defences</span>
-              <i class="fa-solid fa-chevron-right"></i>
-            </button>
+        <div class="course-tabs scroll-reveal-pop">
+          <button class="tab-btn active" data-filter="all">All Programs</button>
+          <button class="tab-btn" data-filter="klee">KLEE 2027 Super Batch</button>
+          <button class="tab-btn" data-filter="mastery">Law Subject Mastery</button>
+          <button class="tab-btn" data-filter="advocacy">Advanced Advocacy</button>
+          <button class="tab-btn" data-filter="nri">NRI Legal Mastery</button>
+          <button class="tab-btn" data-filter="msme">MSME & Business Law</button>
+        </div>
+
+        <div class="courses-grid scroll-reveal">
+
+          <!-- Course 1: KLEE 2027 Super Batch -->
+          <div class="course-card-wrapper" data-category="klee">
+            <div class="glass-panel course-card tri-border-card">
+              <div>
+                <span class="course-badge">KLEE 2027 FLAGSHIP</span>
+                <h3 class="course-title">KLEE 2027 Super Batch</h3>
+                <p class="course-card-desc">India's Most Premium KLEE Coaching Experience. 9-Month Transformation
+                  Program.</p>
+
+                <div class="course-price-tag">₹1,00,000 <span class="course-price-sub">(Inclusive of GST)</span></div>
+
+                <ul class="course-features-list">
+                  <li><span class="check-icon">✓</span> <span><strong>Only 15 Students Per Batch</strong> (Only 10
+                      Batches/Year across India)</span></li>
+                  <li><span class="check-icon">✓</span> <span><strong>300+ Hours Recorded</strong> + 3 Live Interactive
+                      Classes Every Week</span></li>
+                  <li><span class="check-icon">✓</span> <span><strong>1,00,000+ Practice Qs</strong> + 250 Full-Length
+                      CBT Mock Exams</span></li>
+                  <li><span class="check-icon">✓</span> <span><strong>Previous 15 Years'</strong> Solved KLEE Papers &
+                      Trend Mapping</span></li>
+                  <li><span class="check-icon">✓</span> <span><strong>100% Tuition Fee Refund Commitment
+                        Policy*</strong></span></li>
+                </ul>
+              </div>
+
+              <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-top: 1.5rem;">
+                <button class="btn btn-gold explore-course-btn" data-course-id="klee" style="width: 100%;">
+                  <i class="fa-solid fa-magnifying-glass-chart"></i> Explore Super Batch Details &rarr;
+                </button>
+              </div>
+            </div>
           </div>
 
-          <div class="analytics-display">
-            <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+          <!-- Course 2: Law Subject Mastery Program -->
+          <div class="course-card-wrapper" data-category="mastery">
+            <div class="glass-panel course-card tri-border-card">
               <div>
-                <span id="ai-alert-badge" class="alert-badge">REVISION REQUIRED</span>
-                <h3 id="ai-subj-name" style="font-family: var(--font-sans); font-size: 1.4rem; color: #fff;">Administrative Law & Judicial Review</h3>
+                <span class="course-badge">LL.B. DEGREE MASTERY</span>
+                <h3 class="course-title">Law Subject Mastery Program</h3>
+                <p class="course-card-desc">Available in Malayalam & English. Don't just pass your degree—build
+                  doctrinal mastery of a High Court advocate.</p>
+
+                <div class="course-price-tag">₹1,25,000 <span class="course-price-sub">Flagship | Or ₹5,000+GST Per
+                    Subject</span></div>
+
+                <ul class="course-features-list">
+                  <li><span class="check-icon">✓</span> <span><strong>Complete LL.B. Library:</strong> 25+ Core &
+                      Elective Subjects Covered</span></li>
+                  <li><span class="check-icon">✓</span> <span><strong>Const Law, BNS/IPC, BNSS/CrPC, CPC, Evidence,
+                        Contracts, Torts</strong></span></li>
+                  <li><span class="check-icon">✓</span> <span><strong>500+ Hours 4K Motion Visuals</strong> (Malayalam &
+                      English)</span></li>
+                  <li><span class="check-icon">✓</span> <span><strong>Weekly Live Interactive Clinic & Evaluated
+                        Briefs</strong></span></li>
+                  <li><span class="check-icon">✓</span> <span><strong>100% First Class Academic Performance
+                        Commitment*</strong></span></li>
+                </ul>
               </div>
-              <div style="text-align: right;">
-                <div style="font-size: 0.75rem; color: var(--white-muted);">ACCURACY SCORE</div>
-                <div id="ai-subj-score" style="font-family: var(--font-serif); font-size: 2.2rem; font-weight: 800; color: var(--gold-primary);">58%</div>
+
+              <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-top: 1.5rem;">
+                <button class="btn btn-gold explore-course-btn" data-course-id="mastery" style="width: 100%;">
+                  <i class="fa-solid fa-book-bookmark"></i> Explore Law Mastery Details &rarr;
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Course 3: Advanced Advocacy & Legal Practice Mastery -->
+          <div class="course-card-wrapper" data-category="advocacy">
+            <div class="glass-panel course-card tri-border-card">
+              <div>
+                <span class="course-badge">PRACTICE MASTERY</span>
+                <h3 class="course-title">Advanced Advocacy & Legal Practice</h3>
+                <p class="course-card-desc">For Advocates in Practice (1–3 Yrs). Instruction by Retired Judges, Senior
+                  Counsel & Active Advocates.</p>
+
+                <div class="course-price-tag">₹80,000 <span class="course-price-sub">(Inclusive of GST)</span></div>
+
+                <ul class="course-features-list">
+                  <li><span class="check-icon">✓</span> <span><strong>Learn From Both Sides of the Bench:</strong>
+                      Retired Judges & Senior Counsel</span></li>
+                  <li><span class="check-icon">✓</span> <span><strong>Practical Drafting & Pleading Vault:</strong>
+                      Bail, Writs, Plaints, Sec 138 Notices</span></li>
+                  <li><span class="check-icon">✓</span> <span><strong>High-Stakes Hearing Prep:</strong> Bench
+                      psychology & cross-examination</span></li>
+                  <li><span class="check-icon">✓</span> <span><strong>Registry Defect Bypass & Digital Chamber
+                        Systems</strong></span></li>
+                  <li><span class="check-icon">✓</span> <span><strong>100% Practice Elevation
+                        Commitment*</strong></span></li>
+                </ul>
+              </div>
+
+              <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-top: 1.5rem;">
+                <button class="btn btn-gold explore-course-btn" data-course-id="advocacy" style="width: 100%;">
+                  <i class="fa-solid fa-gavel"></i> Explore Advocacy Details &rarr;
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Course 4: NRI Full Legal Mastery -->
+          <div class="course-card-wrapper" data-category="nri">
+            <div class="glass-panel course-card tri-border-card">
+              <div>
+                <span class="course-badge">IN ASSOC. WITH VAKKEEL & ASSOCIATES</span>
+                <h3 class="course-title">NRI Full Legal Mastery</h3>
+                <p class="course-card-desc">For Malayali NRIs Worldwide (GCC, UK, USA, Europe). Protect ancestral land,
+                  wealth & rights in Kerala.</p>
+
+                <div class="course-price-tag">₹40,000 <span class="course-price-sub">Upfront (Save ₹10k) | Or 5-Month
+                    EMI ₹10k/mo</span></div>
+
+                <ul class="course-features-list">
+                  <li><span class="check-icon">✓</span> <span><strong>Kerala Property Law & Title Verification:</strong>
+                      30-yr EC & mutation</span></li>
+                  <li><span class="check-icon">✓</span> <span><strong>Power of Attorney (PoA) Masterclass:</strong>
+                      Embassy attestation & revocation</span></li>
+                  <li><span class="check-icon">✓</span> <span><strong>FEMA, NRE/NRO Compliance & Succession/Will
+                        Planning</strong></span></li>
+                  <li><span class="check-icon">✓</span> <span><strong>Emergency Anti-Encroachment Rapid Action
+                        Plans</strong></span></li>
+                  <li><span class="check-icon">✓</span> <span><strong>Downloadable Attorney-Drafted POA & Will
+                        Vault</strong></span></li>
+                </ul>
+              </div>
+
+              <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-top: 1.5rem;">
+                <button class="btn btn-gold explore-course-btn" data-course-id="nri" style="width: 100%;">
+                  <i class="fa-solid fa-shield-halved"></i> Explore NRI Legal Details &rarr;
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Course 5: Full Legal Mastery for MSMEs & Startups -->
+          <div class="course-card-wrapper" data-category="msme">
+            <div class="glass-panel course-card tri-border-card">
+              <div>
+                <span class="course-badge">IN ASSOC. WITH VAKKEEL & ASSOCIATES</span>
+                <h3 class="course-title">Legal Mastery for MSMEs & Startups</h3>
+                <p class="course-card-desc">For MSME owners, startup founders & entrepreneurs. Build on an unshakeable
+                  corporate foundation.</p>
+
+                <div class="course-price-tag">₹18,000 <span class="course-price-sub">Upfront (Save ₹7k) | Or 6-Month
+                    Easy EMI</span></div>
+
+                <ul class="course-features-list">
+                  <li><span class="check-icon">✓</span> <span><strong>Business Structure & ROC Compliance:</strong> Pvt
+                      Ltd vs LLP vs Sole Prop</span></li>
+                  <li><span class="check-icon">✓</span> <span><strong>Commercial Contracts & NDAs:</strong> MSA, SOW,
+                      Founder SHA agreements</span></li>
+                  <li><span class="check-icon">✓</span> <span><strong>MSME Samadhaan Payment Recovery & Sec 138 Action
+                        Plans</strong></span></li>
+                  <li><span class="check-icon">✓</span> <span><strong>Intellectual Property:</strong> Trademark,
+                      Copyright & Trade Secret protection</span></li>
+                  <li><span class="check-icon">✓</span> <span><strong>Downloadable Enterprise-Grade Contract
+                        Vault</strong></span></li>
+                </ul>
+              </div>
+
+              <div style="display: flex; flex-direction: column; gap: 0.75rem; margin-top: 1.5rem;">
+                <button class="btn btn-gold explore-course-btn" data-course-id="msme" style="width: 100%;">
+                  <i class="fa-solid fa-briefcase"></i> Explore MSME Legal Details &rarr;
+                </button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Refund Policy Banner Box -->
+        <div class="refund-policy-box" id="commitment">
+          <div class="refund-grid">
+            <div>
+              <span class="subhead-label">TRANSPARENT RISK REDUCTION</span>
+              <h3 style="font-family: var(--font-serif); font-size: 2rem; color: #fff; margin-bottom: 1rem;">
+                🛡️ Admission Commitment Policy (100% Fee Refund)
+              </h3>
+              <p style="color: var(--white-muted); line-height: 1.7;">
+                We stand firmly behind the quality of our Flagship Super Batch preparation. Students who satisfy all
+                published eligibility requirements and do not secure admission to a Government Law College through KLEE
+                qualify for a <strong>100% tuition fee refund</strong>, subject to complete terms and conditions.
+              </p>
+              <div id="refund-status-badge"
+                style="margin-top: 1.5rem; display: inline-block; padding: 0.5rem 1.25rem; border-radius: 30px; border: 1px solid var(--gold-primary); font-weight: 700; font-size: 0.85rem; background: rgba(212, 175, 55, 0.15); color: var(--gold-light);">
+                ⚠️ COMPLETE ALL CRITERIA TO LOCK COMMITMENT
               </div>
             </div>
 
-            <div class="progress-bar-wrap">
-              <div class="progress-bar-label">
-                <span>Concept Mastery Threshold</span>
-                <span>Target: 85%+</span>
+            <div>
+              <h4
+                style="font-family: var(--font-sans); color: var(--gold-light); font-size: 1rem; margin-bottom: 0.75rem;">
+                Interactive Eligibility Tracker (Click to Verify Criteria):
+              </h4>
+              <div class="checklist-items">
+                <label class="checklist-item">
+                  <input type="checkbox" class="refund-checkbox"> 90%+ Attendance
+                </label>
+                <label class="checklist-item">
+                  <input type="checkbox" class="refund-checkbox"> Full 9-Month Program
+                </label>
+                <label class="checklist-item">
+                  <input type="checkbox" class="refund-checkbox"> Daily Exams Attempted
+                </label>
+                <label class="checklist-item">
+                  <input type="checkbox" class="refund-checkbox"> Required Mock Tests
+                </label>
+                <label class="checklist-item">
+                  <input type="checkbox" class="refund-checkbox"> Assignments Submitted
+                </label>
+                <label class="checklist-item">
+                  <input type="checkbox" class="refund-checkbox"> Study Plan Followed
+                </label>
+                <label class="checklist-item" style="grid-column: 1/-1;">
+                  <input type="checkbox" class="refund-checkbox"> Appearance in Official KLEE Examination
+                </label>
               </div>
-              <div class="progress-bar-bg">
-                <div id="ai-progress-fill" class="progress-bar-fill" style="width: 58%;"></div>
+              <div id="refund-progress-text"
+                style="font-size: 0.8rem; color: var(--white-muted); margin-top: 0.75rem; text-align: right;">
+                0 of 7 Criteria Satisfied
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- AI Weak Area Alert System Widget Section -->
+    <section class="ai-widget-section" id="ai-dashboard">
+      <div class="container">
+        <div class="glass-panel ai-widget-card tri-border-card">
+          <div class="section-header" style="margin-bottom: 2rem;">
+            <span class="subhead-label">PROPRIETARY TECHNOLOGY</span>
+            <h2 class="section-title">AI-Powered <span class="gradient-text">Weak Area Alert System</span></h2>
+            <p class="section-subtitle">Our intelligent system continuously tracks your learning trajectory, identifying
+              weak subjects, accuracy drops, and time management bottlenecks before exam day.</p>
+          </div>
+
+          <div class="ai-demo-grid">
+            <div class="ai-controls">
+              <h4
+                style="font-family: var(--font-sans); color: var(--gold-light); font-size: 0.95rem; text-transform: uppercase; letter-spacing: 1px;">
+                Select Topic to Simulate AI Diagnostics:
+              </h4>
+
+              <button class="subject-select-btn active" data-subject="admin-law">
+                <span>🏛️ Administrative Law & Judicial Review</span>
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
+              <button class="subject-select-btn" data-subject="const-law">
+                <span>📜 Constitutional Fundamental Rights</span>
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
+              <button class="subject-select-btn" data-subject="legal-reasoning">
+                <span>⚖️ Legal Aptitude & Principle-Fact Qs</span>
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
+              <button class="subject-select-btn" data-subject="criminal-law">
+                <span>🛡️ Bharatiya Nyaya Sanhita (BNS) Defences</span>
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
+            </div>
+
+            <div class="analytics-display">
+              <div style="display: flex; justify-content: space-between; align-items: flex-start;">
+                <div>
+                  <span id="ai-alert-badge" class="alert-badge">REVISION REQUIRED</span>
+                  <h3 id="ai-subj-name" style="font-family: var(--font-sans); font-size: 1.4rem; color: #fff;">
+                    Administrative Law & Judicial Review</h3>
+                </div>
+                <div style="text-align: right;">
+                  <div style="font-size: 0.75rem; color: var(--white-muted);">ACCURACY SCORE</div>
+                  <div id="ai-subj-score"
+                    style="font-family: var(--font-serif); font-size: 2.2rem; font-weight: 800; color: var(--gold-primary);">
+                    58%</div>
+                </div>
+              </div>
+
+              <div class="progress-bar-wrap">
+                <div class="progress-bar-label">
+                  <span>Concept Mastery Threshold</span>
+                  <span>Target: 85%+</span>
+                </div>
+                <div class="progress-bar-bg">
+                  <div id="ai-progress-fill" class="progress-bar-fill" style="width: 58%;"></div>
+                </div>
+              </div>
+
+              <div
+                style="background: rgba(0, 0, 0, 0.4); padding: 1.25rem; border-radius: 14px; border: 1px solid var(--white-border); margin-top: 1.5rem;">
+                <h5
+                  style="color: var(--gold-light); font-size: 0.85rem; font-family: var(--font-sans); margin-bottom: 0.4rem;">
+                  <i class="fa-solid fa-lightbulb"></i> Recommended AI Improvement Action:
+                </h5>
+                <p id="ai-action-text" style="font-size: 0.88rem; color: var(--white-muted); line-height: 1.6;">
+                  Review 15 Landmark Writ Jurisdiction Cases & Attempt 30 MCQ Diagnostic Set.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- 100% Native HTML/CSS Student Analytics Dashboard Card (NO Chinese/Japanese text) -->
+          <div
+            style="margin-top: 3rem; background: rgba(5, 8, 18, 0.95); border: 1px solid var(--gold-border); border-radius: 20px; padding: 2rem; box-shadow: 0 20px 50px rgba(0,0,0,0.9);">
+            <div
+              style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--white-border); padding-bottom: 1rem; margin-bottom: 1.5rem;">
+              <div>
+                <span class="logo-title" style="font-size: 1rem;">INDIAN LAW SCHOOL AI LEARNING DASHBOARD</span>
+                <div style="font-size: 0.8rem; color: var(--white-muted);">Student Analytics • KLEE Super Batch
+                  Performance Tracking</div>
+              </div>
+              <div class="glass-badge glass-badge-gold">
+                <i class="fa-solid fa-award"></i> CLASS RANK: #3 / 150
               </div>
             </div>
 
-            <div style="background: rgba(0, 0, 0, 0.4); padding: 1.25rem; border-radius: 14px; border: 1px solid var(--white-border); margin-top: 1.5rem;">
-              <h5 style="color: var(--gold-light); font-size: 0.85rem; font-family: var(--font-sans); margin-bottom: 0.4rem;">
-                <i class="fa-solid fa-lightbulb"></i> Recommended AI Improvement Action:
-              </h5>
-              <p id="ai-action-text" style="font-size: 0.88rem; color: var(--white-muted); line-height: 1.6;">
-                Review 15 Landmark Writ Jurisdiction Cases & Attempt 30 MCQ Diagnostic Set.
+            <div class="ai-dashboard-stats-grid">
+              <!-- Gauge & Hours -->
+              <div
+                style="background: rgba(0,0,0,0.5); padding: 1.5rem; border-radius: 14px; border: 1px solid var(--white-border); text-align: center;">
+                <div style="font-size: 0.8rem; color: var(--white-muted); margin-bottom: 0.5rem;">OVERALL ACCURACY</div>
+                <div
+                  style="font-family: var(--font-serif); font-size: 3rem; font-weight: 800; color: var(--gold-primary); line-height: 1;">
+                  82%</div>
+                <div style="font-size: 0.78rem; color: var(--gold-light); margin-top: 0.5rem;"><i
+                    class="fa-solid fa-arrow-trend-up"></i> +14% vs Last Month</div>
+
+                <div
+                  style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--white-border); display: flex; justify-content: space-around;">
+                  <div>
+                    <div style="font-size: 1.2rem; font-weight: 800; color: #fff;">184h</div>
+                    <div style="font-size: 0.7rem; color: var(--white-muted);">Study Time</div>
+                  </div>
+                  <div>
+                    <div style="font-size: 1.2rem; font-weight: 800; color: #fff;">24/250</div>
+                    <div style="font-size: 0.7rem; color: var(--white-muted);">Mocks Taken</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Subject Performance Bars (100% English Legal Topics) -->
+              <div
+                style="background: rgba(0,0,0,0.5); padding: 1.5rem; border-radius: 14px; border: 1px solid var(--white-border);">
+                <div style="font-size: 0.85rem; font-weight: 700; color: var(--gold-light); margin-bottom: 1rem;">
+                  PERFORMANCE TRACKING BY SUBJECT
+                </div>
+
+                <div style="margin-bottom: 0.9rem;">
+                  <div
+                    style="display: flex; justify-content: space-between; font-size: 0.8rem; color: #fff; margin-bottom: 0.3rem;">
+                    <span>📜 Constitutional Law & Polity</span>
+                    <span style="color: var(--gold-primary); font-weight: 700;">88%</span>
+                  </div>
+                  <div style="height: 8px; border-radius: 4px; background: rgba(255,255,255,0.1); overflow: hidden;">
+                    <div style="width: 88%; height: 100%; background: var(--gold-gradient);"></div>
+                  </div>
+                </div>
+
+                <div style="margin-bottom: 0.9rem;">
+                  <div
+                    style="display: flex; justify-content: space-between; font-size: 0.8rem; color: #fff; margin-bottom: 0.3rem;">
+                    <span>⚖️ Law of Contracts & Torts</span>
+                    <span style="color: var(--gold-primary); font-weight: 700;">78%</span>
+                  </div>
+                  <div style="height: 8px; border-radius: 4px; background: rgba(255,255,255,0.1); overflow: hidden;">
+                    <div style="width: 78%; height: 100%; background: var(--gold-gradient);"></div>
+                  </div>
+                </div>
+
+                <div style="margin-bottom: 0.9rem;">
+                  <div
+                    style="display: flex; justify-content: space-between; font-size: 0.8rem; color: #fff; margin-bottom: 0.3rem;">
+                    <span>🛡️ Bharatiya Nyaya Sanhita (BNS 2023)</span>
+                    <span style="color: var(--gold-primary); font-weight: 700;">72%</span>
+                  </div>
+                  <div style="height: 8px; border-radius: 4px; background: rgba(255,255,255,0.1); overflow: hidden;">
+                    <div style="width: 72%; height: 100%; background: var(--gold-gradient);"></div>
+                  </div>
+                </div>
+
+                <div>
+                  <div
+                    style="display: flex; justify-content: space-between; font-size: 0.8rem; color: #fff; margin-bottom: 0.3rem;">
+                    <span>💡 Intellectual Property & Cyber Law</span>
+                    <span style="color: var(--gold-primary); font-weight: 700;">68%</span>
+                  </div>
+                  <div style="height: 8px; border-radius: 4px; background: rgba(255,255,255,0.1); overflow: hidden;">
+                    <div style="width: 68%; height: 100%; background: var(--gold-gradient);"></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Recommended Actions Box -->
+              <div
+                style="background: rgba(0,0,0,0.5); padding: 1.5rem; border-radius: 14px; border: 1px solid var(--white-border); display: flex; flex-direction: column; justify-content: space-between;">
+                <div>
+                  <div style="font-size: 0.85rem; font-weight: 700; color: var(--gold-light); margin-bottom: 0.75rem;">
+                    RECOMMENDED ACTIONS
+                  </div>
+                  <p style="font-size: 0.8rem; color: var(--white-muted); line-height: 1.5; margin-bottom: 1rem;">
+                    AI has scheduled a 20-minute diagnostic quiz on <strong>General Exceptions under BNS 2023</strong>
+                    to boost your score to 80%+.
+                  </p>
+                </div>
+                <button class="btn btn-gold btn-sm" style="width: 100%;">Launch Practice Test &rarr;</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- KLEE Exam Pattern & Subject Weightage Section -->
+    <section class="pattern-section" id="klee-pattern">
+      <div class="container">
+        <div class="section-header">
+          <span class="subhead-label">EXAM BLUEPRINT</span>
+          <h2 class="section-title">Understand KLEE <span class="gradient-text">Before You Prepare</span></h2>
+          <p class="section-subtitle">KLEE is a Computer-Based Test (CBT) evaluating speed, accuracy, and legal
+            reasoning. Master the distribution of 120 questions & 360 marks.</p>
+        </div>
+
+        <div class="pattern-grid">
+          <div class="glass-panel pattern-card tri-border-card">
+            <div style="font-size: 2rem; color: var(--gold-primary);"><i class="fa-solid fa-scale-unbalanced-flip"></i>
+            </div>
+            <h4 style="font-family: var(--font-sans); color: #fff; font-size: 1.1rem; margin-top: 0.5rem;">Aptitude for
+              Legal Studies</h4>
+            <div class="pattern-score">126 Marks</div>
+            <p style="color: var(--white-muted); font-size: 0.85rem;">42 Questions • Highest Weightage (Legal
+              principles, reasoning & maxims)</p>
+          </div>
+
+          <div class="glass-panel pattern-card tri-border-card">
+            <div style="font-size: 2rem; color: var(--gold-light);"><i class="fa-solid fa-book-open"></i></div>
+            <h4 style="font-family: var(--font-sans); color: #fff; font-size: 1.1rem; margin-top: 0.5rem;">General
+              English</h4>
+            <div class="pattern-score" style="color: var(--gold-light);">108 Marks</div>
+            <p style="color: var(--white-muted); font-size: 0.85rem;">36 Questions • Reading comprehension, grammar &
+              idioms</p>
+          </div>
+
+          <div class="glass-panel pattern-card tri-border-card">
+            <div style="font-size: 2rem; color: var(--gold-light);"><i class="fa-solid fa-globe"></i></div>
+            <h4 style="font-family: var(--font-sans); color: #fff; font-size: 1.1rem; margin-top: 0.5rem;">GK & Current
+              Affairs</h4>
+            <div class="pattern-score" style="color: var(--gold-light);">81 Marks</div>
+            <p style="color: var(--white-muted); font-size: 0.85rem;">27 Questions • Polity, international affairs,
+              science & history</p>
+          </div>
+
+          <div class="glass-panel pattern-card tri-border-card">
+            <div style="font-size: 2rem; color: var(--gold-primary);"><i class="fa-solid fa-calculator"></i></div>
+            <h4 style="font-family: var(--font-sans); color: #fff; font-size: 1.1rem; margin-top: 0.5rem;">Arithmetic &
+              Logic</h4>
+            <div class="pattern-score" style="color: var(--gold-primary);">45 Marks</div>
+            <p style="color: var(--white-muted); font-size: 0.85rem;">15 Questions • Number system, series, blood
+              relations & logic</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Founder Quote Section -->
+    <section class="founder-section" id="founder">
+      <div class="container">
+        <div class="founder-card tri-border-card">
+          <div class="founder-quote-icon">“</div>
+          <div class="founder-badge">
+            <span class="pulse-dot"></span>
+            <span>FOUNDER'S VISION & PEDAGOGY</span>
+          </div>
+          <div class="founder-quote">
+            The KLEE paper tests something very specific—not how much law you know, but how precisely you think under
+            pressure. Our programme builds that precision through structure, repetition, disciplined practice, and
+            continuous improvement—not by overwhelming students with endless content. We don't just prepare students for
+            an entrance examination; we prepare future advocates, legal professionals, entrepreneurs, and leaders.
+          </div>
+          <div class="founder-meta">
+            <div class="founder-avatar-wrap">
+              <div class="founder-avatar"><i class="fa-solid fa-user-tie"></i></div>
+            </div>
+            <div class="founder-info">
+              <h4 style="color: var(--gold-light); font-family: var(--font-serif); font-size: 1.25rem;">Cmpk Raheem</h4>
+              <p style="color: var(--white-muted); font-size: 0.88rem;">Founder & Managing Director, Indian Law School
               </p>
             </div>
           </div>
         </div>
-
-        <!-- 100% Native HTML/CSS Student Analytics Dashboard Card (NO Chinese/Japanese text) -->
-        <div style="margin-top: 3rem; background: rgba(5, 8, 18, 0.95); border: 1px solid var(--gold-border); border-radius: 20px; padding: 2rem; box-shadow: 0 20px 50px rgba(0,0,0,0.9);">
-          <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--white-border); padding-bottom: 1rem; margin-bottom: 1.5rem;">
-            <div>
-              <span class="logo-title" style="font-size: 1rem;">INDIAN LAW SCHOOL AI LEARNING DASHBOARD</span>
-              <div style="font-size: 0.8rem; color: var(--white-muted);">Student Analytics • KLEE Super Batch Performance Tracking</div>
-            </div>
-            <div class="glass-badge glass-badge-gold">
-              <i class="fa-solid fa-award"></i> CLASS RANK: #3 / 150
-            </div>
-          </div>
-
-          <div class="ai-dashboard-stats-grid">
-            <!-- Gauge & Hours -->
-            <div style="background: rgba(0,0,0,0.5); padding: 1.5rem; border-radius: 14px; border: 1px solid var(--white-border); text-align: center;">
-              <div style="font-size: 0.8rem; color: var(--white-muted); margin-bottom: 0.5rem;">OVERALL ACCURACY</div>
-              <div style="font-family: var(--font-serif); font-size: 3rem; font-weight: 800; color: var(--gold-primary); line-height: 1;">82%</div>
-              <div style="font-size: 0.78rem; color: var(--gold-light); margin-top: 0.5rem;"><i class="fa-solid fa-arrow-trend-up"></i> +14% vs Last Month</div>
-
-              <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--white-border); display: flex; justify-content: space-around;">
-                <div>
-                  <div style="font-size: 1.2rem; font-weight: 800; color: #fff;">184h</div>
-                  <div style="font-size: 0.7rem; color: var(--white-muted);">Study Time</div>
-                </div>
-                <div>
-                  <div style="font-size: 1.2rem; font-weight: 800; color: #fff;">24/250</div>
-                  <div style="font-size: 0.7rem; color: var(--white-muted);">Mocks Taken</div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Subject Performance Bars (100% English Legal Topics) -->
-            <div style="background: rgba(0,0,0,0.5); padding: 1.5rem; border-radius: 14px; border: 1px solid var(--white-border);">
-              <div style="font-size: 0.85rem; font-weight: 700; color: var(--gold-light); margin-bottom: 1rem;">
-                PERFORMANCE TRACKING BY SUBJECT
-              </div>
-
-              <div style="margin-bottom: 0.9rem;">
-                <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: #fff; margin-bottom: 0.3rem;">
-                  <span>📜 Constitutional Law & Polity</span>
-                  <span style="color: var(--gold-primary); font-weight: 700;">88%</span>
-                </div>
-                <div style="height: 8px; border-radius: 4px; background: rgba(255,255,255,0.1); overflow: hidden;">
-                  <div style="width: 88%; height: 100%; background: var(--gold-gradient);"></div>
-                </div>
-              </div>
-
-              <div style="margin-bottom: 0.9rem;">
-                <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: #fff; margin-bottom: 0.3rem;">
-                  <span>⚖️ Law of Contracts & Torts</span>
-                  <span style="color: var(--gold-primary); font-weight: 700;">78%</span>
-                </div>
-                <div style="height: 8px; border-radius: 4px; background: rgba(255,255,255,0.1); overflow: hidden;">
-                  <div style="width: 78%; height: 100%; background: var(--gold-gradient);"></div>
-                </div>
-              </div>
-
-              <div style="margin-bottom: 0.9rem;">
-                <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: #fff; margin-bottom: 0.3rem;">
-                  <span>🛡️ Bharatiya Nyaya Sanhita (BNS 2023)</span>
-                  <span style="color: var(--gold-primary); font-weight: 700;">72%</span>
-                </div>
-                <div style="height: 8px; border-radius: 4px; background: rgba(255,255,255,0.1); overflow: hidden;">
-                  <div style="width: 72%; height: 100%; background: var(--gold-gradient);"></div>
-                </div>
-              </div>
-
-              <div>
-                <div style="display: flex; justify-content: space-between; font-size: 0.8rem; color: #fff; margin-bottom: 0.3rem;">
-                  <span>💡 Intellectual Property & Cyber Law</span>
-                  <span style="color: var(--gold-primary); font-weight: 700;">68%</span>
-                </div>
-                <div style="height: 8px; border-radius: 4px; background: rgba(255,255,255,0.1); overflow: hidden;">
-                  <div style="width: 68%; height: 100%; background: var(--gold-gradient);"></div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Recommended Actions Box -->
-            <div style="background: rgba(0,0,0,0.5); padding: 1.5rem; border-radius: 14px; border: 1px solid var(--white-border); display: flex; flex-direction: column; justify-content: space-between;">
-              <div>
-                <div style="font-size: 0.85rem; font-weight: 700; color: var(--gold-light); margin-bottom: 0.75rem;">
-                  RECOMMENDED ACTIONS
-                </div>
-                <p style="font-size: 0.8rem; color: var(--white-muted); line-height: 1.5; margin-bottom: 1rem;">
-                  AI has scheduled a 20-minute diagnostic quiz on <strong>General Exceptions under BNS 2023</strong> to boost your score to 80%+.
-                </p>
-              </div>
-              <button class="btn btn-gold btn-sm" style="width: 100%;">Launch Practice Test &rarr;</button>
-            </div>
-          </div>
-        </div>
-
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- KLEE Exam Pattern & Subject Weightage Section -->
-  <section class="pattern-section" id="klee-pattern">
-    <div class="container">
-      <div class="section-header">
-        <span class="subhead-label">EXAM BLUEPRINT</span>
-        <h2 class="section-title">Understand KLEE <span class="gradient-text">Before You Prepare</span></h2>
-        <p class="section-subtitle">KLEE is a Computer-Based Test (CBT) evaluating speed, accuracy, and legal reasoning. Master the distribution of 120 questions & 360 marks.</p>
-      </div>
-
-      <div class="pattern-grid">
-        <div class="glass-panel pattern-card tri-border-card">
-          <div style="font-size: 2rem; color: var(--gold-primary);"><i class="fa-solid fa-scale-unbalanced-flip"></i></div>
-          <h4 style="font-family: var(--font-sans); color: #fff; font-size: 1.1rem; margin-top: 0.5rem;">Aptitude for Legal Studies</h4>
-          <div class="pattern-score">126 Marks</div>
-          <p style="color: var(--white-muted); font-size: 0.85rem;">42 Questions • Highest Weightage (Legal principles, reasoning & maxims)</p>
-        </div>
-
-        <div class="glass-panel pattern-card tri-border-card">
-          <div style="font-size: 2rem; color: var(--gold-light);"><i class="fa-solid fa-book-open"></i></div>
-          <h4 style="font-family: var(--font-sans); color: #fff; font-size: 1.1rem; margin-top: 0.5rem;">General English</h4>
-          <div class="pattern-score" style="color: var(--gold-light);">108 Marks</div>
-          <p style="color: var(--white-muted); font-size: 0.85rem;">36 Questions • Reading comprehension, grammar & idioms</p>
-        </div>
-
-        <div class="glass-panel pattern-card tri-border-card">
-          <div style="font-size: 2rem; color: var(--gold-light);"><i class="fa-solid fa-globe"></i></div>
-          <h4 style="font-family: var(--font-sans); color: #fff; font-size: 1.1rem; margin-top: 0.5rem;">GK & Current Affairs</h4>
-          <div class="pattern-score" style="color: var(--gold-light);">81 Marks</div>
-          <p style="color: var(--white-muted); font-size: 0.85rem;">27 Questions • Polity, international affairs, science & history</p>
-        </div>
-
-        <div class="glass-panel pattern-card tri-border-card">
-          <div style="font-size: 2rem; color: var(--gold-primary);"><i class="fa-solid fa-calculator"></i></div>
-          <h4 style="font-family: var(--font-sans); color: #fff; font-size: 1.1rem; margin-top: 0.5rem;">Arithmetic & Logic</h4>
-          <div class="pattern-score" style="color: var(--gold-primary);">45 Marks</div>
-          <p style="color: var(--white-muted); font-size: 0.85rem;">15 Questions • Number system, series, blood relations & logic</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Founder Quote Section -->
-  <section class="founder-section" id="founder">
-    <div class="container">
-      <div class="founder-card tri-border-card">
-        <div class="founder-quote-icon">“</div>
-        <div class="founder-badge">
-          <span class="pulse-dot"></span>
-          <span>FOUNDER'S VISION & PEDAGOGY</span>
-        </div>
-        <div class="founder-quote">
-          The KLEE paper tests something very specific—not how much law you know, but how precisely you think under pressure. Our programme builds that precision through structure, repetition, disciplined practice, and continuous improvement—not by overwhelming students with endless content. We don't just prepare students for an entrance examination; we prepare future advocates, legal professionals, entrepreneurs, and leaders.
-        </div>
-        <div class="founder-meta">
-          <div class="founder-avatar-wrap">
-            <div class="founder-avatar"><i class="fa-solid fa-user-tie"></i></div>
+    <!-- Alliance Section -->
+    <section style="padding: 4rem 0; background-color: #000000;">
+      <div class="container">
+        <div class="glass-panel tri-border-card"
+          style="padding: 3rem; display: grid; grid-template-columns: 1.2fr 1fr; gap: 3rem; align-items: center;">
+          <div>
+            <span class="subhead-label">STRATEGIC ACADEMIC ALLIANCE</span>
+            <h3 style="font-family: var(--font-serif); font-size: 2rem; color: #fff; margin-bottom: 1rem;">
+              In Association with <span class="gradient-text">Vakkeel & Associates</span>
+            </h3>
+            <p style="color: var(--white-muted); line-height: 1.7; margin-bottom: 1.5rem;">
+              Our specialized NRI Legal Mastery and MSME Business Law programs are developed in direct association with
+              senior advocates at Vakkeel & Associates—bringing real-world litigation experience and practical contract
+              insights into your learning environment.
+            </p>
+            <a href="#courses" class="btn btn-gold btn-sm">Explore Partnered Courses</a>
           </div>
-          <div class="founder-info">
-            <h4 style="color: var(--gold-light); font-family: var(--font-serif); font-size: 1.25rem;">Cmpk Raheem</h4>
-            <p style="color: var(--white-muted); font-size: 0.88rem;">Founder & Managing Director, Indian Law School</p>
+          <div>
+            <img src="assets/ils_vakkeel.jpg" alt="Vakkeel & Associates Alliance"
+              style="width: 100%; border-radius: 16px; border: 1px solid var(--gold-border);">
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Alliance Section -->
-  <section style="padding: 4rem 0; background-color: #000000;">
-    <div class="container">
-      <div class="glass-panel tri-border-card" style="padding: 3rem; display: grid; grid-template-columns: 1.2fr 1fr; gap: 3rem; align-items: center;">
-        <div>
-          <span class="subhead-label">STRATEGIC ACADEMIC ALLIANCE</span>
-          <h3 style="font-family: var(--font-serif); font-size: 2rem; color: #fff; margin-bottom: 1rem;">
-            In Association with <span class="gradient-text">Vakkeel & Associates</span>
-          </h3>
-          <p style="color: var(--white-muted); line-height: 1.7; margin-bottom: 1.5rem;">
-            Our specialized NRI Legal Mastery and MSME Business Law programs are developed in direct association with senior advocates at Vakkeel & Associates—bringing real-world litigation experience and practical contract insights into your learning environment.
-          </p>
-          <a href="#courses" class="btn btn-gold btn-sm">Explore Partnered Courses</a>
-        </div>
-        <div>
-          <img src="assets/ils_vakkeel.jpg" alt="Vakkeel & Associates Alliance" style="width: 100%; border-radius: 16px; border: 1px solid var(--gold-border);">
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- "Protect Yourself" Legal Knowledge Hub & Blog -->
-  <section class="blog-section" id="knowledge-hub">
-    <div class="container">
-      <div class="section-header">
-        <span class="subhead-label">PROTECT YOURSELF • LEGAL KNOWLEDGE HUB</span>
-        <h2 class="section-title">Practical Legal Knowledge for <span class="gradient-text">Every Citizen</span></h2>
-        <p class="section-subtitle">Explore our complete repository of legal awareness articles, KLEE rank blueprints, legislative updates, property checklists, and rights guides.</p>
-      </div>
-
-      <div class="blog-controls">
-        <div class="search-input-wrap">
-          <i class="fa-solid fa-magnifying-glass search-icon-pos"></i>
-          <input type="text" id="blog-search-input" placeholder="Search guides e.g., 'KLEE', 'Property', 'BNS', 'Arrest'...">
+    <!-- "Protect Yourself" Legal Knowledge Hub & Blog -->
+    <section class="blog-section" id="knowledge-hub">
+      <div class="container">
+        <div class="section-header">
+          <span class="subhead-label">PROTECT YOURSELF • LEGAL KNOWLEDGE HUB</span>
+          <h2 class="section-title">Practical Legal Knowledge for <span class="gradient-text">Every Citizen</span></h2>
+          <p class="section-subtitle">Explore our complete repository of legal awareness articles, KLEE rank blueprints,
+            legislative updates, property checklists, and rights guides.</p>
         </div>
 
-        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
-          <button class="tab-btn blog-filter-tag active" data-tag="all">All Guides</button>
-          <button class="tab-btn blog-filter-tag" data-tag="KLEE Entrance">KLEE Entrance</button>
-          <button class="tab-btn blog-filter-tag" data-tag="Legal Awareness">Legal Awareness</button>
-          <button class="tab-btn blog-filter-tag" data-tag="NRI & Property">NRI & Property</button>
-          <button class="tab-btn blog-filter-tag" data-tag="Legislative Reform">Legislative Reforms</button>
-          <button class="tab-btn blog-filter-tag" data-tag="Law School">Law School</button>
-        </div>
-      </div>
+        <div class="blog-controls">
+          <div class="search-input-wrap">
+            <i class="fa-solid fa-magnifying-glass search-icon-pos"></i>
+            <input type="text" id="blog-search-input"
+              placeholder="Search guides e.g., 'KLEE', 'Property', 'BNS', 'Arrest'...">
+          </div>
 
-      <!-- Grid rendered via JS -->
-      <div class="blog-grid" id="blog-posts-grid"></div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-col">
-          <a href="#" class="logo" style="margin-bottom: 1rem;">
-            <div class="logo-emblem">⚖️</div>
-            <div class="logo-text">
-              <span class="logo-title">INDIAN LAW SCHOOL</span>
-              <span class="logo-subtitle">PREMIUM LEARNING PLATFORM</span>
-            </div>
-          </a>
-          <p>India's premier law learning ecosystem now in Kerala. Preparing future advocates, legal professionals, judges, and entrepreneurs through structured learning, consistent practice & continuous improvement.</p>
-          <div style="display: flex; gap: 1rem; margin-top: 1.5rem; font-size: 1.2rem; color: var(--gold-primary);">
-            <a href="#" style="color: var(--gold-primary);"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#" style="color: var(--gold-primary);"><i class="fa-brands fa-facebook"></i></a>
-            <a href="#" style="color: var(--gold-primary);"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="#" style="color: var(--gold-primary);"><i class="fa-brands fa-youtube"></i></a>
+          <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+            <button class="tab-btn blog-filter-tag active" data-tag="all">All Guides</button>
+            <button class="tab-btn blog-filter-tag" data-tag="KLEE Entrance">KLEE Entrance</button>
+            <button class="tab-btn blog-filter-tag" data-tag="Legal Awareness">Legal Awareness</button>
+            <button class="tab-btn blog-filter-tag" data-tag="NRI & Property">NRI & Property</button>
+            <button class="tab-btn blog-filter-tag" data-tag="Legislative Reform">Legislative Reforms</button>
+            <button class="tab-btn blog-filter-tag" data-tag="Law School">Law School</button>
           </div>
         </div>
 
-        <div class="footer-col">
-          <h4>Academic Offerings</h4>
-          <ul class="footer-links">
-            <li><a href="#courses">KLEE 2027 Super Batch</a></li>
-            <li><a href="#courses">Law Subject Mastery Program</a></li>
-            <li><a href="#courses">Advanced Advocacy Mastery</a></li>
-            <li><a href="#courses">NRI Full Legal Mastery</a></li>
-            <li><a href="#courses">MSME & Startup Legal Mastery</a></li>
-          </ul>
+        <!-- Grid rendered via JS -->
+        <div class="blog-grid" id="blog-posts-grid"></div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <a href="#" class="logo" style="margin-bottom: 1rem;">
+              <div class="logo-emblem">⚖️</div>
+              <div class="logo-text">
+                <span class="logo-title">INDIAN LAW SCHOOL</span>
+                <span class="logo-subtitle">PREMIUM LEARNING PLATFORM</span>
+              </div>
+            </a>
+            <p>India's premier law learning ecosystem now in Kerala. Preparing future advocates, legal professionals,
+              judges, and entrepreneurs through structured learning, consistent practice & continuous improvement.</p>
+            <div style="display: flex; gap: 1rem; margin-top: 1.5rem; font-size: 1.2rem; color: var(--gold-primary);">
+              <a href="#" style="color: var(--gold-primary);"><i class="fa-brands fa-instagram"></i></a>
+              <a href="#" style="color: var(--gold-primary);"><i class="fa-brands fa-facebook"></i></a>
+              <a href="#" style="color: var(--gold-primary);"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="#" style="color: var(--gold-primary);"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+          </div>
+
+          <div class="footer-col">
+            <h4>Academic Offerings</h4>
+            <ul class="footer-links">
+              <li><a href="#courses">KLEE 2027 Super Batch</a></li>
+              <li><a href="#courses">Law Subject Mastery Program</a></li>
+              <li><a href="#courses">Advanced Advocacy Mastery</a></li>
+              <li><a href="#courses">NRI Full Legal Mastery</a></li>
+              <li><a href="#courses">MSME & Startup Legal Mastery</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Legal Knowledge Hub</h4>
+            <ul class="footer-links">
+              <li><a href="#klee-pattern">KLEE Exam Blueprint</a></li>
+              <li><a href="#knowledge-hub">BNS 2023 vs IPC Guide</a></li>
+              <li><a href="#knowledge-hub">Rent Agreement Rights</a></li>
+              <li><a href="#knowledge-hub">Arrest Rights in Kerala</a></li>
+              <li><a href="#knowledge-hub">13 Land Document Verification</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h4>Admission Desk</h4>
+            <p><i class="fa-solid fa-location-dot" style="color: var(--gold-primary);"></i> Trivandrum • Ernakulam •
+              Kozhikode • Kerala</p>
+            <p><i class="fa-solid fa-phone" style="color: var(--gold-primary);"></i> +91 98765 43210</p>
+            <p><i class="fa-solid fa-envelope" style="color: var(--gold-primary);"></i> admissions@indianlawschool.com
+            </p>
+            <button class="btn btn-gold btn-sm open-enroll-modal" data-course="General Consultation"
+              style="margin-top: 1rem; width: 100%;">
+              Book Consultation
+            </button>
+          </div>
         </div>
 
-        <div class="footer-col">
-          <h4>Legal Knowledge Hub</h4>
-          <ul class="footer-links">
-            <li><a href="#klee-pattern">KLEE Exam Blueprint</a></li>
-            <li><a href="#knowledge-hub">BNS 2023 vs IPC Guide</a></li>
-            <li><a href="#knowledge-hub">Rent Agreement Rights</a></li>
-            <li><a href="#knowledge-hub">Arrest Rights in Kerala</a></li>
-            <li><a href="#knowledge-hub">13 Land Document Verification</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Admission Desk</h4>
-          <p><i class="fa-solid fa-location-dot" style="color: var(--gold-primary);"></i> Trivandrum • Ernakulam • Kozhikode • Kerala</p>
-          <p><i class="fa-solid fa-phone" style="color: var(--gold-primary);"></i> +91 98765 43210</p>
-          <p><i class="fa-solid fa-envelope" style="color: var(--gold-primary);"></i> admissions@indianlawschool.com</p>
-          <button class="btn btn-gold btn-sm open-enroll-modal" data-course="General Consultation" style="margin-top: 1rem; width: 100%;">
-            Book Consultation
-          </button>
+        <div class="footer-bottom">
+          <p>© 2026 Indian Law School (ILS). All Rights Reserved. In association with Vakkeel & Associates. Educational
+            content provided for informational & career guidance purposes.</p>
         </div>
       </div>
+    </footer>
+  </main> <!-- End #main-landing-view -->
 
-      <div class="footer-bottom">
-        <p>© 2026 Indian Law School (ILS). All Rights Reserved. In association with Vakkeel & Associates. Educational content provided for informational & career guidance purposes.</p>
-      </div>
-    </div>
-  </footer>
+  <!-- Standalone Landing View Containers -->
+  <main id="course-landing-view" style="display: none;"></main>
+  <main id="blog-article-view" style="display: none;"></main>
 
   <!-- Modal Article Reader -->
   <div class="modal-overlay" id="article-modal">
@@ -797,45 +906,60 @@
   <div class="modal-overlay" id="enroll-modal">
     <div class="modal-container tri-border-card" style="max-width: 550px;">
       <button class="modal-close-btn" id="enroll-modal-close">&times;</button>
-      
+
       <div id="enroll-form-box">
-        <h2 style="font-family: var(--font-serif); color: var(--gold-light); margin-bottom: 0.5rem;">Secure Your Spot</h2>
-        <p style="color: var(--white-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">Apply for Indian Law School programs or request a call from senior academic advisors.</p>
+        <h2 style="font-family: var(--font-serif); color: var(--gold-light); margin-bottom: 0.5rem;">Secure Your Spot
+        </h2>
+        <p style="color: var(--white-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">Apply for Indian Law School
+          programs or request a call from senior academic advisors.</p>
 
         <form id="enrollment-form">
           <div style="margin-bottom: 1rem;">
-            <label style="font-size: 0.85rem; color: var(--gold-light); display: block; margin-bottom: 0.4rem;">Select Program</label>
-            <select id="form-course-select" style="width: 100%; padding: 0.75rem; border-radius: 10px; background: rgba(0, 0, 0, 0.6); border: 1px solid var(--gold-border); color: #ffffff; outline: none;">
+            <label style="font-size: 0.85rem; color: var(--gold-light); display: block; margin-bottom: 0.4rem;">Select
+              Program</label>
+            <select id="form-course-select"
+              style="width: 100%; padding: 0.75rem; border-radius: 10px; background: rgba(0, 0, 0, 0.6); border: 1px solid var(--gold-border); color: #ffffff; outline: none;">
               <option value="KLEE 2027 Flagship Super Batch">KLEE 2027 Flagship Super Batch (₹1,00,000)</option>
               <option value="Law Subject Mastery Program">Law Subject Mastery Program (₹1,25,000 / ₹5,000)</option>
-              <option value="Advanced Advocacy & Legal Practice Mastery">Advanced Advocacy & Legal Practice Mastery (₹80,000)</option>
+              <option value="Advanced Advocacy & Legal Practice Mastery">Advanced Advocacy & Legal Practice Mastery
+                (₹80,000)</option>
               <option value="NRI Full Legal Mastery">NRI Full Legal Mastery (₹40,000 / ₹10,000 EMI)</option>
-              <option value="Full Legal Mastery for MSMEs & Startups">Full Legal Mastery for MSMEs & Startups (₹18,000 / ₹25,000 EMI)</option>
+              <option value="Full Legal Mastery for MSMEs & Startups">Full Legal Mastery for MSMEs & Startups (₹18,000 /
+                ₹25,000 EMI)</option>
             </select>
           </div>
 
           <div style="margin-bottom: 1rem;">
-            <label style="font-size: 0.85rem; color: var(--white-muted); display: block; margin-bottom: 0.4rem;">Full Name</label>
-            <input type="text" required placeholder="Enter your full name" style="width: 100%; padding: 0.75rem; border-radius: 10px; background: rgba(0, 0, 0, 0.6); border: 1px solid var(--white-border); color: #ffffff; outline: none;">
+            <label style="font-size: 0.85rem; color: var(--white-muted); display: block; margin-bottom: 0.4rem;">Full
+              Name</label>
+            <input type="text" required placeholder="Enter your full name"
+              style="width: 100%; padding: 0.75rem; border-radius: 10px; background: rgba(0, 0, 0, 0.6); border: 1px solid var(--white-border); color: #ffffff; outline: none;">
           </div>
 
           <div style="margin-bottom: 1rem;">
-            <label style="font-size: 0.85rem; color: var(--white-muted); display: block; margin-bottom: 0.4rem;">Phone / WhatsApp Number</label>
-            <input type="tel" required placeholder="+91 98765 43210" style="width: 100%; padding: 0.75rem; border-radius: 10px; background: rgba(0, 0, 0, 0.6); border: 1px solid var(--white-border); color: #ffffff; outline: none;">
+            <label style="font-size: 0.85rem; color: var(--white-muted); display: block; margin-bottom: 0.4rem;">Phone /
+              WhatsApp Number</label>
+            <input type="tel" required placeholder="+91 98765 43210"
+              style="width: 100%; padding: 0.75rem; border-radius: 10px; background: rgba(0, 0, 0, 0.6); border: 1px solid var(--white-border); color: #ffffff; outline: none;">
           </div>
 
           <div style="margin-bottom: 1.5rem;">
-            <label style="font-size: 0.85rem; color: var(--white-muted); display: block; margin-bottom: 0.4rem;">City / Country</label>
-            <input type="text" required placeholder="e.g., Ernakulam / Dubai, UAE" style="width: 100%; padding: 0.75rem; border-radius: 10px; background: rgba(0, 0, 0, 0.6); border: 1px solid var(--white-border); color: #ffffff; outline: none;">
+            <label style="font-size: 0.85rem; color: var(--white-muted); display: block; margin-bottom: 0.4rem;">City /
+              Country</label>
+            <input type="text" required placeholder="e.g., Ernakulam / Dubai, UAE"
+              style="width: 100%; padding: 0.75rem; border-radius: 10px; background: rgba(0, 0, 0, 0.6); border: 1px solid var(--white-border); color: #ffffff; outline: none;">
           </div>
 
           <button type="submit" class="btn btn-gold" style="width: 100%;">Submit Application &rarr;</button>
         </form>
 
         <div id="enroll-success-box" style="display: none; text-align: center; padding: 2rem 0;">
-          <div style="font-size: 3rem; color: var(--gold-primary); margin-bottom: 1rem;"><i class="fa-solid fa-circle-check"></i></div>
+          <div style="font-size: 3rem; color: var(--gold-primary); margin-bottom: 1rem;"><i
+              class="fa-solid fa-circle-check"></i></div>
           <h3 style="font-family: var(--font-serif); color: #ffffff;">Application Received!</h3>
-          <p style="color: var(--white-muted); font-size: 0.9rem; margin: 0.5rem 0 1.5rem 0;">Your priority application reference ID is <strong id="reg-id-display" style="color: var(--gold-light);">ILS-892147</strong>. Our senior academic counselor will call you within 24 hours.</p>
+          <p style="color: var(--white-muted); font-size: 0.9rem; margin: 0.5rem 0 1.5rem 0;">Your priority application
+            reference ID is <strong id="reg-id-display" style="color: var(--gold-light);">ILS-892147</strong>. Our
+            senior academic counselor will call you within 24 hours.</p>
         </div>
       </div>
     </div>
@@ -853,7 +977,7 @@
   <div class="mobile-bottom-bar">
     <div class="mobile-bottom-info">
       <span class="mobile-bar-tag">KLEE 2027 SUPER BATCH</span>
-      <span class="mobile-bar-seats">🔥 Only 8 Seats Remaining</span>
+      <span class="mobile-bar-seats">🔥 Only limited Seats Remaining</span>
     </div>
     <button class="btn btn-gold btn-sm open-enroll-modal" data-course="KLEE 2027 Flagship Super Batch">
       Secure Spot &rarr;
@@ -861,7 +985,7 @@
   </div>
 
   <!-- Master ES Module Entry Script -->
-  <script type="module" src="js/app.js"></script>
+  <script type="module" src="js/app.js?v=5.0"></script>
 </body>
-</html>
 
+</html>

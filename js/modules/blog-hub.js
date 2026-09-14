@@ -1,17 +1,13 @@
 /* ==========================================================================
-   MODULE: Protect Yourself Knowledge Hub & Article Reader
+   MODULE: Protect Yourself Knowledge Hub & Article Router
    ========================================================================== */
 
-import { BLOG_POSTS } from '../blog-data.js';
+import { BLOG_POSTS } from '../blog-data.js?v=1.1';
 
 export function initBlogHub() {
   const blogGrid = document.getElementById('blog-posts-grid');
   const searchInput = document.getElementById('blog-search-input');
   const tagBtns = document.querySelectorAll('.blog-filter-tag');
-
-  const modalOverlay = document.getElementById('article-modal');
-  const modalBody = document.getElementById('modal-article-body');
-  const modalCloseBtn = document.getElementById('modal-close-btn');
 
   if (!blogGrid || !BLOG_POSTS) return;
 
@@ -37,51 +33,10 @@ export function initBlogHub() {
         </div>
       `;
 
-      card.addEventListener('click', () => openArticleModal(post));
-      blogGrid.appendChild(card);
-    });
-  }
-
-  function openArticleModal(post) {
-    if (!modalOverlay || !modalBody) return;
-    modalBody.innerHTML = `
-      <div style="margin-bottom: 2rem;">
-        <span class="glass-badge glass-badge-gold" style="font-size: 0.8rem;">${post.category} • ${post.tag}</span>
-        <h1 style="font-family: var(--font-serif); font-size: 2.2rem; color: #fff; margin-top: 0.8rem; line-height: 1.25;">${post.title}</h1>
-        <div style="font-size: 0.85rem; color: var(--white-muted); margin-top: 0.5rem;">Indian Law School Knowledge Hub • ${post.readTime}</div>
-      </div>
-      <div class="article-content">${post.content}</div>
-      <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--white-border); text-align: center;">
-        <h4 style="font-family: var(--font-serif); color: var(--gold-light); margin-bottom: 0.5rem;">Ready to Master the Law with ILS?</h4>
-        <p style="color: var(--white-muted); font-size: 0.9rem; margin-bottom: 1.5rem;">Enroll in our flagship courses or speak directly with academic mentors.</p>
-        <button class="btn btn-gold modal-enroll-trigger">Explore KLEE 2027 Super Batch</button>
-      </div>
-    `;
-
-    modalOverlay.classList.add('active');
-    document.body.style.overflow = 'hidden';
-
-    const innerEnrollBtn = modalBody.querySelector('.modal-enroll-trigger');
-    if (innerEnrollBtn) {
-      innerEnrollBtn.addEventListener('click', () => {
-        closeArticleModal();
-        const modal = document.getElementById('enroll-modal');
-        if (modal) modal.classList.add('active');
+      card.addEventListener('click', () => {
+        window.location.hash = `#blog/${post.id}`;
       });
-    }
-  }
-
-  function closeArticleModal() {
-    if (modalOverlay) {
-      modalOverlay.classList.remove('active');
-      document.body.style.overflow = 'auto';
-    }
-  }
-
-  if (modalCloseBtn) modalCloseBtn.addEventListener('click', closeArticleModal);
-  if (modalOverlay) {
-    modalOverlay.addEventListener('click', (e) => {
-      if (e.target === modalOverlay) closeArticleModal();
+      blogGrid.appendChild(card);
     });
   }
 
