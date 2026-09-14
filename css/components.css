@@ -1910,30 +1910,285 @@
   font-size: 0.95rem;
 }
 
-@media (max-width: 992px) {
-  .standalone-hero-grid {
+
+/* ==========================================================================
+   KLEE 2027 DUAL-SYNDICATE & PAY-ON-RESULT CUSTOM STYLES
+   ========================================================================== */
+
+/* Social Proof Bar */
+.social-proof-strip-wrapper {
+  background: rgba(10, 18, 42, 0.7);
+  border: 1px solid var(--gold-border);
+  border-radius: 14px;
+  padding: 0.75rem 1.25rem;
+  margin: 1.5rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-proof-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--gold-light);
+  background: rgba(212, 175, 55, 0.08);
+  padding: 0.35rem 0.85rem;
+  border-radius: 20px;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+/* Comparison Table */
+.syndicate-table-container {
+  overflow-x: auto;
+  border-radius: 16px;
+  border: 1px solid var(--gold-border);
+  background: rgba(5, 10, 25, 0.95);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+  margin: 2rem 0;
+}
+
+.syndicate-comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 720px;
+  text-align: left;
+}
+
+.syndicate-comparison-table th,
+.syndicate-comparison-table td {
+  padding: 1.2rem 1.25rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  vertical-align: top;
+  line-height: 1.6;
+}
+
+.syndicate-comparison-table th {
+  background: rgba(15, 25, 55, 0.95);
+  color: var(--gold-light);
+  font-family: var(--font-serif);
+  font-size: 1.1rem;
+  font-weight: 700;
+  border-bottom: 2px solid var(--gold-primary);
+}
+
+.syndicate-comparison-table th.col-superbatch {
+  background: rgba(212, 175, 55, 0.15);
+  color: #ffffff;
+  border-top: 3px solid var(--gold-primary);
+}
+
+.syndicate-comparison-table th.col-openmerit {
+  background: rgba(239, 68, 68, 0.15);
+  color: #ffffff;
+  border-top: 3px solid #ef4444;
+}
+
+.syndicate-comparison-table tr:hover td {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.syndicate-comparison-table td.param-name {
+  font-weight: 700;
+  color: var(--gold-primary);
+  width: 22%;
+  font-size: 0.92rem;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.syndicate-comparison-table td.val-superbatch {
+  background: rgba(212, 175, 55, 0.04);
+  color: #ffffff;
+  font-size: 0.9rem;
+  width: 39%;
+}
+
+.syndicate-comparison-table td.val-openmerit {
+  background: rgba(220, 38, 38, 0.04);
+  color: #ffffff;
+  font-size: 0.9rem;
+  width: 39%;
+}
+
+/* Zero-Risk Rule Highlight Box */
+.zero-risk-rule-box {
+  background: linear-gradient(135deg, rgba(220, 38, 38, 0.2) 0%, rgba(212, 175, 55, 0.15) 50%, rgba(10, 18, 42, 0.95) 100%);
+  border: 2px solid var(--gold-primary);
+  border-radius: 16px;
+  padding: 1.75rem 2rem;
+  margin: 2rem 0;
+  box-shadow: 0 10px 30px rgba(212, 175, 55, 0.15);
+  position: relative;
+  overflow: hidden;
+}
+
+.zero-risk-badge {
+  display: inline-block;
+  background: linear-gradient(90deg, #dc2626, #b91c1c);
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 0.78rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  margin-bottom: 0.75rem;
+}
+
+.zero-risk-rule-text {
+  font-family: var(--font-serif);
+  font-size: 1.25rem;
+  color: #ffffff;
+  line-height: 1.6;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* Selection Filter Cards */
+.selection-filter-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.filter-card {
+  border-radius: 16px;
+  padding: 1.75rem;
+  background: rgba(10, 18, 42, 0.8);
+  border: 1px solid var(--white-border);
+}
+
+.filter-card.who-for {
+  border-color: rgba(34, 197, 94, 0.4);
+  background: linear-gradient(180deg, rgba(34, 197, 94, 0.08) 0%, rgba(10, 18, 42, 0.9) 100%);
+}
+
+.filter-card.who-not-for {
+  border-color: rgba(239, 68, 68, 0.4);
+  background: linear-gradient(180deg, rgba(239, 68, 68, 0.08) 0%, rgba(10, 18, 42, 0.9) 100%);
+}
+
+.filter-card-title {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.filter-card.who-for .filter-card-title {
+  color: #4ade80;
+}
+
+.filter-card.who-not-for .filter-card-title {
+  color: #f87171;
+}
+
+.filter-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  padding: 0;
+  margin: 0;
+}
+
+.filter-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--white-bright);
+}
+
+/* 4-Step Admission Process Flow */
+.admission-process-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+  margin: 2rem 0;
+}
+
+.step-card {
+  background: rgba(10, 18, 42, 0.9);
+  border: 1px solid var(--gold-border);
+  border-radius: 16px;
+  padding: 1.5rem;
+  position: relative;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.step-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--gold-primary);
+  box-shadow: 0 10px 25px rgba(212, 175, 55, 0.15);
+}
+
+.step-num-badge {
+  font-family: var(--font-serif);
+  font-size: 2.2rem;
+  font-weight: 900;
+  color: rgba(212, 175, 55, 0.3);
+  position: absolute;
+  top: 1rem;
+  right: 1.25rem;
+  line-height: 1;
+}
+
+.step-title {
+  font-family: var(--font-serif);
+  font-size: 1.08rem;
+  color: var(--gold-light);
+  margin-bottom: 0.6rem;
+  padding-right: 2rem;
+}
+
+.step-desc {
+  font-size: 0.86rem;
+  color: var(--white-muted);
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* Track Breakdown Card */
+.track-breakdown-card {
+  border-radius: 20px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  position: relative;
+  background: rgba(10, 18, 42, 0.95);
+  border: 1px solid var(--gold-border);
+}
+
+.track-breakdown-card.track-super {
+  border-color: var(--gold-primary);
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.1) 0%, rgba(5, 10, 25, 0.95) 100%);
+}
+
+.track-breakdown-card.track-open {
+  border-color: rgba(239, 68, 68, 0.5);
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.1) 0%, rgba(5, 10, 25, 0.95) 100%);
+}
+
+@media (max-width: 768px) {
+  .selection-filter-grid {
     grid-template-columns: 1fr;
-    gap: 2rem;
   }
-  .standalone-hero-title {
-    font-size: 2.2rem;
+  .syndicate-comparison-table {
+    font-size: 0.85rem;
   }
-  .detail-grid-3, .access-points-grid-2, .klee-banner-stats {
-    grid-template-columns: 1fr;
-  }
-  .standalone-section-card {
-    padding: 1.5rem;
-  }
-  .standalone-article-card {
-    padding: 1.5rem;
-  }
-  .article-standalone-title {
-    font-size: 2rem;
-  }
-  .landing-subhead-bar {
-    top: 60px;
+  .zero-risk-rule-text {
+    font-size: 1.1rem;
   }
 }
+
 
 
 

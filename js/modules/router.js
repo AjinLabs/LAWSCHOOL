@@ -13,15 +13,22 @@ export function initRouter() {
   const handleRoute = () => {
     const hash = window.location.hash || '';
 
-    // Course Page Routing (#course/klee, #course/mastery, etc.)
+    // Course Page Routing (#course/klee, #course/open-merit, #course/mastery, etc.)
     if (hash.startsWith('#course/')) {
       const courseId = hash.replace('#course/', '').trim();
-      const data = COURSE_DATA[courseId];
+      let data = COURSE_DATA[courseId];
+      if (!data && (courseId === 'open-merit' || courseId === 'super-batch' || courseId === 'klee-syndicate' || courseId === 'pay-on-result')) {
+        data = COURSE_DATA['klee'];
+      }
       if (data && courseView) {
         if (mainView) mainView.style.display = 'none';
         if (blogView) blogView.style.display = 'none';
         courseView.style.display = 'block';
-        renderCourseLandingPage(data, courseView);
+        if (data.id === 'klee') {
+          renderKleeLandingPage(data, courseView);
+        } else {
+          renderCourseLandingPage(data, courseView);
+        }
         window.scrollTo({ top: 0, behavior: 'instant' });
         updateNavbarState('course', data.title);
         return;
@@ -87,6 +94,570 @@ function updateNavbarState(type, title = '') {
   } else {
     backNavBtn.style.display = 'none';
   }
+}
+
+function renderKleeLandingPage(data, container) {
+  let html = `
+    <div class="standalone-landing-wrapper">
+      
+      <!-- Urgent Top Alert Banner -->
+      <div class="container" style="padding-top: 0.5rem;">
+        <div class="urgency-top-alert-banner" style="background: linear-gradient(90deg, rgba(185, 28, 28, 0.35) 0%, rgba(10, 18, 42, 0.95) 100%); border: 1px solid rgba(239, 68, 68, 0.5); border-radius: 14px; padding: 0.75rem 1.25rem; margin-bottom: 0.75rem; box-shadow: 0 5px 20px rgba(220, 38, 38, 0.2);">
+          <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.75rem;">
+            <div style="display: flex; align-items: center; gap: 0.75rem;">
+              <span class="pulse-dot-red"></span>
+              <span style="font-weight: 800; color: #f87171; font-size: 0.9rem; letter-spacing: 0.5px;">
+                🔥 KLEE 2027 INTAKE ACTIVE • DIAGNOSTIC SCREENING SLOTS FILLING FAST!
+              </span>
+            </div>
+            <button class="btn btn-gold btn-sm open-enroll-modal" data-course="KLEE 2027 Entrance Syndicate">
+              <i class="fa-solid fa-graduation-cap"></i> Apply for Diagnostic Screening
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sub-Header Breadcrumb Bar -->
+      <div class="landing-subhead-bar">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center; padding: 0.85rem 0;">
+          <div class="breadcrumb-box">
+            <a href="#home" class="breadcrumb-link"><i class="fa-solid fa-house"></i> Home</a>
+            <span class="breadcrumb-sep">/</span>
+            <a href="#courses" class="breadcrumb-link">Courses</a>
+            <span class="breadcrumb-sep">/</span>
+            <span class="breadcrumb-active">KLEE 2027 Entrance Syndicate</span>
+          </div>
+          <a href="#home" class="btn btn-glass btn-sm">
+            <i class="fa-solid fa-arrow-left"></i> Back to Main Platform
+          </a>
+        </div>
+      </div>
+
+      <!-- Hero Header Section -->
+      <section class="standalone-hero">
+        <div class="container">
+          <div class="standalone-hero-grid">
+            <div class="standalone-hero-main">
+              <div class="ticker-badge pulse-badge-glow" style="margin-bottom: 1rem;">
+                <span class="pulse-dot"></span>
+                <span class="ticker-text">${data.statusBadge}</span>
+              </div>
+
+              <p style="color: var(--gold-light); font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; font-size: 0.85rem; margin-bottom: 0.5rem;">
+                ${data.tagline}
+              </p>
+
+              <h1 class="standalone-hero-title" style="font-size: 2.3rem; line-height: 1.25;">
+                ${data.mainHeadline}
+              </h1>
+
+              <p class="standalone-hero-subtitle" style="margin-top: 1rem; color: var(--white-bright); font-size: 1.05rem; line-height: 1.6;">
+                ${data.subHeadline}
+              </p>
+
+              <!-- Social Proof Strip -->
+              <div class="social-proof-strip-wrapper">
+                ${data.socialProofStrip.map(item => `
+                  <span class="social-proof-chip">
+                    <i class="fa-solid fa-circle-check" style="color: var(--gold-primary);"></i> ${item}
+                  </span>
+                `).join('')}
+              </div>
+
+              <div class="standalone-cta-group" style="margin-top: 1.75rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+                <button class="btn btn-gold btn-lg open-enroll-modal" data-course="KLEE 2027 Entrance Syndicate">
+                  <i class="fa-solid fa-bolt"></i> Apply for Diagnostic Screening &rarr;
+                </button>
+                <a href="#compare-syndicates" class="btn btn-glass btn-lg" style="border-color: var(--gold-border); color: var(--gold-light);">
+                  <i class="fa-solid fa-table-columns"></i> Compare Our Two Syndicates &darr;
+                </a>
+              </div>
+            </div>
+
+            <!-- Hero Side Pricing Card -->
+            <div class="standalone-hero-side">
+              <div class="standalone-pricing-card tri-border-card" style="border-color: var(--gold-primary);">
+                <div class="pricing-card-badge"><i class="fa-solid fa-shield-halved"></i> TWO DISTINCT PROTOCOLS</div>
+                <h3 class="pricing-summary-text" style="font-size: 1.2rem; color: var(--gold-light); text-align: center; margin-top: 0.5rem;">
+                  Choose Your Battleground
+                </h3>
+                
+                <div class="pricing-details-stack" style="margin: 1.25rem 0;">
+                  ${data.investmentDetails.map(item => `
+                    <div class="pricing-detail-item" style="border-bottom: 1px dashed rgba(255,255,255,0.1); padding-bottom: 0.75rem; margin-bottom: 0.75rem;">
+                      <div class="detail-item-title" style="color: #fff; font-weight: 700;">${item.title}</div>
+                      <div class="detail-item-price" style="color: var(--gold-primary); font-size: 1.35rem; font-weight: 800;">${item.price}</div>
+                      <div class="detail-item-note" style="color: var(--white-muted); font-size: 0.8rem;">${item.note}</div>
+                    </div>
+                  `).join('')}
+                </div>
+
+                <div style="display: flex; flex-direction: column; gap: 0.75rem;">
+                  <button class="btn btn-gold open-enroll-modal" data-course="KLEE 2027 Super Batch Syndicate" style="width: 100%;">
+                    <i class="fa-solid fa-user-plus"></i> Apply for Super Batch (₹1L 100% Refundable)
+                  </button>
+                  <button class="btn btn-glass open-enroll-modal" data-course="KLEE 2027 Open Merit Syndicate" style="width: 100%; border-color: #ef4444; color: #f87171;">
+                    <i class="fa-solid fa-handshake"></i> Register for Open Merit (₹2.5K Pay-On-Result)
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Body Content -->
+      <div class="container" style="padding-top: 3rem; padding-bottom: 5rem;">
+
+        <!-- SECTION 1: THE BRUTAL REALITY -->
+        <div class="standalone-section-card tri-border-card" style="border-color: rgba(239, 68, 68, 0.4); background: linear-gradient(135deg, rgba(220, 38, 38, 0.08) 0%, rgba(5, 10, 25, 0.95) 100%); margin-bottom: 2.5rem;">
+          <div style="display: flex; align-items: center; gap: 0.75rem; color: #ef4444; font-weight: 800; text-transform: uppercase; font-size: 0.85rem; margin-bottom: 0.5rem;">
+            <i class="fa-solid fa-triangle-exclamation"></i> THE PROBLEM WE SOLVED
+          </div>
+          <h2 class="standalone-section-heading" style="color: #ffffff; margin-bottom: 0.5rem;">
+            ${data.brutalReality.headline}
+          </h2>
+          <p style="color: var(--white-muted); font-size: 1rem; margin-bottom: 1.75rem;">
+            ${data.brutalReality.subtitle}
+          </p>
+
+          <div class="detail-grid-3">
+            ${data.brutalReality.points.map(pt => `
+              <div class="glass-panel" style="border-color: rgba(239, 68, 68, 0.3); background: rgba(0, 0, 0, 0.5); padding: 1.5rem;">
+                <h3 style="color: #f87171; font-size: 1.05rem; margin-bottom: 0.6rem; font-family: var(--font-serif);">
+                  ❌ ${pt.title}
+                </h3>
+                <p style="color: var(--white-muted); font-size: 0.88rem; line-height: 1.6; margin: 0;">
+                  ${pt.desc}
+                </p>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+
+        <!-- SECTION 2: THE SYNDICATE BLUEPRINT -->
+        <div class="standalone-section-card tri-border-card" style="border-color: var(--gold-primary); margin-bottom: 2.5rem;">
+          <div style="display: flex; align-items: center; gap: 0.75rem; color: var(--gold-primary); font-weight: 800; text-transform: uppercase; font-size: 0.85rem; margin-bottom: 0.5rem;">
+            <i class="fa-solid fa-wand-magic-sparkles"></i> THE SOLUTION
+          </div>
+          <h2 class="standalone-section-heading">
+            ${data.syndicateBlueprint.headline}
+          </h2>
+          <p style="color: var(--gold-light); font-size: 1rem; margin-bottom: 1.75rem;">
+            ${data.syndicateBlueprint.subtitle}
+          </p>
+
+          <div class="detail-grid-3">
+            ${data.syndicateBlueprint.points.map(pt => `
+              <div class="glass-panel" style="border-color: var(--gold-border); background: rgba(0, 0, 0, 0.5); padding: 1.5rem;">
+                <h3 style="color: var(--gold-light); font-size: 1.05rem; margin-bottom: 0.6rem; font-family: var(--font-serif);">
+                  ⚖️ ${pt.title}
+                </h3>
+                <p style="color: var(--white-muted); font-size: 0.88rem; line-height: 1.6; margin: 0;">
+                  ${pt.desc}
+                </p>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+
+        <!-- SECTION 3: CORE CURRICULUM ARCHITECTURE -->
+        <div class="standalone-section-card tri-border-card" style="margin-bottom: 2.5rem;" id="curriculum-architecture">
+          <h2 class="standalone-section-heading">
+            <i class="fa-solid fa-layer-group"></i> Core Curriculum Architecture
+          </h2>
+          <p style="color: var(--white-muted); margin-bottom: 1.5rem;">
+            Engineered by state rank-holders to deconstruct all 120 questions (360 marks) of the CEE Kerala computer-based entrance examination.
+          </p>
+
+          <div class="detail-grid-2">
+            ${data.curriculumArchitecture.map(curr => `
+              <div class="glass-panel" style="padding: 1.5rem; border-color: var(--white-border); background: rgba(0, 0, 0, 0.6);">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+                  <h3 style="color: var(--gold-light); font-size: 1.1rem; margin: 0; font-family: var(--font-serif);">
+                    <i class="fa-solid ${curr.icon}" style="color: var(--gold-primary); margin-right: 0.4rem;"></i> ${curr.title}
+                  </h3>
+                  <span class="subject-badge" style="background: rgba(212, 175, 55, 0.15); color: var(--gold-light); border: 1px solid var(--gold-border); padding: 0.25rem 0.6rem; border-radius: 6px; font-weight: 700; font-size: 0.8rem;">
+                    ${curr.marks}
+                  </span>
+                </div>
+                <p style="color: var(--white-muted); font-size: 0.88rem; line-height: 1.6; margin: 0;">
+                  ${curr.desc}
+                </p>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+
+        <!-- SECTION 4: THE TWO TRAINING PROTOCOLS (COMPARISON MATRIX) -->
+        <div class="standalone-section-card tri-border-card" style="margin-bottom: 2.5rem;" id="compare-syndicates">
+          <div style="text-align: center; margin-bottom: 1.5rem;">
+            <span style="color: var(--gold-primary); font-weight: 800; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px;">
+              SIDE-BY-SIDE PROTOCOL COMPARISON
+            </span>
+            <h2 style="font-family: var(--font-serif); font-size: 2rem; color: #ffffff; margin-top: 0.25rem;">
+              ${data.comparisonTable.headline}
+            </h2>
+            <p style="color: var(--white-muted); font-size: 1rem;">
+              ${data.comparisonTable.subHeadline}
+            </p>
+          </div>
+
+          <div class="syndicate-table-container">
+            <table class="syndicate-comparison-table">
+              <thead>
+                <tr>
+                  <th style="width: 22%;">Parameters</th>
+                  <th class="col-superbatch" style="width: 39%;">
+                    🏆 Super Batch Syndicate<br>
+                    <small style="font-weight: normal; font-size: 0.8rem; color: var(--gold-light);">Strictly 15 Students • 100% Refund Guarantee</small>
+                  </th>
+                  <th class="col-openmerit" style="width: 39%;">
+                    ⚡ Open Merit Syndicate<br>
+                    <small style="font-weight: normal; font-size: 0.8rem; color: #f87171;">Pay-On-Result • ₹2.5K Deposit + ₹20K Success Fee</small>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                ${data.comparisonTable.rows.map(row => `
+                  <tr>
+                    <td class="param-name">${row.param}</td>
+                    <td class="val-superbatch">${row.superBatch}</td>
+                    <td class="val-openmerit">${row.openMerit}</td>
+                  </tr>
+                `).join('')}
+                <tr>
+                  <td class="param-name" style="vertical-align: middle;">Action</td>
+                  <td class="val-superbatch" style="text-align: center;">
+                    <button class="btn btn-gold btn-sm open-enroll-modal" data-course="KLEE 2027 Super Batch Syndicate" style="width: 100%;">
+                      [ Apply for Super Batch ]
+                    </button>
+                  </td>
+                  <td class="val-openmerit" style="text-align: center;">
+                    <button class="btn btn-glass btn-sm open-enroll-modal" data-course="KLEE 2027 Open Merit Syndicate" style="width: 100%; border-color: #ef4444; color: #f87171;">
+                      [ Register for Open Merit ]
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- SECTION 5: DEEP DIVE TRACK BREAKDOWNS -->
+        <div style="margin-bottom: 2.5rem;">
+          <!-- Track 01 -->
+          <div class="track-breakdown-card track-super">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem; margin-bottom: 1rem;">
+              <div>
+                <span style="background: rgba(212, 175, 55, 0.2); color: var(--gold-light); padding: 0.25rem 0.75rem; border-radius: 20px; font-weight: 800; font-size: 0.75rem; letter-spacing: 0.5px;">
+                  ${data.trackSuperBatch.badge}
+                </span>
+                <h3 style="font-family: var(--font-serif); font-size: 1.8rem; color: #ffffff; margin-top: 0.5rem; margin-bottom: 0.25rem;">
+                  ${data.trackSuperBatch.title}
+                </h3>
+                <span style="color: var(--white-muted); font-size: 0.9rem;">
+                  <i class="fa-solid fa-users"></i> ${data.trackSuperBatch.capacity}
+                </span>
+              </div>
+              <div style="text-align: right;">
+                <div style="font-size: 1.4rem; font-weight: 800; color: var(--gold-primary);">
+                  ${data.trackSuperBatch.tuition}
+                </div>
+                <button class="btn btn-gold btn-sm open-enroll-modal" data-course="KLEE 2027 Super Batch Syndicate" style="margin-top: 0.5rem;">
+                  Apply for Super Batch &rarr;
+                </button>
+              </div>
+            </div>
+
+            <ul class="filter-list" style="margin-top: 1rem;">
+              ${data.trackSuperBatch.features.map(f => `
+                <li style="color: #ffffff;">
+                  <span style="color: var(--gold-primary); font-weight: 800;">✓</span>
+                  <span>${f}</span>
+                </li>
+              `).join('')}
+            </ul>
+          </div>
+
+          <!-- Track 02 -->
+          <div class="track-breakdown-card track-open" id="pay-on-result">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 1rem; margin-bottom: 1rem;">
+              <div>
+                <span style="background: rgba(239, 68, 68, 0.2); color: #f87171; padding: 0.25rem 0.75rem; border-radius: 20px; font-weight: 800; font-size: 0.75rem; letter-spacing: 0.5px;">
+                  ${data.trackOpenMerit.badge}
+                </span>
+                <h3 style="font-family: var(--font-serif); font-size: 1.8rem; color: #ffffff; margin-top: 0.5rem; margin-bottom: 0.25rem;">
+                  ${data.trackOpenMerit.title}
+                </h3>
+                <span style="color: var(--white-muted); font-size: 0.9rem;">
+                  <i class="fa-solid fa-handshake"></i> ${data.trackOpenMerit.capacity}
+                </span>
+              </div>
+              <div style="text-align: right;">
+                <div style="font-size: 1.25rem; font-weight: 800; color: #f87171;">
+                  ${data.trackOpenMerit.tuition}
+                </div>
+                <button class="btn btn-glass btn-sm open-enroll-modal" data-course="KLEE 2027 Open Merit Syndicate" style="margin-top: 0.5rem; border-color: #ef4444; color: #f87171;">
+                  Register for Open Merit &rarr;
+                </button>
+              </div>
+            </div>
+
+            <ul class="filter-list" style="margin-top: 1rem;">
+              ${data.trackOpenMerit.features.map(f => `
+                <li style="color: #ffffff;">
+                  <span style="color: #4ade80; font-weight: 800;">✓</span>
+                  <span>${f}</span>
+                </li>
+              `).join('')}
+            </ul>
+          </div>
+        </div>
+
+        <!-- SECTION 6: THE PAY-ON-RESULT INITIATIVE SPECIFICS -->
+        <div class="standalone-section-card tri-border-card" style="margin-bottom: 2.5rem; border-color: var(--gold-primary);">
+          <h2 class="standalone-section-heading">
+            <i class="fa-solid fa-hand-holding-dollar"></i> ${data.payOnResultDetails.headline}
+          </h2>
+
+          <!-- 3 Steps Grid -->
+          <div class="detail-grid-3" style="margin: 1.5rem 0;">
+            ${data.payOnResultDetails.steps.map(s => `
+              <div class="glass-panel" style="padding: 1.5rem; border-color: var(--gold-border); background: rgba(0, 0, 0, 0.6);">
+                <span style="background: var(--gold-primary); color: #000; font-weight: 800; font-size: 0.75rem; padding: 0.2rem 0.6rem; border-radius: 4px; text-transform: uppercase;">
+                  ${s.step}
+                </span>
+                <h3 style="color: var(--gold-light); font-size: 1.1rem; margin: 0.75rem 0 0.4rem 0; font-family: var(--font-serif);">
+                  ${s.title}
+                </h3>
+                <p style="color: var(--white-muted); font-size: 0.88rem; line-height: 1.6; margin: 0;">
+                  ${s.desc}
+                </p>
+              </div>
+            `).join('')}
+          </div>
+
+          <!-- Zero Risk Rule Box -->
+          <div class="zero-risk-rule-box">
+            <span class="zero-risk-badge"><i class="fa-solid fa-shield-halved"></i> ABSOLUTE GUARANTEE</span>
+            <p class="zero-risk-rule-text">
+              ${data.payOnResultDetails.zeroRiskRule}
+            </p>
+          </div>
+
+          <!-- Faculty Difference & Speed Methods -->
+          <h3 style="font-family: var(--font-serif); color: var(--gold-light); font-size: 1.3rem; margin: 2rem 0 1rem 0;">
+            The Faculty Difference: Learn From Those Who Cracked It
+          </h3>
+          <div class="detail-grid-3">
+            ${data.payOnResultDetails.facultyMethods.map(fm => `
+              <div class="glass-panel" style="padding: 1.25rem;">
+                <h4 style="color: #ffffff; font-size: 1rem; margin-bottom: 0.4rem; font-family: var(--font-serif);">
+                  ⚡ ${fm.title}
+                </h4>
+                <p style="color: var(--white-muted); font-size: 0.85rem; line-height: 1.5; margin: 0;">
+                  ${fm.desc}
+                </p>
+              </div>
+            `).join('')}
+          </div>
+
+          <!-- What You Get Inside -->
+          <h3 style="font-family: var(--font-serif); color: var(--gold-light); font-size: 1.3rem; margin: 2.5rem 0 1rem 0;">
+            What You Get Inside The Syndicate
+          </h3>
+          <div class="access-points-grid-2">
+            ${data.payOnResultDetails.whatYouGet.map(wyg => `
+              <div class="access-point-card">
+                <span style="color: var(--gold-primary); font-weight: 800; font-size: 1.1rem;">✓</span>
+                <span style="color: #fff; font-size: 0.9rem; line-height: 1.5;">${wyg}</span>
+              </div>
+            `).join('')}
+          </div>
+
+          <!-- Hard Selection Filter -->
+          <div style="margin-top: 2.5rem;">
+            <h3 style="font-family: var(--font-serif); color: #ffffff; font-size: 1.5rem; margin-bottom: 0.3rem;">
+              ${data.payOnResultDetails.hardFilter.headline}
+            </h3>
+            <p style="color: var(--white-muted); font-size: 0.95rem; margin-bottom: 1.5rem;">
+              ${data.payOnResultDetails.hardFilter.subHeadline}
+            </p>
+
+            <div class="selection-filter-grid">
+              <div class="filter-card who-for">
+                <div class="filter-card-title">
+                  <i class="fa-solid fa-circle-check"></i> Who This Is For:
+                </div>
+                <ul class="filter-list">
+                  ${data.payOnResultDetails.hardFilter.whoFor.map(wf => `
+                    <li>
+                      <span style="color: #4ade80;">✓</span>
+                      <span>${wf}</span>
+                    </li>
+                  `).join('')}
+                </ul>
+              </div>
+
+              <div class="filter-card who-not-for">
+                <div class="filter-card-title">
+                  <i class="fa-solid fa-circle-xmark"></i> Who This Is NOT For:
+                </div>
+                <ul class="filter-list">
+                  ${data.payOnResultDetails.hardFilter.whoNotFor.map(wnf => `
+                    <li>
+                      <span style="color: #f87171;">✕</span>
+                      <span>${wnf}</span>
+                    </li>
+                  `).join('')}
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Numbers Matrix -->
+          <div style="margin-top: 2.5rem;">
+            <h3 style="font-family: var(--font-serif); color: var(--gold-light); font-size: 1.3rem; margin-bottom: 1rem;">
+              The Numbers (Why This Is A No-Brainer)
+            </h3>
+            <div class="syndicate-table-container">
+              <table class="syndicate-comparison-table">
+                <thead>
+                  <tr>
+                    <th style="width: 25%;">Metric</th>
+                    <th style="width: 37.5%; color: #f87171;">Private Law College Management Route</th>
+                    <th style="width: 37.5%; color: #4ade80;">Open Merit Syndicate Route</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  ${data.payOnResultDetails.numbersTable.map(num => `
+                    <tr>
+                      <td class="param-name">${num.metric}</td>
+                      <td style="color: var(--white-muted); font-size: 0.9rem;">${num.privateRoute}</td>
+                      <td style="color: #ffffff; font-weight: 700; font-size: 0.95rem;">${num.syndicateRoute}</td>
+                    </tr>
+                  `).join('')}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- SECTION 7: THE 4-STEP ADMISSION PROCESS -->
+        <div class="standalone-section-card tri-border-card" style="margin-bottom: 2.5rem;" id="admission-process">
+          <div style="text-align: center; margin-bottom: 1.5rem;">
+            <span style="color: var(--gold-primary); font-weight: 800; text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px;">
+              HOW TO ENTER THE ARENA
+            </span>
+            <h2 style="font-family: var(--font-serif); font-size: 2rem; color: #ffffff; margin-top: 0.25rem;">
+              ${data.admissionProcess.headline}
+            </h2>
+          </div>
+
+          <div class="admission-process-grid">
+            ${data.admissionProcess.steps.map(step => `
+              <div class="step-card">
+                <span class="step-num-badge">${step.num}</span>
+                <div class="step-title">${step.title}</div>
+                <p class="step-desc">${step.desc}</p>
+              </div>
+            `).join('')}
+          </div>
+
+          <div style="text-align: center; margin-top: 2rem;">
+            <button class="btn btn-gold btn-lg open-enroll-modal" data-course="KLEE 2027 Entrance Syndicate">
+              <i class="fa-solid fa-bolt"></i> Claim Your Screening Slot Now &rarr;
+            </button>
+          </div>
+        </div>
+
+        <!-- SECTION 8: FREQUENTLY ASKED QUESTIONS -->
+        <div class="standalone-section-card tri-border-card" style="margin-bottom: 2.5rem;">
+          <h2 class="standalone-section-heading">
+            <i class="fa-solid fa-circle-question"></i> Frequently Asked Questions
+          </h2>
+
+          <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: 1.5rem;">
+            ${data.faqs.map(faq => `
+              <div class="glass-panel" style="padding: 1.5rem; border-color: var(--white-border); background: rgba(0, 0, 0, 0.6);">
+                <h3 style="color: var(--gold-light); font-size: 1.05rem; margin-bottom: 0.5rem; font-family: var(--font-serif);">
+                  ❓ ${faq.q}
+                </h3>
+                <p style="color: var(--white-muted); font-size: 0.9rem; line-height: 1.6; margin: 0;">
+                  ${faq.a}
+                </p>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+
+        <!-- SECTION 9: FINAL CALL TO ACTION -->
+        <div class="standalone-section-card tri-border-card" style="text-align: center; background: radial-gradient(circle at center, rgba(212, 175, 55, 0.2) 0%, rgba(0,0,0,0.95) 100%); padding: 4rem 2rem; border-color: var(--gold-primary);">
+          <span style="color: #f87171; font-weight: 800; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; display: block; margin-bottom: 0.5rem;">
+            🔥 ADMISSIONS CLOSING ONCE COHORT CAPACITY IS REACHED
+          </span>
+          <h2 style="font-family: var(--font-serif); font-size: 2.2rem; color: #fff; margin-bottom: 0.75rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+            ${data.finalCta.headline}
+          </h2>
+          <h3 style="color: var(--gold-light); font-family: var(--font-serif); font-size: 1.3rem; margin-bottom: 1rem;">
+            ${data.finalCta.subHeadline}
+          </h3>
+          <p style="color: var(--white-muted); max-width: 700px; margin: 0 auto 2rem auto; font-size: 1rem; line-height: 1.6;">
+            ${data.finalCta.text}
+          </p>
+
+          <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap;">
+            <button class="btn btn-gold btn-lg open-enroll-modal" data-course="KLEE 2027 Super Batch Syndicate">
+              <i class="fa-solid fa-bolt"></i> ${data.finalCta.primaryBtn} &rarr;
+            </button>
+            <button class="btn btn-glass btn-lg open-enroll-modal" data-course="KLEE 2027 Open Merit Syndicate" style="border-color: #ef4444; color: #f87171;">
+              <i class="fa-solid fa-handshake"></i> ${data.finalCta.secondaryBtn} &rarr;
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Standalone Footer -->
+      <footer style="background: #000; border-top: 1px solid var(--white-border); padding: 2.5rem 0; text-align: center; color: var(--white-muted); font-size: 0.88rem;">
+        <div class="container">
+          <p style="margin-bottom: 0.5rem;">© 2026 Indian Law School (ILS). KLEE 2027 Entrance Syndicate. All Rights Reserved.</p>
+          <p style="font-size: 0.8rem; color: rgba(255,255,255,0.4);">In Association with Vakkeel & Associates. Taught Exclusively by Government Law College Top Rank Holders.</p>
+        </div>
+      </footer>
+    </div>
+  `;
+
+  container.innerHTML = html;
+
+  // Re-bind enrollment triggers on newly injected content
+  const modalTriggers = container.querySelectorAll('.open-enroll-modal');
+  modalTriggers.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const courseName = btn.getAttribute('data-course');
+      const modal = document.getElementById('enroll-modal');
+      const selectElem = document.getElementById('form-course-select');
+      if (selectElem && courseName) {
+        let found = false;
+        for (let i = 0; i < selectElem.options.length; i++) {
+          if (selectElem.options[i].value === courseName || selectElem.options[i].text.includes(courseName)) {
+            selectElem.selectedIndex = i;
+            found = true;
+            break;
+          }
+        }
+        if (!found) {
+          selectElem.value = courseName;
+        }
+      }
+      if (modal) {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+    });
+  });
 }
 
 function renderCourseLandingPage(data, container) {

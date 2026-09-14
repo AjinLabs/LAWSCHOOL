@@ -5,92 +5,308 @@
 export const COURSE_DATA = {
   klee: {
     id: "klee",
-    badge: "KLEE 2027 FLAGSHIP",
-    title: "KLEE 2027 Super Batch",
-    subtitle: "India's Most Premium KLEE Coaching Experience. 9-Month Transformation Program.",
-    tagline: "Don't Just Prepare for KLEE. Prepare for the Career That Follows.",
-    statusBadge: "🔥 ADMISSIONS OPEN • 8 SEATS REMAINING",
-    shortDescription: "Only 15 Students Per Batch (Only 10 Batches/Year across India). 300+ Hours Recorded + 3 Live Classes/Wk, 1,00,000+ Qs Bank, 250 CBT Mock Exams & 100% Refund Commitment Policy*.",
-    collaboration: "",
-    investmentSummary: "₹1,00,000 (Inclusive of GST)",
+    badge: "KLEE 2027 DUAL-SYNDICATE INITIATIVE",
+    title: "KLEE 2027 Entrance Syndicate",
+    tagline: "Kerala Law Entrance Examination (KLEE) 2027",
+    mainHeadline: "Stop Studying for KLEE Like It’s High School. Train Under Government Law College Top Rank Holders.",
+    subHeadline: "We don’t employ generic coaching faculty. Our entire curriculum is engineered and taught exclusively by state rank-holders from GLC Ernakulam & Trivandrum. Backed by our radical 100% Admission Commitment and Pay-On-Result initiative.",
+    statusBadge: "🔥 2027 INTAKE OPEN • DIAGNOSTIC SCREENING ACTIVE",
+    shortDescription: "Choose between the Ultra-Accountability Super Batch Syndicate (₹1,00,000 Upfront with 100% Money-Back Guarantee) or the Pay-On-Result Open Merit Syndicate (₹2,500 Deposit + ₹20,000 Success Fee only upon official GLC admission memo).",
+    investmentSummary: "Super Batch: ₹1,00,000 (100% Refundable) | Open Merit: ₹2,500 + ₹20,000 Success Fee",
+    socialProofStrip: [
+      "Strictly 15-Seat Super Batches",
+      "100% Money-Back Guarantee Available",
+      "Pay-on-Result Option",
+      "Zero Tuition Risk",
+      "Real-Time Competitive Leaderboards",
+      "Taught Exclusively by GLC Top Rank Holders"
+    ],
     investmentDetails: [
       {
-        title: "KLEE 2027 Flagship Super Batch",
+        title: "Track 01: Super Batch Syndicate",
         price: "₹1,00,000",
-        note: "(Inclusive of GST — Complete 9-Month Transformation Ecosystem)"
+        note: "Strictly 15 Candidates • 100% Tuition Refund Guarantee if you miss a Government Law College seat"
+      },
+      {
+        title: "Track 02: Open Merit Syndicate",
+        price: "₹2,500 + ₹20,000",
+        note: "₹2,500 Commitment Deposit today • ₹20,000 Success Fee payable ONLY after your official CEE allotment memo arrives"
       }
     ],
-    scarcityDetails: {
-      studentsPerBatch: 15,
-      superBatchesPerYear: 10,
-      totalStudentsIndia: 150,
-      note: "Once your batch is full, admissions close. No overcrowding. No last-minute expansion. No compromise in quality."
-    },
-    heroLead: "Kerala's most serious and elite law entrance coaching (KLEE) & law practice ecosystem. Don't Just Prepare for KLEE. Prepare for the Career That Follows.",
-    ecosystemDescription: "Designed for high-performing legal aspirants targeting Government Law Colleges in Kerala. Experience small-batch coaching (strictly 15 students per batch), AI-driven weak area tracking, 15 years' solved KLEE papers, and 1-on-1 ranker mentorship.",
-    whyEnroll: "Because KLEE is a speed & accuracy computer-based test where precision under pressure determines your college rank. When everyone else is competing for attention in classrooms of 100+, you'll be learning in a batch of only 15 serious aspirants.",
-    whySmallBatch: [
-      "Personal Academic Mentor for every student",
-      "One-to-One Weekly Performance Reviews",
-      "Individualized Study Plan & Strategy",
-      "Weekly Progress Meetings & Motivation",
-      "Unlimited 24/7 Doubt Support Desk",
-      "Continuous Academic Accountability",
-      "Faster Feedback on Mock Performance",
-      "Personalized Weak Area Improvement Blueprint"
-    ],
-    accessPoints: [
-      "Only 15 Students Per Batch (Only 10 Batches/Year across India)",
-      "300+ Hours Recorded + 3 Live Interactive Classes Every Week",
-      "1,00,000+ Practice Qs + 250 Full-Length CBT Mock Exams",
-      "Previous 15 Years' Solved KLEE Papers & Trend Mapping",
-      "AI-Powered Weak Area Alert System for targeted accuracy",
-      "Personal Academic Mentor & 1-on-1 Performance Reviews",
-      "100% Tuition Fee Refund Commitment Policy*"
-    ],
-    weeklyModel: [
-      { day: "Monday", desc: "🎙 Live Interactive Class — Conceptual Foundation & Legal Reasoning" },
-      { day: "Tuesday", desc: "🎥 Recorded Masterclass + Practice Speed Drills & Question Solving" },
-      { day: "Wednesday", desc: "🎙 Live Interactive Class — Problem Solving & Legal Aptitude Masterclass" },
-      { day: "Thursday", desc: "🎥 Recorded Masterclass + Sectional Speed Drills & Grammar Modules" },
-      { day: "Friday", desc: "🎙 Live Interactive Class — High-Yield Topic Deep Dives & Exam Tactics" },
-      { day: "Saturday", desc: "📝 Weekly Full-Length CBT Mock Examination (120 Qs / 360 Marks) & Self Study" },
-      { day: "Sunday", desc: "📊 Weekly AI Accuracy Review, Recovery & Planning for Next Week" }
-    ],
-    examPattern: {
-      mode: "Computer-Based Test (CBT)",
-      duration: "2 Hours (120 Minutes)",
-      questionType: "Multiple Choice Questions (MCQs)",
-      totalQuestions: "120 Questions",
-      maxMarks: "360 Marks",
-      markingScheme: "✅ Correct: +3 Marks | ❌ Wrong: -1 Mark | ➖ Unanswered: 0 Marks",
-      subjects: [
+
+    // Problem Section: Why 92% Bleed Out
+    brutalReality: {
+      headline: "The Brutal Reality: Why 92% of KLEE Aspirants Bleed Out on Exam Day",
+      subtitle: "Traditional coaching institutes operate on a broken, predatory business model that profits regardless of your rank.",
+      points: [
         {
-          name: "⚖️ Aptitude for Legal Studies",
-          questions: "42 Questions",
-          marks: "126 Marks",
-          details: "Highest-weightage section. Legal Principles, Legal Reasoning, Constitution Basics, Fundamental Rights, Legal Maxims, Legal Awareness, Landmark Precedents."
+          title: "They Take Your Cash Upfront & Employ Generic Tutors",
+          desc: "Whether you crack Ernakulam GLC or score negative marks, their balance sheet stays green. Most tutors teaching entrance prep understand textbook theory, but have never cleared KLEE themselves or survived a high-stakes legal chamber."
         },
         {
-          name: "📖 General English",
-          questions: "36 Questions",
-          marks: "108 Marks",
-          details: "Reading Comprehension, Grammar, Vocabulary, Synonyms, Antonyms, Idioms & Phrases, Sentence Correction, Error Detection."
+          title: "The 100-Student Void & Mass Lecture Halls",
+          desc: "Sitting in a room of 80 to 100 students listening to dry academic lectures doesn't build the split-second analytical instinct needed for CEE Kerala's tricky question papers. Your personal blind spots remain completely invisible."
         },
         {
-          name: "🌍 General Knowledge & Current Affairs",
-          questions: "27 Questions",
-          marks: "81 Marks",
-          details: "Indian Polity, History, Geography, Economy, Science & Tech, Awards, Sports, International Affairs, Government Schemes, Current Events."
-        },
-        {
-          name: "🧠 Arithmetic & Mental Ability",
-          questions: "15 Questions",
-          marks: "45 Marks",
-          details: "Number System, Percentages, Ratio & Proportion, Profit & Loss, Time & Work, Coding-Decoding, Blood Relations, Direction Sense, Logical Reasoning."
+          title: "The Negative-Marking Meatgrinder",
+          desc: "KLEE isn't won by answering everything. It is won by aggressive, calculated elimination. Guessing emotionally on 10 questions vaporizes 40 marks off your rank."
         }
       ]
     },
+
+    // Solution Section: The Syndicate Blueprint
+    syndicateBlueprint: {
+      headline: "The Syndicate Blueprint: The Ranker-Led System That Turns Legal Reasoning Into Pure Muscle Memory",
+      subtitle: "We built Indian Law School on a simple premise: The only people qualified to train you for a Government Law College merit seat are the ones who took it themselves.",
+      points: [
+        {
+          title: "Ranker-Engineered Pedagogy",
+          desc: "Learn the exact mental shortcuts, high-yield statutory filters, and speed-elimination techniques that secured our mentors their single-digit state ranks."
+        },
+        {
+          title: "Surgical Error Log Audits",
+          desc: "We do not care how many hours you study. We care why you got Question 43 wrong. We isolate whether the issue was knowledge deficit, time panic, or reading fatigue."
+        },
+        {
+          title: "Zero Commercial Compromises",
+          desc: "High-intensity cohorts, strict attendance filters, and continuous accountability until the moment you walk into the test center."
+        }
+      ]
+    },
+
+    // Core Curriculum Architecture
+    curriculumArchitecture: [
+      {
+        icon: "fa-gavel",
+        title: "Legal Aptitude & Reasoning",
+        marks: "126 Marks (42 Qs)",
+        desc: "Constitutional Law, Law of Torts, Law of Contracts, and Criminal Law (IPC / BNS). Master the art of the Principle-Fact Trap—learning to strip away personal morality and apply pure statutory text in under 20 seconds."
+      },
+      {
+        icon: "fa-font",
+        title: "English Language & Analytical Speed",
+        marks: "108 Marks (36 Qs)",
+        desc: "Strategic scanning for reading comprehension passages (slash reading time by 40%), high-frequency legal vocabulary, grammatical precision, and contextual inference drills to minimize read-time."
+      },
+      {
+        icon: "fa-earth-americas",
+        title: "General Knowledge & Current Legal Affairs",
+        marks: "81 Marks (27 Qs)",
+        desc: "Zero fluff. Focused exclusively on the past 12 months of landmark Supreme Court judgments, constitutional bench verdicts, statutory amendments, legal institutions, and Negative-Mark Engineering."
+      },
+      {
+        icon: "fa-brain",
+        title: "Logical & Analytical Reasoning",
+        marks: "45 Marks (15 Qs)",
+        desc: "Deductive syllogisms, linear and circular arrangements, critical reasoning frameworks, and coding-decoding drills broken down into predictable, repeatable solving formulas."
+      }
+    ],
+
+    // Side-by-Side Comparison Matrix
+    comparisonTable: {
+      headline: "The Two Training Protocols: Choose Your Battleground",
+      subHeadline: "Two Distinct Tracks. The Exact Same Standard of Ranker Instruction.",
+      rows: [
+        {
+          param: "Faculty Lineup",
+          superBatch: "GLC Top Rank Holders<br><small style='color:var(--gold-light);'>(State Top Rankers & Legal Scholars)</small>",
+          openMerit: "GLC Top Rank Holders<br><small style='color:var(--gold-light);'>(The Exact Same Core Teaching Faculty)</small>"
+        },
+        {
+          param: "Cohort Size",
+          superBatch: "Strictly 15 Students<br><small style='color:var(--white-muted);'>(Closed, high-accountability room)</small>",
+          openMerit: "Selected Merit Hall<br><small style='color:var(--white-muted);'>(High-energy competitive arena)</small>"
+        },
+        {
+          param: "1-on-1 Sessions",
+          superBatch: "Weekly Private 1-on-1 Strategy Session<br><small style='color:var(--gold-light);'>(Direct deep-dive with designated mentor)</small>",
+          openMerit: "Bi-Weekly Cohort Q&A Sessions<br><small style='color:var(--white-muted);'>(Group doubt clearance & strategy breakdowns)</small>"
+        },
+        {
+          param: "Personal Mentorship",
+          superBatch: "Dedicated Personal Ranker-Mentor<br><small style='color:var(--white-muted);'>(Direct daily guidance & routine enforcement)</small>",
+          openMerit: "Community Academic Desk<br><small style='color:var(--white-muted);'>(Associate-moderated forums & peer reviews)</small>"
+        },
+        {
+          param: "Performance Tracking",
+          superBatch: "Complete AI Performance Report Suite<br><small style='color:var(--gold-light);'>(Micro-behavioral tags, time-drain analytics)</small>",
+          openMerit: "Standard Mock Analytics Dashboard<br><small style='color:var(--white-muted);'>(Sectional cutoffs & percentile tracking)</small>"
+        },
+        {
+          param: "Review Meetings",
+          superBatch: "Mandatory Weekly 1-on-1 Review Meeting<br><small style='color:var(--white-muted);'>(Personal score audit & dynamic study roadmap)</small>",
+          openMerit: "Monthly Milestone Report<br><small style='color:var(--white-muted);'>(Automated performance summary dispatches)</small>"
+        },
+        {
+          param: "Investment",
+          superBatch: "<strong>₹1,00,000 Upfront</strong><br><span style='color:#4ade80; font-size:0.8rem;'>(100% Full Refund if you miss your GLC seat)</span>",
+          openMerit: "<strong>₹2,500 Deposit + ₹20,000 Success Fee</strong><br><span style='color:#f87171; font-size:0.8rem;'>(Success fee payable ONLY upon official GLC allotment)</span>"
+        },
+        {
+          param: "The Profile",
+          superBatch: "Families demanding zero financial risk and relentless personal 1-on-1 accountability",
+          openMerit: "Fiercely independent, self-driven fighters backing their own work ethic on a pay-on-result model"
+        }
+      ]
+    },
+
+    // Track 01 Deep Dive
+    trackSuperBatch: {
+      badge: "TRACK 01: THE ULTRA-HIGH ACCOUNTABILITY 1-ON-1 ACCELERATOR",
+      title: "The Super Batch Syndicate",
+      capacity: "Strictly 15 Candidates",
+      tuition: "₹1,00,000 (Protected by 100% Admission Commitment)",
+      features: [
+        "Guaranteed 1-on-1 Weekly Face Time: Every 7 days, sit private 1-on-1 with your designated ranker-mentor to dismantle every mock error and eliminate bad guessing habits.",
+        "Complete AI-Driven Diagnostic Suite: Our proprietary platform logs your seconds per question, accuracy under time decay, and identifies emotional guess patterns.",
+        "Direct Parent Strategic Sync: Scheduled bi-weekly progress reviews directly between the mentor and parents to maintain complete alignment and discipline at home.",
+        "The 100% Refund Commitment: If you maintain 90% attendance, complete every assigned mock, and fail to secure a Government Law College merit seat, every single rupee is refunded. No administrative deductions, no games."
+      ]
+    },
+
+    // Track 02 Deep Dive
+    trackOpenMerit: {
+      badge: "TRACK 02: THE HIGH-OCTANE PROVING GROUND",
+      title: "The Open Merit Syndicate (Pay-On-Result Initiative)",
+      capacity: "Open to Selected Merit Aspirants",
+      tuition: "₹2,500 Registration + ₹20,000 Success Fee Upon Official GLC Admission",
+      features: [
+        "The Exact Same Elite Ranker Faculty: You attend the exact same live masterclasses delivered by the state’s top GLC rank holders.",
+        "Skin-in-the-Game Pay-on-Result: Pay a nominal ₹2,500 commitment deposit today to access LMS & test engines. Pay the ₹20,000 balance ONLY when your official CEE allotment memo arrives.",
+        "The Zero-Risk Guarantee: If you attend classes, take prescribed mocks, and miss a Government Law College merit seat, you do not pay a single rupee more. Total cost remains strictly ₹2,500.",
+        "Live Competitive Leaderboards: Real-time benchmarking against fellow top aspirants across Kerala after every single mock drill.",
+        "Zero Second-Class Treatment: The exact same exam-tested shortcuts, landmark precedents, and tactical speed techniques used across our entire curriculum."
+      ]
+    },
+
+    // Pay-On-Result Detailed Breakdown
+    payOnResultDetails: {
+      headline: "The Pay-On-Result KLEE Initiative: How The Open Merit Syndicate Works",
+      steps: [
+        {
+          step: "Step 1",
+          title: "₹2,500 Commitment Deposit",
+          desc: "Filters out casual freeloaders, covers your instant access to our LMS, test engines, daily diagnostic drills, and encrypted digital study vault."
+        },
+        {
+          step: "Step 2",
+          title: "Relentless Ranker-Led Training",
+          desc: "You attend live, intensive masterclasses taught exclusively by state rank-holders from GLC Ernakulam and Trivandrum."
+        },
+        {
+          step: "Step 3",
+          title: "₹20,000 Success Fee (Only After Selection)",
+          desc: "You pay the remaining tuition only after the Commissioner for Entrance Examinations (CEE) publishes the official allotment list and you hold an official Government Law College admission memo."
+        }
+      ],
+      zeroRiskRule: "THE ZERO-RISK RULE: If you attend classes, take the mocks, and miss a Government Law College merit seat, you do not pay a single rupee more. Your total cost remains strictly ₹2,500. We take the financial loss on our teaching time.",
+      facultyMethods: [
+        {
+          title: "The Principle-Fact Elimination Method",
+          desc: "Learn how to deconstruct tricky Law of Contracts, Torts, and IPC/BNS scenarios in under 20 seconds without falling into moral traps."
+        },
+        {
+          title: "Negative-Mark Engineering",
+          desc: "Master the disciplined triage system that stops you from burning marks on volatile General Knowledge questions."
+        },
+        {
+          title: "The Reading Sprint Framework",
+          desc: "Tactical scanning frameworks for Reading Comprehension passages that slash reading time by 40%."
+        }
+      ],
+      whatYouGet: [
+        "Live Interactive Command Broadcasts: Real-time problem-solving workshops focusing on past-year trends, high-yield legal maxims, and landmark Supreme Court precedents.",
+        "Live Competitive Leaderboard: Benchmark your speed and accuracy against serious aspirants across Kerala after every single mock drill.",
+        "Sectional Speed Sprints: High-frequency, timed 15-minute diagnostic tests to build cold composure under intense exam-clock pressure.",
+        "Bi-Weekly Cohort Q&A Sessions: Direct strategy check-ins and open doubt clearance with our ranker-mentors.",
+        "Encrypted Digital Vault: Searchable, high-yield digital compendiums, case law summaries, and analytical reasoning shortcut sheets."
+      ],
+      hardFilter: {
+        headline: "The Hard Selection Filter: Open to Merit. Closed to Mediocrity.",
+        subHeadline: "The Open Merit Syndicate is not an open-door, pay-and-enter program. Because our revenue depends on your success, we only take students with the hunger and resilience to win.",
+        whoFor: [
+          "Students with high self-discipline who don't need someone hovering over their shoulder to sit down and study.",
+          "Repeaters who know the syllabus but need surgical elimination strategies to jump from a 200-level to a 350+ score.",
+          "Ambitious minds who want the best legal training in Kerala without burdening their families with massive upfront tuition fees."
+        ],
+        whoNotFor: [
+          "Casual aspirants looking for passive weekend lectures.",
+          "Students who cannot commit to rigorous weekly mock tests.",
+          "Anyone unwilling to study at a competitive, high-pressure pace."
+        ]
+      },
+      numbersTable: [
+        { metric: "5-Year Tuition Cost", privateRoute: "₹8,00,000 – ₹14,00,000", syndicateRoute: "₹15,000 – ₹25,000 (Govt College Fees)" },
+        { metric: "Upfront Coaching Risk", privateRoute: "₹30,000 – ₹50,000 (Non-refundable)", syndicateRoute: "₹2,500 (Commitment deposit only)" },
+        { metric: "Performance Alignment", privateRoute: "Zero (Institute keeps money regardless)", syndicateRoute: "100% (We only profit if you crack GLC)" },
+        { metric: "Net Family Savings", privateRoute: "₹0", syndicateRoute: "₹8+ Lakhs preserved" }
+      ]
+    },
+
+    // 4-Step Admission Process
+    admissionProcess: {
+      headline: "The 4-Step Admission Process",
+      steps: [
+        {
+          num: "01",
+          title: "Submit Preliminary Application",
+          desc: "Complete our diagnostic questionnaire. We review your current academic standing, target law college, and study history."
+        },
+        {
+          num: "02",
+          title: "The 20-Minute Diagnostic Screening",
+          desc: "Candidates undergo a 1-on-1 rapid-fire logic & reasoning screening drill to assess analytical resilience, coachability, and baseline aptitude."
+        },
+        {
+          num: "03",
+          title: "Syndicate Allocation",
+          desc: "Based on your screening score and learning style, we extend a 24-hour window to enter either the Super Batch or Open Merit Syndicate."
+        },
+        {
+          num: "04",
+          title: "Execution & Onboarding",
+          desc: "Onboard into the AI LMS platform, receive your initial diagnostic error assessment, and begin your first ranker-led module."
+        }
+      ]
+    },
+
+    // Combined FAQs
+    faqs: [
+      {
+        q: "Is the teaching quality different between the Super Batch and Open Merit Syndicate?",
+        a: "Not in the slightest. The core lectures, curriculum, ranker faculty, study materials, and mock test papers are completely identical. Both tracks are taught by our primary faculty of Government Law College top rank holders. The difference lies entirely in individual bandwidth: the Super Batch provides weekly private 1-on-1 strategy sessions, dedicated personal mentorship, and custom weekly review meetings backed by our full AI suite."
+      },
+      {
+        q: "What are the exact conditions for the Super Batch 100% refund policy?",
+        a: "Our Admission Commitment is a transparent legal agreement. To qualify for a full refund if you do not secure a Government Law College seat, the student must maintain at least 90% session attendance and complete 100% of the assigned diagnostic mock tests and error logs. If you follow the protocol and the result isn't delivered, we refund 100% of your fee without administrative deductions."
+      },
+      {
+        q: "How does the Open Merit Syndicate success fee work?",
+        a: "You pay ₹2,500 upfront to cover platform onboarding, software licenses, test engine access, and diagnostic tools. You only pay the remaining ₹20,000 when the Commissioner for Entrance Examinations (CEE) publishes the official allotment list and you secure an official admission memo to a Government Law College in Kerala."
+      },
+      {
+        q: "What happens if I miss the GLC cutoff in the Open Merit Syndicate?",
+        a: "You pay nothing beyond your initial ₹2,500 registration deposit. We take the loss on our teaching time, and you walk away with zero financial debt."
+      },
+      {
+        q: "How is the success fee collected upon selection?",
+        a: "Upon enrollment, your parent/guardian signs a straightforward legal performance agreement and provides a post-dated security cheque for ₹20,000. It is deposited only when the CEE Kerala allotment memo confirms your admission into a Government Law College."
+      },
+      {
+        q: "Can a student switch from Open Merit to Super Batch mid-way?",
+        a: "Only if a seat opens up in the Super Batch due to an attendance disqualification, and only if the candidate clears an intermediate diagnostic audit."
+      }
+    ],
+
+    // Final CTA
+    finalCta: {
+      headline: "9 Months from Today, You Will Either Hold a GLC Allotment Memo, or You Will Wish You Started Here.",
+      subHeadline: "Back Yourself. We Are Ready to Back You.",
+      text: "Every seat in a Kerala Government Law College is fought over by hundreds of candidates. The difference between a merit seat and a ₹12-Lakh private college management quota comes down to single-digit marks. Choose accountability. Train with the people who have already conquered the mountain.",
+      primaryBtn: "Apply for Diagnostic Screening Now",
+      secondaryBtn: "Register for Open Merit Syndicate"
+    },
+
     govColleges: [
       "Government Law College, Thiruvananthapuram",
       "Government Law College, Ernakulam",
@@ -117,56 +333,6 @@ export const COURSE_DATA = {
       "Markaz Law College",
       "AIM College of Law",
       "St. Dominic's College of Law"
-    ],
-    founderMessage: {
-      author: "Cmpk Raheem",
-      role: "Founder, Indian Law School",
-      quote: "The KLEE paper tests something very specific—not how much law you know, but how precisely you think under pressure. Our programme builds that precision through structure, repetition, disciplined practice, and continuous improvement—not by overwhelming students with endless content. Every practice question, every mock exam, every mentor session has one purpose: helping you become a confident law student and future legal professional."
-    },
-    curriculumVault: [
-      { title: "Aptitude for Legal Studies (126 Marks)", desc: "Legal principles, reasoning, legal maxims, BNS/IPC basics, Indian Constitution & landmark precedents." },
-      { title: "General English (108 Marks)", desc: "Reading comprehension, vocabulary, grammar, idioms & legal phrases." },
-      { title: "GK & Current Affairs (81 Marks)", desc: "Polity, history, international legal conventions, geography & national news." },
-      { title: "Arithmetic & Logic (45 Marks)", desc: "Logical reasoning, blood relations, series, data interpretation & quantitative speed math." }
-    ],
-    aiLmsFeatures: [
-      "Real-time speed & accuracy metrics on legal principle questions",
-      "Identification of time traps during CBT mock simulations",
-      "Targeted revision sets for low-accuracy subtopics",
-      "Comparative class ranker trajectory tracking"
-    ],
-    mentorship: [
-      "1-on-1 weekly rank audit calls with KLEE top rankers",
-      "Personalized time-table and daily question targets",
-      "Dedicated WhatsApp doubt clearance desk with sub-2 hour resolution time"
-    ],
-    commitment: {
-      title: "🛡️ ADMISSION COMMITMENT POLICY*",
-      subtitle: "Study with Absolute Confidence — 100% Tuition Fee Refund Guarantee",
-      text: "Students who satisfy all published eligibility requirements—including attendance, assessments, assignments, participation, and appearance for the official KLEE examination—may qualify for a 100% tuition fee refund if they do not secure admission to a Government Law College through KLEE, subject to complete terms and conditions.",
-      criteria: [
-        "90%+ Attendance in Live & Recorded Classes",
-        "Completion of Full 9-Month Ecosystem",
-        "Attempting All Prescribed CBT Mock Exams",
-        "Submission of Mandatory Assignments & Daily Exams",
-        "Following Personalized Study Plan & Ranker Reviews",
-        "Official Appearance in the KLEE Entrance Examination"
-      ]
-    },
-    whatMakesDifferent: [
-      "Strict Scarcity: Max 15 Students per Batch for Ultra-Personalized Attention",
-      "Only 10 Super Batches Per Year Across India (150 Total Seats)",
-      "9-Month Transformation Program (300+ Hours Recorded + 3 Live Classes Weekly)",
-      "250 Full-Length CBT Mock Exams with AI Analytics",
-      "1,00,000+ Question Bank specifically tuned to KLEE patterns",
-      "Previous 15 Years' Solved Questions & Trend Analysis",
-      "100% Tuition Fee Refund Commitment Policy*"
-    ],
-    whoShouldEnroll: [
-      "Aspirants targeting 3-Year or 5-Year LL.B admissions in Kerala Government Law Colleges.",
-      "Students seeking elite rank-level preparation without overcrowded 200+ student coaching rooms.",
-      "Candidates who want data-driven AI tracking to fix speed and accuracy bottlenecks.",
-      "Students willing to commit to disciplined 9-month preparation."
     ]
   },
 
