@@ -9,7 +9,7 @@ export const COURSE_DATA = {
     title: "KLEE 2027 Entrance Syndicate",
     tagline: "Kerala Law Entrance Examination (KLEE) 2027",
     mainHeadline: "Stop Studying for KLEE Like It’s High School. Train Under Government Law College Top Rank Holders.",
-    subHeadline: "We don’t employ generic coaching faculty. Our entire curriculum is engineered and taught exclusively by state rank-holders from GLC Ernakulam & Trivandrum. Backed by our radical 100% Admission Commitment and Pay-On-Result initiative.",
+    subHeadline: "We don’t employ generic coaching faculty. Our entire curriculum is engineered and taught exclusively by state rank-holders from GLC Ernakulam. Backed by our radical 100% Admission Commitment and Pay-On-Result initiative.",
     statusBadge: "🔥 2027 INTAKE OPEN • DIAGNOSTIC SCREENING ACTIVE",
     shortDescription: "Choose between the Ultra-Accountability Super Batch Syndicate (₹1,00,000 Upfront with 100% Money-Back Guarantee) or the Pay-On-Result Open Merit Syndicate (₹2,500 Deposit + ₹20,000 Success Fee only upon official GLC admission memo).",
     investmentSummary: "Super Batch: ₹1,00,000 (100% Refundable) | Open Merit: ₹2,500 + ₹20,000 Success Fee",
@@ -19,7 +19,7 @@ export const COURSE_DATA = {
       "Pay-on-Result Option",
       "Zero Tuition Risk",
       "Real-Time Competitive Leaderboards",
-      "Taught Exclusively by GLC Top Rank Holders"
+      "Taught Exclusively by GLC Ernakulam Top Rank Holders"
     ],
     investmentDetails: [
       {
@@ -109,8 +109,8 @@ export const COURSE_DATA = {
       rows: [
         {
           param: "Faculty Lineup",
-          superBatch: "GLC Top Rank Holders<br><small style='color:var(--gold-light);'>(State Top Rankers & Legal Scholars)</small>",
-          openMerit: "GLC Top Rank Holders<br><small style='color:var(--gold-light);'>(The Exact Same Core Teaching Faculty)</small>"
+          superBatch: "GLC Ernakulam Top Rank Holders<br><small style='color:var(--gold-light);'>(State Top Rankers & Legal Scholars)</small>",
+          openMerit: "GLC Ernakulam Top Rank Holders<br><small style='color:var(--gold-light);'>(The Exact Same Core Teaching Faculty)</small>"
         },
         {
           param: "Cohort Size",
@@ -140,7 +140,7 @@ export const COURSE_DATA = {
         {
           param: "Investment",
           superBatch: "<strong>₹1,00,000 Upfront</strong><br><span style='color:#4ade80; font-size:0.8rem;'>(100% Full Refund if you miss your GLC seat)</span>",
-          openMerit: "<strong>₹2,500 Deposit + ₹20,000 Success Fee</strong><br><span style='color:#f87171; font-size:0.8rem;'>(Success fee payable ONLY upon official GLC allotment)</span>"
+          openMerit: "<strong>₹2,500 Deposit + ₹20,000 Success Fee</strong><br><span style='color:var(--gold-light); font-size:0.8rem;'>(Success fee payable ONLY upon official GLC allotment)</span>"
         },
         {
           param: "The Profile",
@@ -171,7 +171,7 @@ export const COURSE_DATA = {
       capacity: "Open to Selected Merit Aspirants",
       tuition: "₹2,500 Registration + ₹20,000 Success Fee Upon Official GLC Admission",
       features: [
-        "The Exact Same Elite Ranker Faculty: You attend the exact same live masterclasses delivered by the state’s top GLC rank holders.",
+        "The Exact Same Elite Ranker Faculty: You attend the exact same live masterclasses delivered by state top rank holders from GLC Ernakulam.",
         "Skin-in-the-Game Pay-on-Result: Pay a nominal ₹2,500 commitment deposit today to access LMS & test engines. Pay the ₹20,000 balance ONLY when your official CEE allotment memo arrives.",
         "The Zero-Risk Guarantee: If you attend classes, take prescribed mocks, and miss a Government Law College merit seat, you do not pay a single rupee more. Total cost remains strictly ₹2,500.",
         "Live Competitive Leaderboards: Real-time benchmarking against fellow top aspirants across Kerala after every single mock drill.",
@@ -191,7 +191,7 @@ export const COURSE_DATA = {
         {
           step: "Step 2",
           title: "Relentless Ranker-Led Training",
-          desc: "You attend live, intensive masterclasses taught exclusively by state rank-holders from GLC Ernakulam and Trivandrum."
+          desc: "You attend live, intensive masterclasses taught exclusively by state rank-holders from GLC Ernakulam."
         },
         {
           step: "Step 3",
@@ -274,7 +274,7 @@ export const COURSE_DATA = {
     faqs: [
       {
         q: "Is the teaching quality different between the Super Batch and Open Merit Syndicate?",
-        a: "Not in the slightest. The core lectures, curriculum, ranker faculty, study materials, and mock test papers are completely identical. Both tracks are taught by our primary faculty of Government Law College top rank holders. The difference lies entirely in individual bandwidth: the Super Batch provides weekly private 1-on-1 strategy sessions, dedicated personal mentorship, and custom weekly review meetings backed by our full AI suite."
+        a: "Not in the slightest. The core lectures, curriculum, ranker faculty, study materials, and mock test papers are completely identical. Both tracks are taught by our primary faculty of GLC Ernakulam top rank holders. The difference lies entirely in individual bandwidth: the Super Batch provides weekly private 1-on-1 strategy sessions, dedicated personal mentorship, and custom weekly review meetings backed by our full AI suite."
       },
       {
         q: "What are the exact conditions for the Super Batch 100% refund policy?",
@@ -308,8 +308,8 @@ export const COURSE_DATA = {
     },
 
     govColleges: [
-      "Government Law College, Thiruvananthapuram",
       "Government Law College, Ernakulam",
+      "Government Law College, Thiruvananthapuram",
       "Government Law College, Thrissur",
       "Government Law College, Kozhikode"
     ],

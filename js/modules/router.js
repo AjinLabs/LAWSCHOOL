@@ -13,24 +13,34 @@ export function initRouter() {
   const handleRoute = () => {
     const hash = window.location.hash || '';
 
-    // Course Page Routing (#course/klee, #course/open-merit, #course/mastery, etc.)
+    // Course Page Routing (#course/klee, #course/super-batch, #course/open-merit, #course/mastery, etc.)
     if (hash.startsWith('#course/')) {
       const courseId = hash.replace('#course/', '').trim();
       let data = COURSE_DATA[courseId];
-      if (!data && (courseId === 'open-merit' || courseId === 'super-batch' || courseId === 'klee-syndicate' || courseId === 'pay-on-result')) {
-        data = COURSE_DATA['klee'];
-      }
-      if (data && courseView) {
+
+      if (courseView) {
         if (mainView) mainView.style.display = 'none';
         if (blogView) blogView.style.display = 'none';
         courseView.style.display = 'block';
-        if (data.id === 'klee') {
+
+        if (courseId === 'super-batch') {
+          renderSuperBatchLandingPage(COURSE_DATA.klee, courseView);
+          updateNavbarState('course', 'KLEE 2027 Super Batch Syndicate');
+        } else if (courseId === 'open-merit' || courseId === 'pay-on-result') {
+          renderOpenMeritLandingPage(COURSE_DATA.klee, courseView);
+          updateNavbarState('course', 'KLEE 2027 Open Merit Syndicate');
+        } else if (data && data.id === 'klee') {
           renderKleeLandingPage(data, courseView);
-        } else {
+          updateNavbarState('course', data.title);
+        } else if (data) {
           renderCourseLandingPage(data, courseView);
+          updateNavbarState('course', data.title);
+        } else {
+          // Fallback to KLEE hub page
+          renderKleeLandingPage(COURSE_DATA.klee, courseView);
+          updateNavbarState('course', COURSE_DATA.klee.title);
         }
         window.scrollTo({ top: 0, behavior: 'instant' });
-        updateNavbarState('course', data.title);
         return;
       }
     }
@@ -94,6 +104,561 @@ function updateNavbarState(type, title = '') {
   } else {
     backNavBtn.style.display = 'none';
   }
+}
+
+function renderSuperBatchLandingPage(data, container) {
+  let html = `
+    <div class="standalone-landing-wrapper">
+      
+      <!-- Sub-Header Breadcrumb Bar -->
+      <div class="landing-subhead-bar">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center; padding: 0.85rem 0;">
+          <div class="breadcrumb-box">
+            <a href="#home" class="breadcrumb-link"><i class="fa-solid fa-house"></i> Home</a>
+            <span class="breadcrumb-sep">/</span>
+            <a href="#courses" class="breadcrumb-link">Courses</a>
+            <span class="breadcrumb-sep">/</span>
+            <span class="breadcrumb-active">KLEE 2027 Super Batch Syndicate</span>
+          </div>
+          <a href="#home" class="btn btn-glass btn-sm">
+            <i class="fa-solid fa-arrow-left"></i> Back to Main Platform
+          </a>
+        </div>
+      </div>
+
+      <!-- Hero Section -->
+      <section class="standalone-hero">
+        <div class="container">
+          <div class="standalone-hero-grid">
+            <div class="standalone-hero-main">
+              <div class="ticker-badge pulse-badge-glow" style="margin-bottom: 1rem;">
+                <span class="pulse-dot"></span>
+                <span class="ticker-text">STRICTLY 15 CANDIDATES PER BATCH • 100% MONEY-BACK GUARANTEE</span>
+              </div>
+
+              <p style="color: var(--gold-light); font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; font-size: 0.85rem; margin-bottom: 0.5rem;">
+                TRACK 01: THE ULTRA-HIGH ACCOUNTABILITY 1-ON-1 ACCELERATOR
+              </p>
+
+              <h1 class="standalone-hero-title" style="font-size: 2.3rem; line-height: 1.25;">
+                KLEE 2027 Super Batch Syndicate
+              </h1>
+
+              <p class="standalone-hero-subtitle" style="margin-top: 1rem; color: var(--white-bright); font-size: 1.05rem; line-height: 1.6;">
+                Engineered for candidates demanding 100% financial protection and relentless personal 1-on-1 ranker accountability. Taught exclusively by state top rank holders from GLC Ernakulam.
+              </p>
+
+              <!-- Social Proof Chips -->
+              <div class="social-proof-strip-wrapper">
+                <span class="social-proof-chip"><i class="fa-solid fa-shield-halved" style="color: var(--gold-primary);"></i> 100% Full Refund Guarantee</span>
+                <span class="social-proof-chip"><i class="fa-solid fa-user-gear" style="color: var(--gold-primary);"></i> Weekly 1-on-1 Mentor Deep-Dive</span>
+                <span class="social-proof-chip"><i class="fa-solid fa-robot" style="color: var(--gold-primary);"></i> AI Weak-Area Diagnostics</span>
+              </div>
+
+              <div class="standalone-cta-group" style="margin-top: 1.75rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+                <button class="btn btn-gold btn-lg open-enroll-modal" data-course="KLEE 2027 Super Batch Syndicate">
+                  <i class="fa-solid fa-bolt"></i> Apply for Super Batch (₹1L 100% Refundable) &rarr;
+                </button>
+                <a href="#course/open-merit" class="btn btn-glass btn-lg" style="border-color: var(--gold-border); color: var(--gold-light);">
+                  <i class="fa-solid fa-handshake"></i> View Pay-On-Result Open Merit Track &rarr;
+                </a>
+              </div>
+            </div>
+
+            <!-- Hero Side Pricing Card -->
+            <div class="standalone-hero-side">
+              <div class="standalone-pricing-card tri-border-card" style="border-color: var(--gold-primary);">
+                <div class="pricing-card-badge"><i class="fa-solid fa-shield-halved"></i> 100% PROTECTED INVESTMENT</div>
+                <h3 class="pricing-summary-text" style="font-size: 1.8rem; color: var(--gold-primary); text-align: center; margin-top: 0.5rem;">
+                  ₹1,00,000
+                </h3>
+                <p style="color: var(--white-muted); font-size: 0.8rem; text-align: center; margin-bottom: 1rem;">
+                  (Inclusive of GST — Protected by 100% Admission Commitment)
+                </p>
+                
+                <div class="pricing-details-stack" style="margin: 1rem 0;">
+                  <div class="pricing-detail-item">
+                    <div class="detail-item-title" style="color: #fff; font-weight: 700;">Cohort Bandwidth</div>
+                    <div class="detail-item-note" style="color: var(--gold-light);">Strictly 15 Students per batch</div>
+                  </div>
+                  <div class="detail-item-note" style="color: var(--white-muted); margin-top: 0.5rem; font-size: 0.85rem; line-height: 1.5;">
+                    If you satisfy 90% attendance & mocks but miss a Government Law College merit seat, 100% of your tuition fee is refunded without administrative deductions.
+                  </div>
+                </div>
+
+                <button class="btn btn-gold open-enroll-modal" data-course="KLEE 2027 Super Batch Syndicate" style="width: 100%;">
+                  <i class="fa-solid fa-user-plus"></i> Claim Priority Super Batch Seat &rarr;
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Main Body Container -->
+      <div class="container" style="padding-top: 3rem; padding-bottom: 5rem;">
+
+        <!-- Features Deep Dive Card -->
+        <div class="standalone-section-card tri-border-card" style="border-color: var(--gold-primary); margin-bottom: 2.5rem;">
+          <h2 class="standalone-section-heading">
+            <i class="fa-solid fa-star"></i> What Makes The Super Batch Syndicate Unique?
+          </h2>
+          <div class="detail-grid-2" style="margin-top: 1.5rem;">
+            ${data.trackSuperBatch.features.map(f => `
+              <div class="glass-panel" style="padding: 1.5rem; border-color: var(--gold-border); background: rgba(0, 0, 0, 0.6);">
+                <div style="display: flex; gap: 0.75rem; align-items: flex-start;">
+                  <span style="color: var(--gold-primary); font-weight: 800; font-size: 1.2rem;">✓</span>
+                  <span style="color: #ffffff; font-size: 0.95rem; line-height: 1.6;">${f}</span>
+                </div>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+
+        <!-- Curriculum Architecture -->
+        <div class="standalone-section-card tri-border-card" style="margin-bottom: 2.5rem;">
+          <h2 class="standalone-section-heading">
+            <i class="fa-solid fa-layer-group"></i> Core Curriculum Architecture
+          </h2>
+          <div class="detail-grid-2" style="margin-top: 1.5rem;">
+            ${data.curriculumArchitecture.map(curr => `
+              <div class="glass-panel" style="padding: 1.5rem; border-color: var(--white-border); background: rgba(0, 0, 0, 0.6);">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+                  <h3 style="color: var(--gold-light); font-size: 1.1rem; margin: 0; font-family: var(--font-serif);">
+                    <i class="fa-solid ${curr.icon}" style="color: var(--gold-primary); margin-right: 0.4rem;"></i> ${curr.title}
+                  </h3>
+                  <span class="subject-badge" style="background: rgba(212, 175, 55, 0.15); color: var(--gold-light); border: 1px solid var(--gold-border); padding: 0.25rem 0.6rem; border-radius: 6px; font-weight: 700; font-size: 0.8rem;">
+                    ${curr.marks}
+                  </span>
+                </div>
+                <p style="color: var(--white-muted); font-size: 0.88rem; line-height: 1.6; margin: 0;">${curr.desc}</p>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+
+        <!-- Side-by-Side Comparison Matrix -->
+        <div class="standalone-section-card tri-border-card" style="margin-bottom: 2.5rem; border-color: var(--gold-border);">
+          <h2 class="standalone-section-heading">
+            <i class="fa-solid fa-code-compare"></i> ${data.comparisonTable.headline}
+          </h2>
+          <p style="color: var(--white-muted); font-size: 0.95rem; margin-bottom: 1.5rem;">
+            ${data.comparisonTable.subHeadline}
+          </p>
+
+          <div class="syndicate-table-container">
+            <table class="syndicate-comparison-table">
+              <thead>
+                <tr>
+                  <th style="width: 25%;">Parameter</th>
+                  <th style="width: 37.5%; color: var(--gold-primary);">KLEE 2027 Super Batch</th>
+                  <th style="width: 37.5%; color: var(--gold-light);">KLEE 2027 Open Merit</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${data.comparisonTable.rows.map(row => `
+                  <tr>
+                    <td class="param-name">${row.param}</td>
+                    <td style="color: #ffffff; font-size: 0.9rem;">${row.superBatch}</td>
+                    <td style="color: var(--white-muted); font-size: 0.9rem;">${row.openMerit}</td>
+                  </tr>
+                `).join('')}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- 4-Step Admission Process -->
+        <div class="standalone-section-card tri-border-card" style="margin-bottom: 2.5rem;">
+          <div style="text-align: center; margin-bottom: 1.5rem;">
+            <h2 style="font-family: var(--font-serif); font-size: 2rem; color: #ffffff;">
+              ${data.admissionProcess.headline}
+            </h2>
+          </div>
+          <div class="admission-process-grid">
+            ${data.admissionProcess.steps.map(step => `
+              <div class="step-card">
+                <span class="step-num-badge">${step.num}</span>
+                <div class="step-title">${step.title}</div>
+                <p class="step-desc">${step.desc}</p>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+
+        <!-- FAQs -->
+        <div class="standalone-section-card tri-border-card" style="margin-bottom: 2.5rem;">
+          <h2 class="standalone-section-heading"><i class="fa-solid fa-circle-question"></i> Frequently Asked Questions</h2>
+          <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: 1.5rem;">
+            ${data.faqs.filter(f => f.q.toLowerCase().includes('super batch') || f.q.toLowerCase().includes('refund')).map(faq => `
+              <div class="glass-panel" style="padding: 1.5rem; border-color: var(--white-border); background: rgba(0, 0, 0, 0.6);">
+                <h3 style="color: var(--gold-light); font-size: 1.05rem; margin-bottom: 0.5rem; font-family: var(--font-serif);">❓ ${faq.q}</h3>
+                <p style="color: var(--white-muted); font-size: 0.9rem; line-height: 1.6; margin: 0;">${faq.a}</p>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+
+        <!-- Final CTA -->
+        <div class="standalone-section-card tri-border-card" style="text-align: center; background: radial-gradient(circle at center, rgba(212, 175, 55, 0.2) 0%, rgba(0,0,0,0.95) 100%); padding: 4rem 2rem; border-color: var(--gold-primary);">
+          <h2 style="font-family: var(--font-serif); font-size: 2.2rem; color: #fff; margin-bottom: 0.75rem;">
+            Back Yourself. We Are Ready to Back You.
+          </h2>
+          <p style="color: var(--white-muted); max-width: 650px; margin: 0 auto 2rem auto; font-size: 1rem;">
+            Strict 15-candidate capacity enforced. Reserve your seat in the Super Batch Syndicate today.
+          </p>
+          <button class="btn btn-gold btn-lg open-enroll-modal" data-course="KLEE 2027 Super Batch Syndicate">
+            <i class="fa-solid fa-bolt"></i> Apply for Super Batch (₹1L 100% Refundable) &rarr;
+          </button>
+        </div>
+
+      </div>
+
+      <footer style="background: #000; border-top: 1px solid var(--white-border); padding: 2.5rem 0; text-align: center; color: var(--white-muted); font-size: 0.88rem;">
+        <div class="container">
+          <p>© 2026 Indian Law School (ILS). KLEE 2027 Super Batch Syndicate. Taught Exclusively by GLC Ernakulam Top Rank Holders.</p>
+        </div>
+      </footer>
+    </div>
+  `;
+
+  container.innerHTML = html;
+  bindModalTriggers(container);
+}
+
+function renderOpenMeritLandingPage(data, container) {
+  let html = `
+    <div class="standalone-landing-wrapper">
+      
+      <!-- Sub-Header Breadcrumb Bar -->
+      <div class="landing-subhead-bar">
+        <div class="container" style="display: flex; justify-content: space-between; align-items: center; padding: 0.85rem 0;">
+          <div class="breadcrumb-box">
+            <a href="#home" class="breadcrumb-link"><i class="fa-solid fa-house"></i> Home</a>
+            <span class="breadcrumb-sep">/</span>
+            <a href="#courses" class="breadcrumb-link">Courses</a>
+            <span class="breadcrumb-sep">/</span>
+            <span class="breadcrumb-active">KLEE 2027 Open Merit Syndicate</span>
+          </div>
+          <a href="#home" class="btn btn-glass btn-sm">
+            <i class="fa-solid fa-arrow-left"></i> Back to Main Platform
+          </a>
+        </div>
+      </div>
+
+      <!-- Hero Section -->
+      <section class="standalone-hero">
+        <div class="container">
+          <div class="standalone-hero-grid">
+            <div class="standalone-hero-main">
+              <div class="ticker-badge pulse-badge-glow" style="margin-bottom: 1rem;">
+                <span class="pulse-dot"></span>
+                <span class="ticker-text" style="color: var(--gold-light);">ZERO TUITION RISK • PAY FEE ONLY AFTER SELECTION</span>
+              </div>
+
+              <p style="color: var(--gold-light); font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; font-size: 0.85rem; margin-bottom: 0.5rem;">
+                THE PAY-ON-RESULT KLEE INITIATIVE
+              </p>
+
+              <h1 class="standalone-hero-title" style="font-size: 2.3rem; line-height: 1.25;">
+                Get Trained by Government Law College Top Rank Holders. Pay the Coaching Fee Only After You Crack GLC.
+              </h1>
+
+              <p class="standalone-hero-subtitle" style="margin-top: 1rem; color: var(--white-bright); font-size: 1.05rem; line-height: 1.6;">
+                Stop risking ₹40,000 upfront on generic commercial coaching centers. Pay a ₹2,500 commitment deposit today—pay the rest only when your official CEE Kerala merit allotment memo is in your hands.
+              </p>
+
+              <!-- Social Proof Chips -->
+              <div class="social-proof-strip-wrapper">
+                <span class="social-proof-chip"><i class="fa-solid fa-shield-halved" style="color: #4ade80;"></i> Zero Tuition Risk</span>
+                <span class="social-proof-chip"><i class="fa-solid fa-ranking-star" style="color: var(--gold-primary);"></i> Real-Time Leaderboards</span>
+                <span class="social-proof-chip"><i class="fa-solid fa-gavel" style="color: var(--gold-primary);"></i> GLC Ernakulam Faculty</span>
+              </div>
+
+              <div class="standalone-cta-group" style="margin-top: 1.75rem; display: flex; gap: 1rem; flex-wrap: wrap;">
+                <button class="btn btn-gold btn-lg open-enroll-modal" data-course="KLEE 2027 Open Merit Syndicate">
+                  <i class="fa-solid fa-bolt"></i> Apply for Open Merit Syndicate &rarr;
+                </button>
+                <a href="#course/super-batch" class="btn btn-glass btn-lg" style="border-color: var(--gold-border); color: var(--gold-light);">
+                  <i class="fa-solid fa-user-plus"></i> View 15-Seat Super Batch Track &rarr;
+                </a>
+              </div>
+            </div>
+
+            <!-- Hero Side Pricing Card -->
+            <div class="standalone-hero-side">
+              <div class="standalone-pricing-card tri-border-card" style="border-color: var(--gold-border);">
+                <div class="pricing-card-badge" style="background: rgba(212, 175, 55, 0.15); color: var(--gold-light);"><i class="fa-solid fa-handshake"></i> PAY ON SELECTION MODEL</div>
+                <h3 class="pricing-summary-text" style="font-size: 1.6rem; color: var(--gold-primary); text-align: center; margin-top: 0.5rem;">
+                  ₹2,500 + ₹20,000
+                </h3>
+                <p style="color: var(--white-muted); font-size: 0.8rem; text-align: center; margin-bottom: 1rem;">
+                  (₹2,500 deposit today • ₹20,000 success fee ONLY upon official GLC allotment)
+                </p>
+
+                <div class="pricing-details-stack" style="margin: 1rem 0;">
+                  <div class="pricing-detail-item">
+                    <div class="detail-item-title" style="color: #fff; font-weight: 700;">Step 1: ₹2,500 Deposit</div>
+                    <div class="detail-item-note" style="color: var(--white-muted);">Instant LMS, test engines & digital vault access</div>
+                  </div>
+                  <div class="pricing-detail-item" style="margin-top: 0.5rem;">
+                    <div class="detail-item-title" style="color: #4ade80; font-weight: 700;">Step 2: Ranker Training</div>
+                    <div class="detail-item-note" style="color: var(--white-muted);">Taught by GLC Ernakulam top rank holders</div>
+                  </div>
+                  <div class="pricing-detail-item" style="margin-top: 0.5rem;">
+                    <div class="detail-item-title" style="color: var(--gold-light); font-weight: 700;">Step 3: ₹20,000 Success Fee</div>
+                    <div class="detail-item-note" style="color: var(--white-muted);">Payable ONLY after your CEE allotment memo arrives</div>
+                  </div>
+                </div>
+
+                <button class="btn btn-gold open-enroll-modal" data-course="KLEE 2027 Open Merit Syndicate" style="width: 100%;">
+                  <i class="fa-solid fa-handshake"></i> Register for Open Merit &rarr;
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Main Body Container -->
+      <div class="container" style="padding-top: 3rem; padding-bottom: 5rem;">
+
+        <!-- Problem Section -->
+        <div class="standalone-section-card tri-border-card" style="border-color: var(--gold-border); background: linear-gradient(135deg, rgba(212, 175, 55, 0.08) 0%, rgba(5, 10, 25, 0.95) 100%); margin-bottom: 2.5rem;">
+          <h2 class="standalone-section-heading" style="color: #ffffff;">
+            ${data.brutalReality.headline}
+          </h2>
+          <p style="color: var(--white-muted); font-size: 1rem; margin-bottom: 1.75rem;">
+            ${data.brutalReality.subtitle}
+          </p>
+
+          <div class="detail-grid-3">
+            ${data.brutalReality.points.map(pt => `
+              <div class="glass-panel" style="border-color: var(--gold-border); background: rgba(0, 0, 0, 0.5); padding: 1.5rem;">
+                <h3 style="color: var(--gold-light); font-size: 1.05rem; margin-bottom: 0.6rem; font-family: var(--font-serif);">❌ ${pt.title}</h3>
+                <p style="color: var(--white-muted); font-size: 0.88rem; line-height: 1.6; margin: 0;">${pt.desc}</p>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+
+        <!-- 3 Steps Grid -->
+        <div class="standalone-section-card tri-border-card" style="margin-bottom: 2.5rem; border-color: var(--gold-primary);">
+          <h2 class="standalone-section-heading"><i class="fa-solid fa-hand-holding-dollar"></i> ${data.payOnResultDetails.headline}</h2>
+          
+          <div class="detail-grid-3" style="margin: 1.5rem 0;">
+            ${data.payOnResultDetails.steps.map(s => `
+              <div class="glass-panel" style="padding: 1.5rem; border-color: var(--gold-border); background: rgba(0, 0, 0, 0.6);">
+                <span style="background: var(--gold-primary); color: #000; font-weight: 800; font-size: 0.75rem; padding: 0.2rem 0.6rem; border-radius: 4px; text-transform: uppercase;">${s.step}</span>
+                <h3 style="color: var(--gold-light); font-size: 1.1rem; margin: 0.75rem 0 0.4rem 0; font-family: var(--font-serif);">${s.title}</h3>
+                <p style="color: var(--white-muted); font-size: 0.88rem; line-height: 1.6; margin: 0;">${s.desc}</p>
+              </div>
+            `).join('')}
+          </div>
+
+          <!-- Zero Risk Box -->
+          <div class="zero-risk-rule-box">
+            <span class="zero-risk-badge"><i class="fa-solid fa-shield-halved"></i> ABSOLUTE GUARANTEE</span>
+            <p class="zero-risk-rule-text">${data.payOnResultDetails.zeroRiskRule}</p>
+          </div>
+
+          <!-- Faculty Difference -->
+          <h3 style="font-family: var(--font-serif); color: var(--gold-light); font-size: 1.3rem; margin: 2rem 0 1rem 0;">
+            The Faculty Difference: Learn From Those Who Cracked It
+          </h3>
+          <div class="detail-grid-3">
+            ${data.payOnResultDetails.facultyMethods.map(fm => `
+              <div class="glass-panel" style="padding: 1.25rem;">
+                <h4 style="color: #ffffff; font-size: 1rem; margin-bottom: 0.4rem; font-family: var(--font-serif);">⚡ ${fm.title}</h4>
+                <p style="color: var(--white-muted); font-size: 0.85rem; line-height: 1.5; margin: 0;">${fm.desc}</p>
+              </div>
+            `).join('')}
+          </div>
+
+          <!-- What You Get -->
+          <h3 style="font-family: var(--font-serif); color: var(--gold-light); font-size: 1.3rem; margin: 2.5rem 0 1rem 0;">
+            What You Get Inside The Syndicate
+          </h3>
+          <div class="access-points-grid-2">
+            ${data.payOnResultDetails.whatYouGet.map(wyg => `
+              <div class="access-point-card">
+                <span style="color: var(--gold-primary); font-weight: 800; font-size: 1.1rem;">✓</span>
+                <span style="color: #fff; font-size: 0.9rem; line-height: 1.5;">${wyg}</span>
+              </div>
+            `).join('')}
+          </div>
+
+          <!-- Hard Filter -->
+          <div style="margin-top: 2.5rem;">
+            <h3 style="font-family: var(--font-serif); color: #ffffff; font-size: 1.5rem; margin-bottom: 0.3rem;">
+              ${data.payOnResultDetails.hardFilter.headline}
+            </h3>
+            <p style="color: var(--white-muted); font-size: 0.95rem; margin-bottom: 1.5rem;">
+              ${data.payOnResultDetails.hardFilter.subHeadline}
+            </p>
+
+            <div class="selection-filter-grid">
+              <div class="filter-card who-for">
+                <div class="filter-card-title"><i class="fa-solid fa-circle-check"></i> Who This Is For:</div>
+                <ul class="filter-list">
+                  ${data.payOnResultDetails.hardFilter.whoFor.map(wf => `<li><span style="color: #4ade80;">✓</span><span>${wf}</span></li>`).join('')}
+                </ul>
+              </div>
+
+              <div class="filter-card who-not-for">
+                <div class="filter-card-title"><i class="fa-solid fa-circle-xmark"></i> Who This Is NOT For:</div>
+                <ul class="filter-list">
+                  ${data.payOnResultDetails.hardFilter.whoNotFor.map(wnf => `<li><span style="color: var(--gold-light);">✕</span><span>${wnf}</span></li>`).join('')}
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Numbers Table -->
+          <div style="margin-top: 2.5rem;">
+            <h3 style="font-family: var(--font-serif); color: var(--gold-light); font-size: 1.3rem; margin-bottom: 1rem;">
+              The Numbers (Why This Is A No-Brainer)
+            </h3>
+            <div class="syndicate-table-container">
+              <table class="syndicate-comparison-table">
+                <thead>
+                  <tr>
+                    <th style="width: 25%;">Metric</th>
+                    <th style="width: 37.5%; color: var(--gold-light);">Private Law College Management Route</th>
+                    <th style="width: 37.5%; color: #4ade80;">Open Merit Syndicate Route</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  ${data.payOnResultDetails.numbersTable.map(num => `
+                    <tr>
+                      <td class="param-name">${num.metric}</td>
+                      <td style="color: var(--white-muted); font-size: 0.9rem;">${num.privateRoute}</td>
+                      <td style="color: #ffffff; font-weight: 700; font-size: 0.95rem;">${num.syndicateRoute}</td>
+                    </tr>
+                  `).join('')}
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Side-by-Side Comparison Matrix -->
+        <div class="standalone-section-card tri-border-card" style="margin-bottom: 2.5rem; border-color: var(--gold-border);">
+          <h2 class="standalone-section-heading">
+            <i class="fa-solid fa-code-compare"></i> ${data.comparisonTable.headline}
+          </h2>
+          <p style="color: var(--white-muted); font-size: 0.95rem; margin-bottom: 1.5rem;">
+            ${data.comparisonTable.subHeadline}
+          </p>
+
+          <div class="syndicate-table-container">
+            <table class="syndicate-comparison-table">
+              <thead>
+                <tr>
+                  <th style="width: 25%;">Parameter</th>
+                  <th style="width: 37.5%; color: var(--gold-primary);">KLEE 2027 Super Batch</th>
+                  <th style="width: 37.5%; color: var(--gold-light);">KLEE 2027 Open Merit</th>
+                </tr>
+              </thead>
+              <tbody>
+                ${data.comparisonTable.rows.map(row => `
+                  <tr>
+                    <td class="param-name">${row.param}</td>
+                    <td style="color: #ffffff; font-size: 0.9rem;">${row.superBatch}</td>
+                    <td style="color: var(--white-muted); font-size: 0.9rem;">${row.openMerit}</td>
+                  </tr>
+                `).join('')}
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- 4-Step Admission Process -->
+        <div class="standalone-section-card tri-border-card" style="margin-bottom: 2.5rem;">
+          <div style="text-align: center; margin-bottom: 1.5rem;">
+            <h2 style="font-family: var(--font-serif); font-size: 2rem; color: #ffffff;">
+              ${data.admissionProcess.headline}
+            </h2>
+          </div>
+          <div class="admission-process-grid">
+            ${data.admissionProcess.steps.map(step => `
+              <div class="step-card">
+                <span class="step-num-badge">${step.num}</span>
+                <div class="step-title">${step.title}</div>
+                <p class="step-desc">${step.desc}</p>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+
+        <!-- FAQs -->
+        <div class="standalone-section-card tri-border-card" style="margin-bottom: 2.5rem;">
+          <h2 class="standalone-section-heading"><i class="fa-solid fa-circle-question"></i> Frequently Asked Questions</h2>
+          <div style="display: flex; flex-direction: column; gap: 1rem; margin-top: 1.5rem;">
+            ${data.faqs.map(faq => `
+              <div class="glass-panel" style="padding: 1.5rem; border-color: var(--white-border); background: rgba(0, 0, 0, 0.6);">
+                <h3 style="color: var(--gold-light); font-size: 1.05rem; margin-bottom: 0.5rem; font-family: var(--font-serif);">❓ ${faq.q}</h3>
+                <p style="color: var(--white-muted); font-size: 0.9rem; line-height: 1.6; margin: 0;">${faq.a}</p>
+              </div>
+            `).join('')}
+          </div>
+        </div>
+
+        <!-- Final CTA -->
+        <div class="standalone-section-card tri-border-card" style="text-align: center; background: radial-gradient(circle at center, rgba(212, 175, 55, 0.2) 0%, rgba(0,0,0,0.95) 100%); padding: 4rem 2rem; border-color: var(--gold-primary);">
+          <h2 style="font-family: var(--font-serif); font-size: 2.2rem; color: #fff; margin-bottom: 0.75rem;">
+            Back Yourself. We Are Ready to Back You.
+          </h2>
+          <p style="color: var(--white-muted); max-width: 650px; margin: 0 auto 2rem auto; font-size: 1rem;">
+            Step into the arena with zero tuition risk. Claim your diagnostic screening slot now.
+          </p>
+          <button class="btn btn-gold btn-lg open-enroll-modal" data-course="KLEE 2027 Open Merit Syndicate">
+            <i class="fa-solid fa-handshake"></i> Register for Open Merit Syndicate &rarr;
+          </button>
+        </div>
+
+      </div>
+
+      <footer style="background: #000; border-top: 1px solid var(--white-border); padding: 2.5rem 0; text-align: center; color: var(--white-muted); font-size: 0.88rem;">
+        <div class="container">
+          <p>© 2026 Indian Law School (ILS). KLEE 2027 Open Merit Syndicate. Taught Exclusively by GLC Ernakulam Top Rank Holders.</p>
+        </div>
+      </footer>
+    </div>
+  `;
+
+  container.innerHTML = html;
+  bindModalTriggers(container);
+}
+
+function bindModalTriggers(container) {
+  const modalTriggers = container.querySelectorAll('.open-enroll-modal');
+  modalTriggers.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const courseName = btn.getAttribute('data-course');
+      const modal = document.getElementById('enroll-modal');
+      const selectElem = document.getElementById('form-course-select');
+      if (selectElem && courseName) {
+        let found = false;
+        for (let i = 0; i < selectElem.options.length; i++) {
+          if (selectElem.options[i].value === courseName || selectElem.options[i].text.includes(courseName)) {
+            selectElem.selectedIndex = i;
+            found = true;
+            break;
+          }
+        }
+        if (!found) {
+          selectElem.value = courseName;
+        }
+      }
+      if (modal) {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+    });
+  });
 }
 
 function renderKleeLandingPage(data, container) {
