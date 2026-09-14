@@ -2177,17 +2177,310 @@
   background: linear-gradient(135deg, rgba(239, 68, 68, 0.1) 0%, rgba(5, 10, 25, 0.95) 100%);
 }
 
-@media (max-width: 768px) {
-  .selection-filter-grid {
-    grid-template-columns: 1fr;
+
+/* ==========================================================================
+   MOBILE & TABLET ULTRA-RESPONSIVE SYSTEM
+   Clean, Minimal, Zero Overflow, Perfect Alignments for Chrome Mobile & iOS
+   ========================================================================== */
+
+@media (max-width: 992px) {
+  .hero-grid,
+  .standalone-hero-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
   }
-  .syndicate-comparison-table {
-    font-size: 0.85rem;
+
+  .standalone-hero-main {
+    text-align: left;
   }
-  .zero-risk-rule-text {
-    font-size: 1.1rem;
+
+  .standalone-hero-title {
+    font-size: 2rem !important;
+    line-height: 1.25 !important;
+  }
+
+  .standalone-hero-subtitle {
+    font-size: 1rem !important;
+  }
+
+  .standalone-cta-group {
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+
+  .standalone-cta-group .btn,
+  .standalone-cta-group a {
+    width: 100% !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  .detail-grid-3,
+  .detail-grid-2,
+  .access-points-grid-2,
+  .klee-banner-stats,
+  .admission-process-grid,
+  .selection-filter-grid,
+  .courses-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem !important;
+  }
+
+  .standalone-section-card {
+    padding: 1.5rem 1.25rem !important;
+    border-radius: 16px !important;
+    margin-bottom: 1.5rem !important;
+  }
+
+  .standalone-section-heading {
+    font-size: 1.4rem !important;
+    line-height: 1.3 !important;
+  }
+
+  .social-proof-strip-wrapper {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    padding: 0.75rem 1rem !important;
+    gap: 0.5rem !important;
+  }
+
+  .social-proof-chip {
+    font-size: 0.8rem !important;
+    width: 100% !important;
+    justify-content: flex-start !important;
   }
 }
+
+@media (max-width: 768px) {
+  /* Container Padding */
+  .container {
+    padding: 0 1rem !important;
+  }
+
+  /* Navbar Adjustments */
+  .navbar {
+    padding: 0.6rem 0 !important;
+  }
+
+  .nav-container {
+    gap: 0.5rem;
+  }
+
+  .logo-emblem {
+    width: 36px !important;
+    height: 36px !important;
+    font-size: 1.1rem !important;
+  }
+
+  .logo-title {
+    font-size: 0.92rem !important;
+    letter-spacing: 0.5px !important;
+  }
+
+  .logo-subtitle {
+    font-size: 0.55rem !important;
+    letter-spacing: 1px !important;
+  }
+
+  /* Compact button styling on mobile header */
+  #nav-back-button {
+    padding: 0.4rem 0.65rem !important;
+    font-size: 0.75rem !important;
+  }
+
+  .navbar .open-enroll-modal {
+    padding: 0.45rem 0.75rem !important;
+    font-size: 0.78rem !important;
+  }
+
+  /* Subhead breadcrumbs */
+  .landing-subhead-bar {
+    padding: 0.45rem 0 !important;
+  }
+
+  .landing-subhead-bar .container {
+    flex-wrap: wrap !important;
+    gap: 0.5rem !important;
+  }
+
+  .breadcrumb-box {
+    font-size: 0.78rem !important;
+    max-width: 100% !important;
+    white-space: normal !important;
+    word-break: break-word !important;
+  }
+
+  .landing-subhead-bar .btn {
+    display: none !important; /* Hide redundant desktop back button in breadcrumb bar on mobile */
+  }
+
+  /* Urgency Top Alert */
+  .urgency-top-alert-banner {
+    padding: 0.65rem 0.85rem !important;
+    margin-bottom: 0.5rem !important;
+    border-radius: 12px !important;
+  }
+
+  .urgency-top-alert-banner button {
+    width: 100% !important;
+    margin-top: 0.35rem !important;
+    justify-content: center !important;
+  }
+
+  /* Standalone Hero */
+  .standalone-hero {
+    padding-top: 4.5rem !important;
+    padding-bottom: 2rem !important;
+  }
+
+  .standalone-hero-title {
+    font-size: 1.6rem !important;
+    line-height: 1.25 !important;
+  }
+
+  .standalone-hero-subtitle {
+    font-size: 0.9rem !important;
+    line-height: 1.5 !important;
+  }
+
+  .standalone-pricing-card {
+    padding: 1.25rem 1rem !important;
+    border-radius: 16px !important;
+  }
+
+  /* Table Horizontal Scrolling & Hints */
+  .syndicate-table-container {
+    margin: 1.25rem 0 !important;
+    border-radius: 12px !important;
+    position: relative;
+    border: 1px solid var(--gold-border) !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+  }
+
+  .syndicate-comparison-table {
+    min-width: 600px !important;
+  }
+
+  .syndicate-comparison-table th,
+  .syndicate-comparison-table td {
+    padding: 0.75rem 0.6rem !important;
+    font-size: 0.82rem !important;
+    line-height: 1.4 !important;
+  }
+
+  .syndicate-comparison-table td.param-name {
+    width: 28% !important;
+    font-size: 0.8rem !important;
+  }
+
+  .syndicate-comparison-table td.val-superbatch,
+  .syndicate-comparison-table td.val-openmerit {
+    width: 36% !important;
+  }
+
+  /* Zero Risk Box */
+  .zero-risk-rule-box {
+    padding: 1.25rem 1rem !important;
+    border-radius: 14px !important;
+    margin: 1.25rem 0 !important;
+  }
+
+  .zero-risk-rule-text {
+    font-size: 1.02rem !important;
+    line-height: 1.5 !important;
+  }
+
+  /* Filter Cards */
+  .filter-card {
+    padding: 1.25rem 1rem !important;
+    border-radius: 14px !important;
+  }
+
+  .filter-card-title {
+    font-size: 1.05rem !important;
+    margin-bottom: 0.85rem !important;
+  }
+
+  .filter-list li {
+    font-size: 0.85rem !important;
+    line-height: 1.45 !important;
+  }
+
+  /* Admission Process Step Cards */
+  .admission-process-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+
+  .step-card {
+    padding: 1.25rem 1rem !important;
+    border-radius: 14px !important;
+  }
+
+  .step-num-badge {
+    font-size: 1.8rem !important;
+    top: 0.75rem !important;
+    right: 0.85rem !important;
+  }
+
+  .step-title {
+    font-size: 1rem !important;
+  }
+
+  .step-desc {
+    font-size: 0.85rem !important;
+  }
+
+  /* Track Breakdown Card */
+  .track-breakdown-card {
+    padding: 1.25rem 1rem !important;
+    border-radius: 16px !important;
+    margin-bottom: 1.25rem !important;
+  }
+
+  .track-breakdown-card button {
+    width: 100% !important;
+    margin-top: 0.5rem !important;
+    justify-content: center !important;
+  }
+
+  /* Mobile Modal Container */
+  .modal-container {
+    padding: 1.5rem 1.25rem !important;
+    border-radius: 18px !important;
+    max-height: 92vh !important;
+  }
+
+  /* Sticky Mobile Bottom Bar spacing */
+  body {
+    padding-bottom: 60px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .standalone-hero-title {
+    font-size: 1.45rem !important;
+  }
+
+  .hero-title {
+    font-size: 1.8rem !important;
+  }
+
+  .logo-text {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .logo-title {
+    font-size: 0.85rem !important;
+  }
+
+  .logo-subtitle {
+    display: none;
+  }
+}
+
 
 
 
